@@ -7,9 +7,9 @@
 
 		//metodos
 		public function __construct(){
-			$this->hackaton= new hackaton();
+			$this->$hackaton= new hackaton();
 		}
-		public function index(){
+		public function index(){ 
 			$resultado->$this->hackaton->listar();
 			return $resultado;
 		}
@@ -41,5 +41,5 @@
 		}
 
 
-	}
+	} 
 ?>
