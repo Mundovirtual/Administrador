@@ -13,7 +13,7 @@
 		private $con;
 
 		public function __constructor(){
-			$this->con=new conexion(); 
+			$this->con= new conexion();
 		}
 
 		public function set($atributo,$contenido){
@@ -90,6 +90,11 @@
 			return $resultado;
 		}
 
-	}
+
+
+
+
+
+ 	}
  
 ?>
