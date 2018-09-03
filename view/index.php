@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<?php
+  include_once("../modulos/enrutador.php");
+  include_once("../modulos/controlador.php");
+?>
+ <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin</title>
     
     <!-- Bootstrap CSS--> 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Font Awesome CSS-->  
+    <!-- Font Awesome CSS-->
+    <link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="../css/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
     <link href="../css/fontawesome/css/solid.css" rel="stylesheet">
@@ -21,10 +26,13 @@
     <link rel="stylesheet" href="../css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
-</head>
-<body>
-	 
-	<header class="header">
+    
+  </head>
+   
+  <body>
+    <div class="page">
+      <!-- Main Navbar-->
+      <header class="header">
         <nav class="navbar">          
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
@@ -44,9 +52,57 @@
             </div>
           </div>
         </nav>
-    </header>
-	 
-	<script src="../js/jquery/jquery.min.js"></script> 
+      </header>
+      
+      <div class="page-content d-flex align-items-stretch"> 
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          <div class="sidebar-header d-flex align-items-center">
+            <div class="avatar"><img src="../img/city.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="title">
+              <h1 class="h4">Mark Stephen</h1>
+              <p>Web Designer</p>
+            </div>
+          </div>
+          <!-- Sidebar Navidation Menus-->
+          <span class="heading">Main</span>
+          <ul class="list-unstyled">
+             
+            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Registro </a>
+              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                <li><a href="#">Hackaton</a></li>
+                <li><a href="#">Vertical</a></li>
+                <li><a href="#">Page</a></li>
+              </ul>
+            </li>
+            <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+            <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
+          </ul>           
+        </nav>
+        <div class="content-inner">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                 <section class="dashboard-counts no-padding-bottom">
+                  <?php  
+                    $enrutador =new enrutador();                    
+                        
+                    if ($enrutador->validarGET($_GET['cargar'])) { 
+                          $enrutador->cargarVista($_GET['cargar']);
+                       } 
+                  ?>             
+                </section> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="../js/jquery/jquery.min.js"></script> 
     <script src="../js/Bootstrap/bootstrap.min.js"></script> 
-</body>
-</html>
+  </body>    
+</html> 
+ 
+
