@@ -12,6 +12,7 @@
     <!-- Bootstrap CSS--> 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome CSS-->
+    <link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="../css/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
     <link href="../css/fontawesome/css/solid.css" rel="stylesheet">
@@ -102,7 +103,6 @@
     <script src="../js/jquery/jquery.min.js"></script> 
     <script src="../js/Bootstrap/bootstrap.min.js"></script> 
   </body>    
-
 </html> 
  
 

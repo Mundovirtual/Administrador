@@ -78,11 +78,11 @@
 			  	 <div class="form-row">
 				    <div class="col">
 				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="InicioHack" class="form-control datetimepicker" value="10/05/2016"/>
+			   		  <input type="date" id="InicioHack" class="form-control " value=""/>
 				    </div>
 				    <div class="col">
 				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EntregaProyectos" class="form-control datetimepicker" value="10/05/2016"/>
+			    	   <input type="date" id="EntregaProyectos" class="form-control " value=""/>
 				    </div>
 				  </div>
 			    
@@ -90,14 +90,14 @@
 			  <div class="form-group" align="center">
 			    <label class="label-control">Fin de Hackaton</label>
 			    	<div class="col-md-6">
-			    		<input type="date" id="FinHack" class="form-control datetimepicker" value="10/05/2016"/>
+			    		<input type="date" id="FinHack" class="form-control" value=""/>
 			    	</div>
 			  </div>			  
 			</form>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-primary" id="GuardarHack">Guardar</button>
+	        <button type="button" class="btn btn-success" id="GuardarHack">Guardar</button>
 	      </div>
 	    </div>
 	  </div>
