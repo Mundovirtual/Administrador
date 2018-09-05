@@ -15,6 +15,8 @@
     <link href="../css/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
     <link href="../css/fontawesome/css/solid.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"   crossorigin="anonymous"></script>
+
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     <!-- Google fonts - Poppins -->
@@ -71,7 +73,7 @@
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Registro </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="http://localhost/hack/admin/view/index.php?cargar=1">Hackaton</a></li>
-                <li><a href="#">Vertical</a></li>
+                <li><a href="http://localhost/hack/admin/view/index.php?cargar=2">Vertical</a></li>
                 <li><a href="#">Page</a></li>
               </ul>
             </li>
@@ -90,8 +92,6 @@
                     if ($enrutador->validarGET($_GET['cargar'])) { 
                           $enrutador->cargarVista($_GET['cargar']);
                        } 
-                    
-
                   ?>             
                 </section> 
               </div> 

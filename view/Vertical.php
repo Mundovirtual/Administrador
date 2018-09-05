@@ -1,6 +1,6 @@
-
+ 
 <div class="container">
-	<h1 align="center"> </i>Hackaton</h1>     
+	<h1 align="center"> </i>Verticales</h1>     
 </div>
  
  <header>
@@ -14,7 +14,7 @@
 		</div>
 		<div class="col-md-6">
 			<div align="right">
-				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalHackaton">Nuevo
+				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalVertical">Nuevo
 				</button>
 			</div>			 
 		</div>
@@ -29,10 +29,10 @@
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
-			      <th scope="col">Edicion</th>
-			      <th scope="col">Inicio</th>
-			      <th scope="col">Limite de registro</th>
-			      <th scope="col">Acciones</th>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Descripcion</th>
+			      <th scope="col">Asesorias</th>
+			      <th scope="col">Hackaton</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -40,12 +40,13 @@
 			      <th scope="row">1</th>
 			      <td>Mark</td>
 			      <td>Otto</td>
+			      <td>@mdo</td>
 			      <td>@mdo</td> 
 			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarHackaton">	 
+			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical">	 
 			      	 </button>
 
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarHackaton"></button>
+			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical"></button>
 			      </td>
 			      
 			    </tr>			     
@@ -60,11 +61,11 @@
 </body>
 
 	<!-- REGISTRO -->
-	<div class="modal fade" id="ModalHackaton" tabindex="-1" role="dialog" aria-labelledby="Editar" aria-hidden="true">
+	<div class="modal fade" id="ModalVertical" tabindex="-1" role="dialog" aria-labelledby="Editar" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="Editar"><i class="fas fa-plus-circle"></i>Registro Hackaton</h5>
+	        <h5 class="modal-title" id="Editar"><i class="fas fa-plus-circle"></i>Registro de Verticales</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -76,24 +77,25 @@
 			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
-			  	 <div class="form-row">
-				    <div class="col">
-				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="InicioHack" class="form-control " value=""/>
-				    </div>
-				    <div class="col">
-				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EntregaProyectos" class="form-control " value=""/>
-				    </div>
-				  </div>
-			    
-			  </div>			 
-			  <div class="form-group" align="center">
-			    <label class="label-control">Fin de Hackaton</label>
-			    	<div class="col-md-6">
-			    		<input type="date" id="FinHack" class="form-control" value=""/>
-			    	</div>
-			  </div>			  
+			    <label for="exampleFormControlTextarea1">Descripcion</label>
+			    <textarea class="form-control" id="Descripcion" rows="2" placeholder="Descripcion"></textarea>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlTextarea1">Asesoria</label>
+			    <textarea class="form-control" id="Asesoria" rows="2" placeholder="Asesoria"></textarea>
+			  </div>
+		    <div class="input-group mb-3"> 
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">Hackaton</label>
+			  </div>
+			  <select class="custom-select" id="inputGroupSelect01">
+			    <option selected>Selecciona...</option>
+			    <option value="1">Hackaton 1</option>
+			    <option value="2">Hackaton 2</option>
+			    <option value="3">Hackaton 3</option>
+			  </select>
+			</div>
+				 		
 			</form>
 	      </div>
 	      <div class="modal-footer">
@@ -106,7 +108,7 @@
 
 	 
 	<!-- Editar -->
-	<div class="modal fade" id="EditarHackaton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="editarVertical" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -122,24 +124,25 @@
 			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
-			  	 <div class="form-row">
-				    <div class="col">
-				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="InicioHack" class="form-control " value=""/>
-				    </div>
-				    <div class="col">
-				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EntregaProyectos" class="form-control " value=""/>
-				    </div>
-				  </div>
-			    
-			  </div>			 
-			  <div class="form-group" align="center">
-			    <label class="label-control">Fin de Hackaton</label>
-			    	<div class="col-md-6">
-			    		<input type="date" id="FinHack" class="form-control" value=""/>
-			    	</div>
-			  </div>			  
+			    <label for="exampleFormControlTextarea1">Descripcion</label>
+			    <textarea class="form-control" id="Descripcion" rows="2" placeholder="Descripcion"></textarea>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlTextarea1">Asesoria</label>
+			    <textarea class="form-control" id="Asesoria" rows="2" placeholder="Asesoria"></textarea>
+			  </div>
+		    <div class="input-group mb-3"> 
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">Hackaton</label>
+			  </div>
+			  <select class="custom-select" id="inputGroupSelect01">
+			    <option selected>Selecciona...</option>
+			    <option value="1">Hackaton 1</option>
+			    <option value="2">Hackaton 2</option>
+			    <option value="3">Hackaton 3</option>
+			  </select>
+			</div>
+				 		
 			</form>
 	      </div>
 	      <div class="modal-footer">
@@ -152,7 +155,7 @@
 
 	<!-- Eliminar -->	
  
-	<div class="modal fade" id="EliminarHackaton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="EliminarVertical" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -178,5 +181,10 @@
 
 
 
+<script>
+	function myFunction() {
+	  document.getElementById("demo").innerHTML = "Hello World";
+	}
+</script>
 
  

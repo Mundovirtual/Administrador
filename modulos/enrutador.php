@@ -7,6 +7,10 @@
 			        include_once("../view/hackaton.php");
 			         
 			        break;
+			    case "2": 
+			        include_once("../view/Vertical.php");
+			         
+			        break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");
 			    break;	
