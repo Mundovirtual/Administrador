@@ -1,8 +1,7 @@
 <?php
-  include_once("../modulos/enrutador.php");
-  include_once("../modulos/controlador.php");
+  include_once("../modulos/enrutador.php");   
 ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -71,7 +70,7 @@
              
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Registro </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                <li><a href="#">Hackaton</a></li>
+                <li><a href="http://localhost/hack/admin/view/index.php?cargar=1">Hackaton</a></li>
                 <li><a href="#">Vertical</a></li>
                 <li><a href="#">Page</a></li>
               </ul>
@@ -91,6 +90,8 @@
                     if ($enrutador->validarGET($_GET['cargar'])) { 
                           $enrutador->cargarVista($_GET['cargar']);
                        } 
+                    
+
                   ?>             
                 </section> 
               </div> 

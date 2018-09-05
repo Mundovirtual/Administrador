@@ -3,8 +3,8 @@
 		public function cargarVista($vista){
  
 			switch ($vista) {
-			    case "crear": 
-			        include_once("../view/".$vista.".php");
+			    case "1": 
+			        include_once("../view/hackaton.php");
 			         
 			        break;
 			    case "error":
@@ -19,7 +19,7 @@
 
 		public function validarGET($variable){ 
 			if (empty($variable)) {
-				 include_once("../view/dashboard.php");
+				 include_once("../view/index.php");
 			}
 			else{
 				return true;

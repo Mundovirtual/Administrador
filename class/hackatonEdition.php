@@ -1,8 +1,10 @@
 <?php 
- 	require("conexion.php");
+ 	require_once("conexion.php");
  	
  	class hackaton{
+
  		//atributos
+ 		
  		private $id;
  		private $Edicion;
 		private $InicioHackaton;
@@ -10,22 +12,18 @@
 		private $TerminoHack;
 		private $Imagen;
 
+		//conexion
 		private $con;
 
 		public function __constructor(){
+		
 			$this->con= new conexion();
+		
 		}
+ 
 
-		public function set($atributo,$contenido){
-			$this->$atributo=$contenido;
-
-		}
-
-		public function get($atributo){
-			return $this->$atributo;
-		}
-
-		public function create(){
+		public function create($Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$imagen){
+		
 			$sql2="SELECT `Edicion` FROM `hackatonedicion` WHERE `Edicion`='{$this->$Edicion}'";
 			$resultado=$this->con->consultaRetorno($sql2);
 			$num=mysqli_num_rows($sql2);
@@ -58,10 +56,10 @@
 			$resultado=$this->con->consultaSimple($sql);
 		}
 
-		public function view(){
+		public function ver($id){
 			$sql="SELECT `id`, `Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen` FROM `hackatonedicion` WHERE `id`='{$this->$id}'"; 			
  			$resultado=$this->con->consultaRetorno($sql); 			
- 			$fila=mysqli_fetch_assoc($resultado);
+ 			$fila=mysqli_fetch_array($resultado);
 
  			//set
  			$this->id=$fila["id"];
@@ -83,18 +81,15 @@
 											WHERE `id`='{$this->$id}'";
 			$resultado=$this->con->consultaSimple($sql);								
  
+		} 
+		public function index() {
+
+			$sql="SELECT * FROM `hackatonedicion`";			
+			$re=$this->con->consultaRetorno($sql);	 
+	 		return $re;
+		 
 		}
-		public function listar(){
-			$sql="SELECT * FROM `hackatonedicion`";
-			$resultado=$this->con->consultaRetorno($sql); 
-			return $resultado;
-		}
-
-
-
-
-
-
+		
  	}
- 
+  
 ?>
