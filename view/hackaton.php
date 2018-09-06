@@ -1,5 +1,4 @@
-@ -1,182 +0,0 @@
-
+ 
 <div class="container">
 	<h1 align="center">Hackaton</h1>     
 </div>
@@ -99,7 +98,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="GuardarHack">Guardar</button>
+	        <button type="button" class="btn btn-success" id="GuardarHack">Registrar</button>
 	      </div>
 	    </div>
 	  </div>

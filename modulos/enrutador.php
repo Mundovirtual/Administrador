@@ -14,6 +14,9 @@
 			    case "3": 
 			        include_once("../view/confHackaton.php");			         
 			        break;
+		        case "4": 
+			        include_once("../view/Rubricas.php");			         
+		        break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");
 			    break;	

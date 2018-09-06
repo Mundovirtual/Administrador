@@ -14,13 +14,16 @@
     <link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="../css/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
-    <link href="../css/fontawesome/css/solid.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"   crossorigin="anonymous"></script>
+    <link href="../css/fontawesome/css/solid.css" rel="stylesheet"> 
+    <!-- Popper js--> 
+    <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>
+    <!-- Jquery js--> 
+    <script src="../js/jquery/jquery.min.js"></script>
 
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     <!-- Google fonts - Poppins -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="../css/poppins.css">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
@@ -75,7 +78,8 @@
               <ul id="Registros" class="collapse list-unstyled ">
                 <li><a href="http://localhost/hack/admin/view/index.php?cargar=1">Hackaton</a></li>
                 <li><a href="http://localhost/hack/admin/view/index.php?cargar=2">Vertical</a></li>
-                <li><a href="http://localhost/hack/admin/view/index.php?cargar=3">Configuraciones</a></li> 
+                <li><a href="http://localhost/hack/admin/view/index.php?cargar=3">Configuraciones</a></li>
+                <li><a href="http://localhost/hack/admin/view/index.php?cargar=4">Rubricas</a></li> 
               </ul>
             </li>
             <!-- Menu Monitoreo --> 
@@ -112,8 +116,7 @@
         </div>
       </div>
     </div>
-    <!-- JavaScript files-->
-    <script src="../js/jquery/jquery.min.js"></script> 
+     
     <script src="../js/Bootstrap/bootstrap.min.js"></script> 
   </body>    
 </html> 
