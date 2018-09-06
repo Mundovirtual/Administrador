@@ -1,6 +1,6 @@
  
 <div class="container">
-	<h1 align="center"> </i>Verticales</h1>     
+	<h1 align="center">Verticales</h1>     
 </div>
  
  <header>
@@ -86,7 +86,7 @@
 			  </div>
 		    <div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Hackaton</label>
+			    <label class="input-group-text" for="inputGroupSelect01">Edición</label>
 			  </div>
 			  <select class="custom-select" id="inputGroupSelect01">
 			    <option selected>Selecciona...</option>
@@ -112,7 +112,7 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Actualizar Datos</h5>
+	        <h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Editar Vertical</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -159,7 +159,7 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="Editar" align="center"><i class="fas fa-trash-alt"></i>Eliminar</h5>	      
+	        <h5 class="modal-title" id="Editar" align="center"><i class="fas fa-trash-alt"></i>Eliminar Vertical</h5>	      
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -177,14 +177,5 @@
 	    </div>
 	  </div>
 	</div>
-	
-
-
-
-<script>
-	function myFunction() {
-	  document.getElementById("demo").innerHTML = "Hello World";
-	}
-</script>
-
+ 
  

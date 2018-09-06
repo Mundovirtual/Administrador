@@ -11,6 +11,9 @@
 			        include_once("../view/Vertical.php");
 			         
 			        break;
+			    case "3": 
+			        include_once("../view/confHackaton.php");			         
+			        break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");
 			    break;	

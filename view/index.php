@@ -62,24 +62,36 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="../img/city.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Mark Stephen</h1>
-              <p>Web Designer</p>
+              <h1 class="h4">Isaac Santiago Coronel</h1>
+              <p>Administrador de Pagina</p>
             </div>
           </div>
           <!-- Sidebar Navidation Menus-->
           <span class="heading">Main</span>
-          <ul class="list-unstyled">
-             
-            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Registro </a>
-              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+
+          <ul class="list-unstyled">     
+          <!-- Menu Registros -->        
+            <li><a href="#Registros" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Registro </a>
+              <ul id="Registros" class="collapse list-unstyled ">
                 <li><a href="http://localhost/hack/admin/view/index.php?cargar=1">Hackaton</a></li>
                 <li><a href="http://localhost/hack/admin/view/index.php?cargar=2">Vertical</a></li>
-                <li><a href="#">Page</a></li>
+                <li><a href="http://localhost/hack/admin/view/index.php?cargar=3">Configuraciones</a></li> 
               </ul>
             </li>
-            <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-            <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
-          </ul>           
+            <!-- Menu Monitoreo --> 
+             <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Monitoreo </a>
+              <ul id="Monitoreo" class="collapse list-unstyled ">                
+                  <li><a href="">Equipos</a></li>
+                  <li><a href="">Proyectos</a></li>   
+                  
+                  <li><a href="">Jueces</a></li> 
+                  <li><a href="">Hackers</a></li>
+              </ul>
+            </li>    
+           
+
+          <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+          </ul>         
         </nav>
         <div class="content-inner">
           <div class="container-fluid">
