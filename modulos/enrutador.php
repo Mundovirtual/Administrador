@@ -17,6 +17,9 @@
 		        case "4": 
 			        include_once("../view/Rubricas.php");			         
 		        break;
+		         case "5": 
+			        include_once("../view/jueces.php");			         
+		        break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");
 			    break;	

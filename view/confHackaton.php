@@ -183,7 +183,7 @@
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-danger" id="ActualizarHack">Eliminar</button>
+	        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
 	      </div>
 	    </div>
 	  </div>
