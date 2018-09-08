@@ -78,7 +78,7 @@
           <!-- Menu Monitoreo --> 
              <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Monitoreo </a>
               <ul id="Monitoreo" class="collapse list-unstyled ">                
-                  <li><a href="">Equipos</a></li>
+                  <li><a href="../view/index.php?cargar=6">Equipos</a></li>
                   <li><a href="">Proyectos</a></li>   
                   <li><a href="">Hackers</a></li>
               </ul>
