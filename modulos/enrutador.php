@@ -1,4 +1,4 @@
--<?php 
+<?php 
 	class enrutador{
 		public function cargarVista($vista){
  
