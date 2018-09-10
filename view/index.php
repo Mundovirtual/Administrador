@@ -83,6 +83,7 @@
                   <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
                   <li><a href="../view/index.php?cargar=7">Hackers</a></li>
                   <li><a href="../view/index.php?cargar=8">Jueces</a></li>
+                  <li><a href="../view/index.php?cargar=9">Calificaciones</a></li>
               </ul>
             </li>    
           <!-- Menu solicitudes -->        

@@ -24,8 +24,11 @@
 		        case "7": 
 			        include_once("../view/comunidad.php");			         
 		        break;
-		         case "8": 
+		        case "8": 
 			        include_once("../view/Jueces.php");			         
+		        break;
+		        case "9": 
+			        include_once("../view/calificaciones.php");			         
 		        break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");
