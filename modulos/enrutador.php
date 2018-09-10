@@ -14,25 +14,25 @@
 			        break;
 		        case "4": 
 			        include_once("../view/Rubricas.php");			         
-		        break;
+		        	break;
 		        case "5": 
 			        include_once("../view/solicitudJueces.php");			         
-		        break;
+		        	break;
 		        case "6": 
 			        include_once("../view/proyectos.php");			         
-		        break;
+		        	break;
 		        case "7": 
 			        include_once("../view/comunidad.php");			         
-		        break;
+		        	break;
 		        case "8": 
 			        include_once("../view/Jueces.php");			         
-		        break;
+		        	break;
 		        case "9": 
 			        include_once("../view/calificaciones.php");			         
-		        break;
+		        	break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");
-			    break;	
+			    	break;	
 			    default:	
 					include_once("../view/error.php");
 			}

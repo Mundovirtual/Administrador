@@ -409,7 +409,7 @@ nav.side-navbar a {
 }
 
 nav.side-navbar a[data-toggle="collapse"]::before {
-  content: '\f104';
+  content: '﹀';
   display: inline-block;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -424,7 +424,7 @@ nav.side-navbar a[aria-expanded="true"] {
 }
 
 nav.side-navbar a[aria-expanded="true"]::before {
-  content: '\f107';
+  content: '︿';
 }
 
 nav.side-navbar a i {
@@ -531,7 +531,7 @@ nav.side-navbar.shrinked ul li a {
 }
 
 nav.side-navbar.shrinked ul li a[data-toggle="collapse"]::before {
-  content: '\f107';
+  content: '﹀';
   -webkit-transform: translateX(50%);
   transform: translateX(50%);
   position: absolute;
@@ -542,7 +542,7 @@ nav.side-navbar.shrinked ul li a[data-toggle="collapse"]::before {
 }
 
 nav.side-navbar.shrinked ul li a[data-toggle="collapse"][aria-expanded="true"]::before {
-  content: '\f106';
+  content: '﹀';
 }
 
 nav.side-navbar.shrinked ul li a:hover {
@@ -597,7 +597,7 @@ nav.side-navbar.shrinked .sidebar-header .title {
     transition: color 0.3s, background 0.3s;
   }
   nav.side-navbar ul li a[data-toggle="collapse"]::before {
-    content: '\f107';
+    content: '﹀';
     -webkit-transform: translateX(50%);
     transform: translateX(50%);
     position: absolute;
@@ -607,7 +607,7 @@ nav.side-navbar.shrinked .sidebar-header .title {
     left: auto;
   }
   nav.side-navbar ul li a[data-toggle="collapse"][aria-expanded="true"]::before {
-    content: '\f106';
+    content: '﹀';
   }
   nav.side-navbar ul li a:hover {
     color: #fff;

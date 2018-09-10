@@ -12,7 +12,7 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fontawesome/css/fontawesome.min.css">
   <!-- CSS Files -->
   <link href="css/material-kit.css?v=2.0.4" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -74,9 +74,7 @@
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="js/plugins/nouislider.min.js" type="text/javascript"></script>
   <!--	Plugin for Sharrre btn -->
-  <script src="js/plugins/jquery.sharrre.js" type="text/javascript"></script>
-  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-  <script src="js/material-kit.js?v=2.0.4" type="text/javascript"></script>
+  <script src="js/plugins/jquery.sharrre.js" type="text/javascript"></script> 
 </body>
 
 </html>
