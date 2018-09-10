@@ -16,10 +16,16 @@
 			        include_once("../view/Rubricas.php");			         
 		        break;
 		        case "5": 
-			        include_once("../view/jueces.php");			         
+			        include_once("../view/solicitudJueces.php");			         
 		        break;
 		        case "6": 
 			        include_once("../view/equipos.php");			         
+		        break;
+		        case "7": 
+			        include_once("../view/comunidad.php");			         
+		        break;
+		         case "8": 
+			        include_once("../view/Jueces.php");			         
 		        break;
 			    case "error":
 			    	include_once("../view/".$vista.".php");

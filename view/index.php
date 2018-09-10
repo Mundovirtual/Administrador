@@ -82,7 +82,8 @@
               <ul id="Monitoreo" class="collapse list-unstyled ">                
                   <li><a href="../view/index.php?cargar=6">Equipos</a></li>
                   <li><a href="">Proyectos</a></li>   
-                  <li><a href="../view/index.php?cargar=7">Tripulacion</a></li>
+                  <li><a href="../view/index.php?cargar=7">Hackers</a></li>
+                  <li><a href="../view/index.php?cargar=8">Jueces</a></li>
               </ul>
             </li>    
           <!-- Menu solicitudes -->        

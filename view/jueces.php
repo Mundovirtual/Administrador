@@ -1,5 +1,6 @@
 <div class="container">
-	<h1 align="center">Jueces</h1>     
+	<h1 align="center">Jueces
+	</h1>     
 </div>
  
  <header>
@@ -27,29 +28,28 @@
 				<tr>
 				  <th scope="col">#</th>
 				  <th scope="col">Nombre</th>
-				  <th scope="col">Celular</th>
+				  <th scope="col">Celular</th> 
 				  <th scope="col">E-mail</th> 
-				  <th scope="col">Detalles</th>
-				  <th scope="col">Acciones</th>
+				  <th scope="col">Detalles</th> 
+				  <th scope="col">Acciones</th> 
 				</tr>
 			  </thead>
 			  <tbody>
 				<tr>
 				  <th scope="row">1</th>
-				  <td>Isaac Santiago Coronel</td>
-				  <td>442 545 45 54 </td> 
-				  <td>Isaac@gmail.com</td> 	
+				  <td>Jovanny Leobardo Salas</td>
+				  <td>953 456 45 45</td>
+				  <td>HolaMundo@gmail.com</td> 	
 				  <td>
-					<a data-toggle="modal" data-target="#Detalles">
+					<a data-toggle="modal" data-target="#detallesJueces">
 						<i class="fa fa-eye fa-2x" align="center" aria-hidden="true">
 						</i>
 					</a>			      	
 				  </td> 
 				  <td>
-					<button type="button" class="btn btn-success fa fa-check" data-toggle="modal" data-target="#EditarJueces"> Aceptar	 
-					 </button>
-
-					<button type="button" class="btn btn-danger fa fa-trash" data-toggle="modal"  data-target="#EliminarJueces"> Rechazar</button>
+				 	 <button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarJueces">	 
+			      	 </button> 
+					<button type="button" class="btn btn-danger fa fa-trash" data-toggle="modal"  data-target="#EliminarJueces"> </button>
 				  </td>
 				  
 				</tr>			     
@@ -62,13 +62,14 @@
 	</div>
 
 </body>
- 
+
+
 <!-- Detalles -->
-<div class="modal fade" id="Detalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="detallesJueces" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
 	<div class="modal-content">
 	  <div class="modal-header">
-		<h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Datos Juez</h5>
+		<h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Datos Jueces</h5>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		  <span aria-hidden="true">&times;</span>
 		</button>
@@ -76,40 +77,47 @@
 	  <div class="modal-body">
 
 		<div class="form-row">
-			<div class="col-md-7">
-			  <label for="Nombre">Nombre</label>
-			  <input type="text" class="form-control" id="NombreJuez" placeholder="First name" value="Isaac Santiago Coronel" disabled="">
-			</div>
-			<div class="col-md-5">
-			  <label for="Telefono">Telefono</label>
-			  <input type="text" class="form-control" id="Telefono" value="953 455 54 45" disabled="">
-			</div>		     
+			<div class="col-md-12">
+			  <label for="password">password</label>
+			  <input type="text" class="form-control" id="paswHacker" value="#$@$@#$@isac" disabled="">
+			</div> 
 		</div>
-
 		<div class="form-row">
-			<div class="col-md-7">
-			  <label for="Correo">Correo</label>
-			  <input type="text" class="form-control" id="Correo" value="isaacasd32@gmail.com" disabled="">
+			<div class="col-md-12">
+			  <label for="Institucion">Institución</label>
+			  <input type="text" class="form-control" id="Institucion" value="Instituto Tecnológico de san Miguel El grande" disabled="">
 			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-12">
+			  <label for="Carrera">Carrera</label>
+			  <input type="text" class="form-control" id="Carrera" value="Ingeniería en Sistemas Computacionales " disabled="">
+			</div>
+		</div>
+		<div class="form-group">
+			    <label for="Habilidades">Habilidades</label>
+			    <textarea class="form-control" id="Habilidades" rows="2" disabled="" value=""></textarea>
+		</div>
+		<div class="form-group">
+			    <label for="Hobbies">Hobbies</label>
+			    <textarea class="form-control" id="Hobbies" rows="2" disabled="" value=""></textarea>
+		</div>
+		<div class="form-row">
 			<div class="col-md-5">
 			  <label for="FechaNacimiento">Fecha de nacimiento</label>
 			  <input type="text" class="form-control" id="FechaNacimiento" value="02/12/1995" disabled="">
-			</div>		     
+			</div>
+			<div class="col-md-3">
+			  <label for="Sexo">Sexo</label>
+			  <input type="text" class="form-control" id="sexo" value="Masculino" disabled="">
+			</div>
+			<div class="col-md-3">
+			  <label for="Playera">Playera</label>
+			  <input type="text" class="form-control" id="playera" value="Mediana" disabled="">
+			</div>					     
 		</div>
 
-		<div class="form-row">
-			<div class="col-md-10">
-			  <label for="Institucion">Institución</label>
-			  <input type="text" class="form-control" id="Institucion" value="Instituto Tecnológico de Tlaxiaco" disabled="">
-			</div>
-		</div>
-
-		<div class="form-row">
-			<div class="col-md-10">
-			  <label for="Carrera">Carrera</label>
-			  <input type="text" class="form-control" id="Carrera" value="Ingenieria en sistemas computacionales" disabled="">
-			</div>
-		</div> 
+		 
 		<span></span>
 		<div class="form-row">
 			<div class="col-md-4"> 					 
@@ -123,8 +131,7 @@
 				<a href="https://twitter.com/ereschiste?lang=es" target="_blank">
 					<button type="button" class="btn btn-info fab fa-twitter fa-1x" >
 					</button>
-				</a>	
-
+				</a>
 			</div>
 		</div>
    </div>
@@ -134,8 +141,78 @@
 	</div>
   </div>
 </div>
- 
-
-
 
  
+<!-- Editar -->
+<div class="modal fade" id="EditarJueces" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Editar Datos</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>
+	  <div class="modal-body"> 
+		<div class="form-row">
+			<div class="col-md-12">
+			  <label for="password">password</label>
+			  <input type="text" class="form-control" id="paswHackerEdit" value="#$@$@#$@isac" placeholder="Password">
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-12">
+			  <label for="Celular">Celular</label>
+			  <input type="tel" class="form-control" id="CelularEdit" value="953 145 54 54" placeholder="Celular">
+			</div>
+		</div>	
+		<div class="form-row">
+			<div class="col-md-12">
+			  <label for="password">Correo</label>
+			  <input type="email" class="form-control" id="paswHackerEdit" value="qIsaac@gmail.com" placeholder="Correo">
+			</div>
+		</div>		      
+	  </div>
+		 
+
+  
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
+		<button type="button" class="btn btn-success"  name="submit" id="submit">Registrar</button>
+	  </div>
+	</div>
+  </div>
+</div>
+ 
+
+<!-- Eliminar -->	
+
+<div class="modal fade" id="EliminarJueces" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Editar" align="center"><i class="fas fa-trash-alt"></i>Eliminar</h5>	      
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <div class="modal-body">	      		
+	<h1>Estás a punto de eliminar</h2>
+
+	Quiere proceder?
+      	
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+ <script type="text/javascript">
+ 	document.getElementById("Hobbies").value = "Billiards, billar.Bowling, juego de bolos, boliche.Brainteasers, acertijos.Camping, acampar.";
+ 	document.getElementById("Habilidades").value = "Flexibilidad/adaptabilidad. ...Habilidades comunicativas. ...Capacidad para resolver problemas. ...Creatividad. ...";
+ </script>
