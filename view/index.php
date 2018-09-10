@@ -52,8 +52,10 @@
             </div>
           </div>
         </nav>
-      </header>      
+      </header> 
+
       <div class="page-content d-flex align-items-stretch"> 
+        
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
@@ -80,7 +82,7 @@
               <ul id="Monitoreo" class="collapse list-unstyled ">                
                   <li><a href="../view/index.php?cargar=6">Equipos</a></li>
                   <li><a href="">Proyectos</a></li>   
-                  <li><a href="">Hackers</a></li>
+                  <li><a href="../view/index.php?cargar=7">Tripulacion</a></li>
               </ul>
             </li>    
           <!-- Menu solicitudes -->        
@@ -90,6 +92,7 @@
             </li>          
           </ul>         
         </nav>
+
         <div class="content-inner">
           <div class="container-fluid">
             <div class="row">
@@ -107,6 +110,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
      

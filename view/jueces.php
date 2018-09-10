@@ -27,6 +27,7 @@
 				<tr>
 				  <th scope="col">#</th>
 				  <th scope="col">Nombre</th>
+				  <th scope="col">Celular</th>
 				  <th scope="col">E-mail</th> 
 				  <th scope="col">Detalles</th>
 				  <th scope="col">Acciones</th>
@@ -36,6 +37,7 @@
 				<tr>
 				  <th scope="row">1</th>
 				  <td>Isaac Santiago Coronel</td>
+				  <td>442 545 45 54 </td> 
 				  <td>Isaac@gmail.com</td> 	
 				  <td>
 					<a data-toggle="modal" data-target="#Detalles">
