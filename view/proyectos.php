@@ -1,5 +1,5 @@
  <div class="container">
-	<h1 align="center">Equipos</h1></br>  
+	<h1 align="center">Proyectos</h1></br>  
 </div>
  
  <header>

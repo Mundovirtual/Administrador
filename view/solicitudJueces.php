@@ -1,5 +1,5 @@
 <div class="container">
-	<h1 align="center">Jueces</h1>     
+	<h1 align="center">Solicitudes de Jueces</h1>     
 </div>
  
  <header>

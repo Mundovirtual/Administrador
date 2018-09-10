@@ -19,7 +19,7 @@
 			        include_once("../view/solicitudJueces.php");			         
 		        break;
 		        case "6": 
-			        include_once("../view/equipos.php");			         
+			        include_once("../view/proyectos.php");			         
 		        break;
 		        case "7": 
 			        include_once("../view/comunidad.php");			         
