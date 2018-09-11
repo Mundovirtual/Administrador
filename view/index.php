@@ -6,6 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="icon" type="png" href="../img/favicon.png">
     <title>Admin</title>    
     <!-- Bootstrap CSS--> 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -67,16 +68,12 @@
           </div>
           <!-- Sidebar Navidation Menus-->
           <span class="heading">Main</span>
-          <ul class="list-unstyled">     
-          <!-- Menu Registros -->        
-            <li><a href="#Registros" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-plus"></i>Registro </a>
-              <ul id="Registros" class="collapse list-unstyled ">
-                <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
-                <li><a href="../view/index.php?cargar=2">Vertical</a></li>
-                <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
-                <li><a href="../view/index.php?cargar=4">Rubricas</a></li> 
-              </ul>
-            </li>
+          <ul class="list-unstyled"> 
+          <!--Panel de control-->
+            <li>
+              <a href="../view/index.php?cargar=10" aria-expanded="false"> 
+                <i class="fas fa-tachometer-alt"></i>Panel de control </a>
+            </li>         
           <!-- Menu Monitoreo --> 
              <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
               <ul id="Monitoreo" class="collapse list-unstyled ">                
@@ -85,15 +82,20 @@
                   <li><a href="../view/index.php?cargar=8">Jueces</a></li>
                   <li><a href="../view/index.php?cargar=9">Calificaciones</a></li>
               </ul>
-            </li>    
+            </li>
+            <!-- Menu Registros -->        
+            <li><a href="#Registros" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-plus"></i>Registros </a>
+              <ul id="Registros" class="collapse list-unstyled ">
+                <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
+                <li><a href="../view/index.php?cargar=2">Vertical</a></li>
+                <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
+                <li><a href="../view/index.php?cargar=4">Rubricas</a></li> 
+              </ul>
+            </li>
+               
           <!-- Menu solicitudes -->        
             <li>
               <a href="../view/index.php?cargar=5" aria-expanded="false"> 
-                <i class="fa fa-bell"></i>Solicitudes 5 </a>
-            </li> 
-          <!--Panel de control-->
-            <li>
-              <a href="../view/index.php?cargar=10" aria-expanded="false"> 
                 <i class="fa fa-bell"></i>Solicitudes 5 </a>
             </li> 
 
