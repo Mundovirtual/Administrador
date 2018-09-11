@@ -30,6 +30,9 @@
 		        case "9": 
 			        include_once("../view/calificaciones.php");			         
 		        	break;
+		        case "10": 
+			        include_once("../view/PanelDeControl.php");			         
+		        	break;	
 			    case "error":
 			    	include_once("../view/".$vista.".php");
 			    	break;	

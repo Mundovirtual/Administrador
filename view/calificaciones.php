@@ -141,7 +141,7 @@
 				    <tr>
 				      <th scope="col">#</th>
 				      <th scope="col">Juez</th>
-				      <th scope="col">Calificacion</th>
+				      <th scope="col">calificación</th>
 				      <th scope="col">Detalles</th> 
 				    </tr>
 				  </thead>
@@ -179,7 +179,7 @@
 				    
 				  </tbody>
 				  <tr>
-				      <th scope="row">Promedio</th>
+				      <th scope="row">calificación</th>
 				      <td></td>
 				      <td>8.5</td> 
 				    </tr>
@@ -195,14 +195,12 @@
   </div>
 </div>
 
-
-
 <!-- Rubricas por proyecto calificaciones -->
 <div class="modal fade" id="DetCalifPorRubrica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Criterio de evaluacion</h5>
+        <h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Criterios de evaluacion</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -239,7 +237,7 @@
 				    
 				  </tbody>
 				  <tr>
-				      <th scope="row">Promedio</th>
+				      <th scope="row">calificación</th>
 				      <td></td>
 				      <td>8.5</td> 
 				    </tr>

@@ -38,10 +38,10 @@
 			  <tbody>
 			    <tr>
 			      <th scope="row">1</th>
-			      <td>Mark</td>
-			      <td>Otto</td>
-			      <td>@mdo</td>
-			      <td>@mdo</td> 
+			      <td>Vertical 1</td>
+			      <td>Herramienta de análisis y monitoreo....</td>
+			      <td>Subsecretaria de ....</td>
+			      <td>Primera Edición</td> 
 			      <td>
 			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical">	 
 			      	 </button>

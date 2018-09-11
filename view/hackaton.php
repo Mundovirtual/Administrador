@@ -32,15 +32,17 @@
 			      <th scope="col">Edicion</th>
 			      <th scope="col">Inicio</th>
 			      <th scope="col">Limite de registro</th>
+			      <th scope="col">Fin</th>
 			      <th scope="col">Acciones</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">1</th>
-			      <td>Mark</td>
-			      <td>Otto</td>
-			      <td>@mdo</td> 
+			      <td>Primera Edicion</td>
+			      <td>22/09/2018</td>
+			      <td>30/09/2018</td>
+			      <td>05/10/2018</td> 
 			      <td>
 			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarHackaton">	 
 			      	 </button>

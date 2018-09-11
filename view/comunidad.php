@@ -1,8 +1,7 @@
 <div class="container">
 	<h1 align="center">Tripulación
 	</h1>     
-</div>
- 
+</div> 
  <header>
 	<div class="d-flex"> 
 		<div class="col-md-1"></div>
@@ -60,9 +59,7 @@
 		<div class="col-md-1">
 		</div>
 	</div>
-
 </body>
-
 
 <!-- Detalles -->
 <div class="modal fade" id="DetallesHacker" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -172,13 +169,10 @@
 			  <input type="email" class="form-control" id="paswHackerEdit" value="qIsaac@gmail.com" placeholder="Correo">
 			</div>
 		</div>		      
-	  </div>
-		 
-
-  
+	  </div>  
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
-		<button type="button" class="btn btn-success"  name="submit" id="submit">Registrar</button>
+		<button type="button" class="btn btn-success"  name="submit" id="submit">Actualizar</button>
 	  </div>
 	</div>
   </div>

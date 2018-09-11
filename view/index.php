@@ -78,7 +78,7 @@
               </ul>
             </li>
           <!-- Menu Monitoreo --> 
-             <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Monitoreo </a>
+             <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
               <ul id="Monitoreo" class="collapse list-unstyled ">                
                   <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
                   <li><a href="../view/index.php?cargar=7">Hackers</a></li>
@@ -90,7 +90,13 @@
             <li>
               <a href="../view/index.php?cargar=5" aria-expanded="false"> 
                 <i class="fa fa-bell"></i>Solicitudes 5 </a>
-            </li>          
+            </li> 
+          <!--Panel de control-->
+            <li>
+              <a href="../view/index.php?cargar=10" aria-expanded="false"> 
+                <i class="fa fa-bell"></i>Solicitudes 5 </a>
+            </li> 
+
           </ul>         
         </nav>
 
