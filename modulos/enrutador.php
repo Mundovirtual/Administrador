@@ -31,7 +31,7 @@
 			        include_once("../view/calificaciones.php");			         
 		        	break;
 		        case "10": 
-			        include_once("../view/PanelDeControl.php");			         
+			        include_once("../view/proceso.php");			         
 		        	break;	
 			    case "error":
 			    	include_once("../view/".$vista.".php");

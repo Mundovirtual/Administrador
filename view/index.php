@@ -67,11 +67,15 @@
           <!-- Sidebar Navidation Menus-->
           <span class="heading">Main</span>
           <ul class="list-unstyled"> 
-          <!--Panel de control-->
+         
+          <!--Estado del Concurso-->
             <li>
               <a href="../view/index.php?cargar=10" aria-expanded="false"> 
-                <i class="fas fa-tachometer-alt"></i>Panel de control </a>
-            </li>         
+                <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
+            </li>
+
+
+
           <!-- Menu Monitoreo --> 
              <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
               <ul id="Monitoreo" class="collapse list-unstyled ">                
