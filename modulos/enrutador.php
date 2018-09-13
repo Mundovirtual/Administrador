@@ -41,7 +41,7 @@
 			}
 
 		}
-
+		
 		public function validarGET($variable){ 
 			if (empty($variable)) {
 				 include_once("../view/index.php");

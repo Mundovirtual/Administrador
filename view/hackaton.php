@@ -53,13 +53,26 @@
 			    </tr>			     
 			  </tbody>
 			</table>
-			
+			<div class="info">
+				
+			</div>
 		</div>
 		<div class="col-md-1">
 		</div>
 	</div>
 
 </body>
+<script type="text/javascript">
+	$.ajax({
+		 url: 'Hackaton/visualizar.php',
+		 beforeSend:function(){
+		 	alert("Procesando....");
+		 },
+		 success:function(respuesta){
+		 	alert(respuesta);
+		 }
+	})
+</script>
 
 	<!-- REGISTRO -->
 	<div class="modal fade" id="ModalHackaton" tabindex="-1" role="dialog" aria-labelledby="Editar" aria-hidden="true">
