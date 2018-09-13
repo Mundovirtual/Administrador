@@ -74,7 +74,7 @@
 	      <div class="modal-body">
 	       	<form>
 			  <div class="form-group">
-			    <label for="inputNombre">Nombre</label>
+			    <label for="inputNombre">yo</label>
 			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
