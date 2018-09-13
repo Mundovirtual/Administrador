@@ -1,9 +1,8 @@
 <?php
   include_once("../modulos/enrutador.php");   
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE html> 
+ <html> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <link rel="icon" type="png" href="../img/favicon.png">
@@ -41,8 +40,7 @@
               <div class="navbar-header">
                 <!-- Navbar Brand -->
                 <a href="../view/index.php" class="navbar-brand d-none d-sm-inline-block">
-                  <div class="brand-text d-none d-lg-inline-block"><span>HACKATON </span><strong>Admin</strong></div>
-                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
+                   <img src="../img/inovahackNavbar.png" height="20" width="130">
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -108,7 +106,7 @@
               <div class="col-md-12">
                  <section class="dashboard-counts no-padding-bottom">
                   <?php  
-                    $enrutador =new enrutador();                    
+                    $enrutador = new enrutador();                    
                         
                     if ($enrutador->validarGET($_GET['cargar'])) { 
                           $enrutador->cargarVista($_GET['cargar']);
