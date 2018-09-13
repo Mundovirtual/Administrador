@@ -73,6 +73,11 @@
               <a href="../view/index.php?cargar=10" aria-expanded="false"> 
                 <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
             </li>
+          
+          <li>
+              <a href="../view/index.php?cargar=11" aria-expanded="false"> 
+                <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
+          </li>
 
 
 

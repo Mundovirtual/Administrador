@@ -1,5 +1,5 @@
 <div class="container">
-	<h1 align="center">Panel de control</h1></br>  
+	<h1 align="center">Tabla de proyectos</h1></br>  
 </div>
  
  <header>
