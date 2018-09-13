@@ -74,7 +74,7 @@
 	      <div class="modal-body">
 	       	<form>
 			  <div class="form-group">
-			    <label for="inputNombre">yo</label>
+			    <label for="inputNombre">Nombre</label>
 			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
@@ -90,11 +90,18 @@
 				  </div>
 			    
 			  </div>			 
-			  <div class="form-group" align="center">
-			    <label class="label-control">Fin de Hackaton</label>
-			    	<div class="col-md-6">
-			    		<input type="date" id="FinHack" class="form-control" value=""/>
-			    	</div>
+			  <div class="form-group">
+			   	<div class="form-row">
+				     <div class="col">
+						 <label class = "label-control">Fin de Hackaton</label>
+						 <input type="text" id = "FinHack" class = "form-control">
+				     </div>
+						 <div class="col">
+						 <label class = "label-control">Imagen Principal</label>
+						 <input type="text" id = "imagen" class = "form-control">
+						 </div>
+				  </div>
+			     
 			  </div>			  
 			</form>
 	      </div>
@@ -174,7 +181,7 @@
 	        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
 	      </div>
 	    </div>
-	  </div>
+	  </div>	
 	</div>
 	
 

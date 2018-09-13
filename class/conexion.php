@@ -5,7 +5,7 @@
 		private $dbhost="localhost";
 		private $dbuser="root";
 		private $dbpass="";
-		private $dbname="inovahack";
+		private $dbname="innovahack";
 
 		
 		public function __construct(){
@@ -43,4 +43,5 @@
 			 return $res;
 		}
 	}
+
 ?>
