@@ -25,6 +25,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
+			  <!--
 			<table class="table table-hover">
 			  <thead>
 			    <tr>
@@ -37,7 +38,9 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
+			  	
+			
+			  <tr>
 			      <th scope="row">1</th>
 			      <td>Primera Edicion</td>
 			      <td>22/09/2018</td>
@@ -50,7 +53,11 @@
 			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarHackaton"></button>
 			      </td>
 			      
-			    </tr>			     
+			   </tr>-->
+			   <div class="visualizar">
+			  		
+			  	</div>
+
 			  </tbody>
 			</table>
 			<div class="info">
@@ -64,12 +71,12 @@
 </body>
 <script type="text/javascript">
 	$.ajax({
-		 url: 'Hackaton/visualizar.php',
+		 url: '../modulos/Hackaton/visualizar.php',
 		 beforeSend:function(){
-		 	alert("Procesando....");
+		 
 		 },
 		 success:function(respuesta){
-		 	alert(respuesta);
+		 	$(".visualizar").html(respuesta);
 		 }
 	})
 </script>
