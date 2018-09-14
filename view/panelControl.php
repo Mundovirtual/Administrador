@@ -10,7 +10,7 @@
 		  <div class="card-header bg-success" align="center">Primera Fase</div>
 		  <div class="card-body"  align="center">
 		     
-		     <button type="button" class="btn btn-primary">Small button</button>
+		     <button id="faseUno" type="button" class="btn btn-primary" >Empezar</button>
 
 		  </div>
 		</div>
@@ -22,7 +22,7 @@
 		  <div class="card-header bg-info" align="center">Segunda Fase</div>
 		  <div class="card-body"  align="center">
 		   
-		   <button type="button" class="btn btn-success">Small button</button>
+		   <button id="faseDos" type="button" class="btn btn-success">Empezar</button>
 
 		  </div>
 		</div>
@@ -34,11 +34,12 @@
 		<div  class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 		  <div class="card-header bg-primary" align="center">Tercera Fase</div>
 		  <div class="card-body" align="center">
-		      <button type="button" class="btn  btn-danger">Small button</button>	   
+		      <button id="faseTres" type="button" class="btn  btn-danger">Empezar</button>	   
 			</div>
 		</div>
 		 
 
 	</div>
 </div>
-	 
+
+ 
