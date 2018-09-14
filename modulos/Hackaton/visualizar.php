@@ -5,7 +5,7 @@
     		$esqueleto = new esqueleto();
     		$resultado = $esqueleto->setVisualizar("SELECT `id`, `Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion`");
     		?>
-    		<table class="table table-hover">
+    		<table class="table table-hover text-center">
     			<thead>
     				 <tr>
 			           <th scope="col">#</th>
@@ -26,14 +26,13 @@
     		     echo "<td>".$row['InicioHackaton']."</td>";
     		     echo "<td>".$row['FechLimiteRegProy']."</td>";
     		     echo "<td>".$row['TerminoHack']."<td>";
-    		     echo "<td>";
     		     ?>
     		     <button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarHackaton">	 
-			     </button>
+			     </button>	
 
 			     <button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarHackaton"></button>  
     		     <?php
-    		     echo "</td>";
+    		     echo "</tr>";
     			}
     		     
     		}else{
