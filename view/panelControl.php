@@ -42,4 +42,79 @@
 	</div>
 </div>
 
+ <script type="text/javascript">
+
+ 	var EstadoBotfaseUno ="Empezar";
+ 	var EstadoBotfaseUno ="Finalizar";
+ 	var EstadoBotfaseUno ="Finalizado";
+
+ 	alert(EstadoBotfaseUno);
+ 	alert(EstadoBotfaseUno=="Empezar");
+
+ 	
+ 	if (EstadoBotfaseUno=="Empezar") {
+    	$('#faseUno').text("Finalizar");
+    	//Boton fase dos
+    	$('#faseDos').attr('disabled', false);
+    	//Boton fase tres
+    	$('#faseTres').attr('disabled', false);
+
+ 	}else if(EstadoBotfaseUno="Finalizar"){
+
+ 	}else{
+
+ 	}
+
+
+
+
+
+
+
+
+
+
+
+ 	/*Botones*/
+ 	/*
+
+ 	$("#faseUno").click(function(){
+    	$('#faseUno').attr('disabled', true);
+    	$('#faseUno').text("Finalizado");
+    	fu=1;
+
+    	//Boton fase dos
+    	$('#faseDos').attr('disabled', false);
+    	//Boton fase tres
+    	$('#faseTres').attr('disabled', true);
+
+    });
+
+    $("#faseDos").click(function(){
+    	$('#faseDos').attr('disabled', true);
+    	$('#faseDos').text("Finalizado");
+    	fd=1;
+
+    	//Boton fase dos
+    	$('#faseDos').attr('disabled', true);
+    	//Boton fase tres
+    	$('#faseTres').attr('disabled', false);
+
+    });
+
+    $("#faseTres").click(function(){
+    	$('#faseTres').attr('disabled', true);
+    	$('#faseTres').text("Finalizado");
+    	ft=1;
+
+    	//Boton fase dos
+    	$('#faseUno').attr('disabled', true);
+    	//Boton fase tres
+    	$('#faseDos').attr('disabled', true);
+    });
  
+ 	
+
+ 	 
+	
+ </script> 	 
