@@ -1,4 +1,35 @@
- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="icon" type="png" href="../img/favicon.png">
+    <title>Admin</title>    
+    <!-- Bootstrap CSS--> 
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/solid.css" rel="stylesheet"> 
+    <!-- Popper js--> 
+    <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>
+    <!-- Jquery js--> 
+    <script src="../js/jquery/jquery.min.js"></script>
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="../css/fontastic.css">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="../css/poppins.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
+  </head>
+  <body>
+
+  	<?php require_once 'ingresarHackaton.php'; ?>
 <div class="container">
 	<h1 align="center">Hackaton</h1>     
 </div>
@@ -14,7 +45,7 @@
 		</div>
 		<div class="col-md-6">
 			<div align="right">
-				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalHackaton">Nuevo
+				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalHackaton1"> Nuevo
 				</button>
 			</div>			 
 		</div>
@@ -25,55 +56,20 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			  <!--
-			<table class="table table-hover">
-			  <thead>
-			    <tr>
-			      <th scope="col">#</th>
-			      <th scope="col">Edicion</th>
-			      <th scope="col">Inicio</th>
-			      <th scope="col">Limite de registro</th>
-			      <th scope="col">Fin</th>
-			      <th scope="col">Acciones</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			  	
-			
-			  <tr>
-			      <th scope="row">1</th>
-			      <td>Primera Edicion</td>
-			      <td>22/09/2018</td>
-			      <td>30/09/2018</td>
-			      <td>05/10/2018</td> 
-			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarHackaton">	 
-			      	 </button>
-
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarHackaton"></button>
-			      </td>
-			      
-			   </tr>-->
-			   <div class="visualizar">
-			  		
-			  	</div>
-
-			  </tbody>
-			</table>
-			<div class="info">
-				
-			</div>
+			 <div class="visualizar">	
+			 </div>
+			 <div class="info">	
+			 </div>
 		</div>
 		<div class="col-md-1">
 		</div>
 	</div>
-
 </body>
 <script type="text/javascript">
 	$.ajax({
 		 url: '../modulos/Hackaton/visualizar.php',
 		 beforeSend:function(){
-		 
+		 	$(".visualizar").html("<div class='alert alert-danger alert-dismissible fade show text-center' role='alert'><i class='fas fa-times'></i><strong> Cargando datos !</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
 		 },
 		 success:function(respuesta){
 		 	$(".visualizar").html(respuesta);
@@ -81,59 +77,7 @@
 	})
 </script>
 
-	<!-- REGISTRO -->
-	<div class="modal fade" id="ModalHackaton" tabindex="-1" role="dialog" aria-labelledby="Editar" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="Editar"><i class="fas fa-plus-circle"></i>Registro Hackaton</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-	       	<form>
-			  <div class="form-group">
-			    <label for="inputNombre">Nombre</label>
-			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
-			  </div>
-			  <div class="form-group">
-			  	 <div class="form-row">
-				    <div class="col">
-				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="InicioHack" class="form-control " value=""/>
-				    </div>
-				    <div class="col">
-				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EntregaProyectos" class="form-control " value=""/>
-				    </div>
-				  </div>
-			    
-			  </div>			 
-			  <div class="form-group">
-			   	<div class="form-row">
-				     <div class="col">
-						 <label class = "label-control">Fin de Hackaton</label>
-						 <input type="text" id = "FinHack" class = "form-control">
-				     </div>
-						 <div class="col">
-						 <label class = "label-control">Imagen Principal</label>
-						 <input type="text" id = "imagen" class = "form-control">
-						 </div>
-				  </div>
-			     
-			  </div>			  
-			</form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="GuardarHack">Registrar</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-	 
+	
 	<!-- Editar -->
 	<div class="modal fade" id="EditarHackaton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
@@ -144,6 +88,7 @@
 	          <span aria-hidden="true">&times;</span>
 	        </button>
 	      </div>
+	      <!--EDITAR INFORMACION-->
 	      <div class="modal-body">
 	       	<form>
 			  <div class="form-group">
@@ -203,9 +148,27 @@
 	    </div>
 	  </div>	
 	</div>
+   
+     
+    <script src="../js/Bootstrap/bootstrap.min.js"></script> 
+  </body>    
+</html> 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
-
-
-
 
  

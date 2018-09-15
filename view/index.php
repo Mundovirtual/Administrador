@@ -60,19 +60,19 @@
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
+           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><i class="fas fa-user-astronaut fa-4x"></i></div>
             <div class="title">
               <h1 class="h4">Isaac Santiago Coronel</h1>
             </div>
-          </div>
+           </div>
           <!-- Sidebar Navidation Menus-->
           <span class="heading">Main</span>
           <ul class="list-unstyled"> 
           <!--Panel de control-->
             <li>
-              <a href="../view/index.php?cargar=10" aria-expanded="false"> 
-                <i class="fas fa-tachometer-alt"></i>Panel de control </a>
+               <a href="../view/index.php?cargar=10" aria-expanded="false"> 
+               <i class="fas fa-tachometer-alt"></i>Panel de control </a>
             </li>         
           <!-- Menu Monitoreo --> 
              <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
