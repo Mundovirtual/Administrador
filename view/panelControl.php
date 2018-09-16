@@ -46,74 +46,94 @@
  	
 	var botonUno="Finalizado";
 	var botonDos="Finalizado";
-	var botonTres="Finalizado";
+	var botonTres="Empezar";
 
-
-	$('#faseUno').attr('disabled', true);
-	$('#faseDos').attr('disabled', true);		
-	$('#faseTres').attr('disabled', true);
+ 
  	
 	$('#faseUno').text(botonUno);
 	$('#faseDos').text(botonDos);
 	$('#faseTres').text(botonTres);
 
  	
-	if ($("#faseUno").text()=="Empezar") {
-		$('#faseUno').attr('disabled', false); 
-		
+	if ($("#faseUno").text()=="Empezar") {		 
+		$('#faseUno').attr('disabled', false); 		
+		$('#faseDos').attr('disabled', true);		
+		$('#faseTres').attr('disabled', true);
+
 		$("#faseUno").click(function(){ 
 	    		$('#faseUno').text("Finalizar");
 	    		//Update base de datos tabla: InfConfiguracion-> Status::: Estado Finalizar
 	     });
 
-	} else if($("#faseUno").text()=="Finalizar") {
-		$('#faseUno').attr('disabled', false); 
+	} 
+	if($("#faseUno").text()=="Finalizar") {
+		$('#faseUno').attr('disabled', false);		 
+		$('#faseDos').attr('disabled', true);		
+		$('#faseTres').attr('disabled', true); 
 		
 		$("#faseUno").click(function(){ 
 	    		$('#faseUno').text("Finalizado");
 	    		//Update base de datos tabla: InfConfiguracion-> Status::: Estado Finalizado
 	     });
-	}else if ($("#faseUno").text()=="Finalizado") {
+	}
+	if ($("#faseUno").text()=="Finalizado") {
 		$('#faseDos').attr('disabled', true);  
+		 
 	}
 
 	//Fase dos
 	if ($("#faseDos").text()=="Empezar") {
-		$('#faseDos').attr('disabled', false); 
-		
+		$('#faseDos').attr('disabled', false);		 
+		$('#faseUno').attr('disabled', true);		
+		$('#faseTres').attr('disabled', true);		
+
 		$("#faseDos").click(function(){ 
 	    		$('#faseDos').text("Finalizar");
+	    		$('#FaseDos').attr('disabled', true);
 	    		//Update base de datos tabla: InfConfiguracion-> Status::: Estado Finalizar
 	     });
 
-	} else if($("#faseDos").text()=="Finalizar") {
-		$('#faseDos').attr('disabled', false); 
+	}
+	if ($("#faseDos").text()=="Finalizar") {
+		$('#faseDos').attr('disabled', false);  
+		$('#faseUno').attr('disabled', true);		
+		$('#faseTres').attr('disabled', true);
 		
 		$("#faseDos").click(function(){ 
 	    		$('#faseDos').text("Finalizado");
 	    		//Update base de datos tabla: InfConfiguracion-> Status::: Estado Finalizado
+	    		$('#faseDos').attr('disabled', true);
 	     });
-	}else if ( $("#faseDos").text()=="Finalizado") {
+	}
+	if ( $("#faseDos").text()=="Finalizado") {
 		$('#faseTres').attr('disabled', false);
 	}
 
 	//Fase Tres
 	if ($("#faseTres").text()=="Empezar") {
 		$('#faseTres').attr('disabled', false); 
+
+		$('#faseDos').attr('disabled', true);		
+		$('#faseTres').attr('disabled', true);
 		
 		$("#faseTres").click(function(){ 
 	    		$('#faseTres').text("Finalizar");
 	    		//Update base de datos tabla: InfConfiguracion-> Status::: Estado Finalizar
 	     });
 
-	} else if($("#faseTres").text()=="Finalizar") {
+	}
+	if($("#faseTres").text()=="Finalizar") {
 		$('#faseTres').attr('disabled', false); 
+
+		$('#faseDos').attr('disabled', true);		
+		$('#faseTres').attr('disabled', true);
 		
 		$("#faseTres").click(function(){ 
 	    		$('#faseTres').text("Finalizado");
 	    		//Update base de datos tabla: InfConfiguracion-> Status::: Estado Finalizado
 	     });
-	}else if ( $("#faseTres").text()=="Finalizado") {
+	}
+	if ( $("#faseTres").text()=="Finalizado") {
 		$('#faseTres').attr('disabled', true); 
 	}
  
