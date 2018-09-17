@@ -31,15 +31,16 @@
 			         </div>			 
 			         <div class="form-group">
 			   	         <div class="form-row">
-				             <div class="col">
+				             <div class="col-md-6">
 						         <label class = "label-control">Fin Hackaton <span class="text-danger">Required</span></label>
 						         <input type="date" id = "fin" name="fin" class = "form-control">
 				             </div>
-						     <div class="col">
-						         <label class = "label-control">Imagen Principal2</label>
-						         <input type="text" id = "imagen" name="imagen" class = "form-control">
-						     </div>
+						      
 				         </div>
+			         </div>
+			         <div class="form-group">
+			         	<label class="label-control">Imagen Principal</label>
+			         	<input type = "file" id="imagen" name = "imagen">
 			         </div>	
 			         <div class="form-group">
 			             <div class="mensaje">
@@ -62,20 +63,21 @@
     	$(document).ready(function(){
     		$('#guardarDatosHackaton').submit(function(event){
     			var valor = $(this).serialize();
-    			$.ajax({
-		 url: 'registrohackaton.php',
-		 type:'post',
-		 data:valor,
-		 beforeSend:function(){
-		 	$(".mensaje").html("<div class='alert alert-danger alert-dismissible fade show text-center' role='alert'><i class='fas fa-times'></i><strong> Cargando datos !</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-		 },
-		 success:function(respuesta){
-		 	$(".mensaje").html(respuesta);
-		 }
-	        })
+    			 $.ajax({
+		             url: '../modulos/Hackaton/registro_hackaton.php',
+		             type:'post',
+		             data:valor,
+		             beforeSend:function(){
+		 	         $(".mensaje").html("<div class='alert alert-danger alert-dismissible fade show text-center' role='alert'><i class='fas fa-times'></i><strong> Cargando datos !</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+		         },
+		         success:function(respuesta){
+		 	         $(".mensaje").html(respuesta);
+		 	         visualizarHackaton();
+		         }
+	             })
     			event.preventDefault();
 
-    		})
+    		 })
     	})
     	 
     	
