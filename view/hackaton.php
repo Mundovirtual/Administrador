@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
+    <script type="text/javascript" src="../modulos/Hackaton/buscar.js"></script>
     <script type="text/javascript" src="../modulos/Hackaton/funciones.js"></script>
   </head>
   <body>
@@ -40,11 +41,18 @@
  <header>
  	<div class="d-flex"> 
  		<div class="col-md-1"></div>
-	 	<div class="col-md-5">
-			<form class="form-inline">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-			    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
+	 	<div class="col-md-4">
+			<form>
+        <div class="input-group formulario">
+
+          <input type="text" class="form-control" id="caja_busqueda" name="caja_busqueda" aria-describedby="emailHelp" placeholder="Buscar Registro">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-white bg-blue"><i class="fas fa-search"></i></span>
+            </div>
+            
+        </div>
+       </form>
+			
 		</div>
 		<div class="col-md-6">
 			<div align="right">
@@ -59,9 +67,11 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
+           
 				   <div class="visualizar">
 
-			     </div> 
+			     </div>
+        </tbody> 
 		</div>
 		<div class="col-md-1">
 		</div>

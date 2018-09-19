@@ -1,7 +1,6 @@
 $(document).ready(function(){
    visualizarHackaton();
 })
-
 function visualizarHackaton(){
     $(document).ready(function(){
     	$.ajax({
