@@ -1,9 +1,8 @@
 <?php
   include_once("../modulos/enrutador.php");   
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE html> 
+ <html> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <link rel="icon" type="png" href="../img/favicon.png">
@@ -19,6 +18,9 @@
     <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>
     <!-- Jquery js--> 
     <script src="../js/jquery/jquery.min.js"></script>
+    <!-- Alertyfy js-->
+    <script src="../js/alertifyjs/alertify.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../js/alertifyjs/css/alertify.css">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     <!-- Google fonts - Poppins -->
@@ -41,8 +43,7 @@
               <div class="navbar-header">
                 <!-- Navbar Brand -->
                 <a href="../view/index.php" class="navbar-brand d-none d-sm-inline-block">
-                  <div class="brand-text d-none d-lg-inline-block"><span>HACKATON </span><strong>Admin</strong></div>
-                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
+                   <img src="../img/inovahackNavbar.png" height="20" width="130">
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -69,11 +70,26 @@
           <!-- Sidebar Navidation Menus-->
           <span class="heading">Main</span>
           <ul class="list-unstyled"> 
-          <!--Panel de control-->
+         
+          <!--Estado del Concurso-->
             <li>
+<<<<<<< HEAD
                <a href="../view/index.php?cargar=10" aria-expanded="false"> 
                <i class="fas fa-tachometer-alt"></i>Panel de control </a>
             </li>         
+=======
+              <a href="../view/index.php?cargar=10" aria-expanded="false"> 
+                <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
+            </li>
+          
+          <li>
+              <a href="../view/index.php?cargar=11" aria-expanded="false"> 
+                <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
+          </li>
+
+
+
+>>>>>>> master
           <!-- Menu Monitoreo --> 
              <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
               <ul id="Monitoreo" class="collapse list-unstyled ">                
@@ -108,7 +124,7 @@
               <div class="col-md-12">
                  <section class="dashboard-counts no-padding-bottom">
                   <?php  
-                    $enrutador =new enrutador();                    
+                    $enrutador = new enrutador();                    
                         
                     if ($enrutador->validarGET($_GET['cargar'])) { 
                           $enrutador->cargarVista($_GET['cargar']);
