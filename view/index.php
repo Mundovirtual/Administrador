@@ -73,12 +73,7 @@
          
           <!--Estado del Concurso-->
             <li>
-<<<<<<< HEAD
-               <a href="../view/index.php?cargar=10" aria-expanded="false"> 
-               <i class="fas fa-tachometer-alt"></i>Panel de control </a>
-            </li>         
-=======
-              <a href="../view/index.php?cargar=10" aria-expanded="false"> 
+                <a href="../view/index.php?cargar=10" aria-expanded="false"> 
                 <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
             </li>
           
@@ -87,9 +82,6 @@
                 <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
           </li>
 
-
-
->>>>>>> master
           <!-- Menu Monitoreo --> 
              <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
               <ul id="Monitoreo" class="collapse list-unstyled ">                
