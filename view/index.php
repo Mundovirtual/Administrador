@@ -18,6 +18,9 @@
     <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>
     <!-- Jquery js--> 
     <script src="../js/jquery/jquery.min.js"></script>
+    <!-- Alertyfy js-->
+    <script src="../js/alertifyjs/alertify.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../js/alertifyjs/css/alertify.css">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     <!-- Google fonts - Poppins -->
