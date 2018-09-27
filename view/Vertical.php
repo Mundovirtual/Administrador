@@ -1,31 +1,78 @@
- 
+<script type="text/javascript">
+ 	$(document).ready(function() {
+	    $('#TablaVertical').DataTable();
+	    $('.displayVertical').dataTable();
+	} );
+ </script>
 <div class="container">
-	<h1 align="center">Verticales</h1>     
-</div>
- 
- <header>
- 	<div class="d-flex"> 
- 		<div class="col-md-1"></div>
-	 	<div class="col-md-5">
-			<form class="form-inline">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-			    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
-		</div>
-		<div class="col-md-6">
-			<div align="right">
+	<h1 align="center">Verticales</h1>  
+	<div align="right">
 				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalVertical">Nuevo
 				</button>
-			</div>			 
-		</div>
-	</div>
- </header>
+			</div>	   
+</div>
+ 
+ 
 <body>
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
-		<div class="col-md-10">
-			<table class="table table-hover">
+		<div class="col-md-10" id="TablaVertical" class="displayVertical">
+			<table class="displayVertical table table-striped">
+			    <thead>
+			        <tr>
+			            <th>Nombre</th>
+			            <th>Pellido</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Santiago</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			        <tr>
+			            <td>Isaac </td>
+			            <td>Coronel</td>
+			        </tr>
+			    </tbody>
+			</table>
+			<!--<table class="table table-hover">
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
@@ -51,7 +98,7 @@
 			      
 			    </tr>			     
 			  </tbody>
-			</table>
+			</table>-->	
 			
 		</div>
 		<div class="col-md-1">
@@ -73,22 +120,22 @@
 	      <div class="modal-body">
 	       	<form>
 			  <div class="form-group">
-			    <label for="inputNombre">Nombre</label>
-			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
+			    <label>Nombre</label>
+			    <input type="text" class="form-control" id="NombreVertical" placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
-			    <label for="exampleFormControlTextarea1">Descripcion</label>
-			    <textarea class="form-control" id="Descripcion" rows="2" placeholder="Descripcion"></textarea>
+			    <label >Descripcion</label>
+			    <textarea class="form-control" id="DescripcionVertical" rows="2" placeholder="Descripcion"></textarea>
 			  </div>
 			  <div class="form-group">
-			    <label for="exampleFormControlTextarea1">Asesoria</label>
-			    <textarea class="form-control" id="Asesoria" rows="2" placeholder="Asesoria"></textarea>
+			    <label>Asesoria</label>
+			    <textarea class="form-control" id="AsesoriaVertical" rows="2" placeholder="Asesoria" ></textarea>
 			  </div>
 		    <div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Edición</label>
+			    <label class="input-group-text">Edición</label>
 			  </div>
-			  <select class="custom-select" id="inputGroupSelect01">
+			  <select class="custom-select" id="EdicionVertical">
 			    <option selected>Selecciona...</option>
 			    <option value="1">Hackaton 1</option>
 			    <option value="2">Hackaton 2</option>
@@ -100,7 +147,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="GuardarHack">Registrar</button>
+	        <button type="button" class="btn btn-success" onclick="guardarVertical()">Registrar</button>
 	      </div>
 	    </div>
 	  </div>
@@ -178,4 +225,27 @@
 	  </div>
 	</div>
  
- 
+ <script type="text/javascript">
+ 	function guardarVertical(){
+ 		var Nombre=$("#NombreVertical").val;
+ 		var Descripcion=$("#DescripcionVertical").val;
+ 		var Asesoria=$("#AsesoriaVertical").val;
+ 		var Hack=$("#EdicionVertical").val;
+ 		$.ajax({
+ 			url: '/path/to/file',
+ 			type: 'default GET (Other values: POST)',
+ 			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+ 			data: {param1: 'value1'},
+ 		})
+ 		.done(function() {
+ 			console.log("success");
+ 		})
+ 		.fail(function() {
+ 			console.log("error");
+ 		})
+ 		.always(function() {
+ 			console.log("complete");
+ 		});
+ 		
+ 	}
+ </script>

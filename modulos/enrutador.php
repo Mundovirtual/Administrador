@@ -1,7 +1,7 @@
 <?php 
 	class enrutador{
 		public function cargarVista($vista){
- 
+ 			
 			switch ($vista) {
 			    case "1": 
 			        include_once("../view/hackaton.php");      
@@ -46,8 +46,9 @@
 		}
 		
 		public function validarGET($variable){ 
-			if (empty($variable)) {
+			if (empty($variable)) { 
 				 include_once("../view/index.php");
+
 			}
 			else{
 				return true;
