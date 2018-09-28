@@ -70,7 +70,7 @@
             </li>
 
             <li><a href="#ConsultasDown" aria-expanded="false" data-toggle="collapse">  
-                <i class="fa fa-laptop"></i>Consultas<span class="fa fa-chevron-down"></a>
+                <i class="fa fa-laptop"></i>Consultas <span class="fa fa-chevron-down"></a>
               <ul id="ConsultasDown" class="collapse list-unstyled ">
                   <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
                   <li><a href="../view/index.php?cargar=7">Hackers</a></li>
@@ -80,7 +80,7 @@
             </li>
 
             <li><a href="#RegistrosDown" aria-expanded="false" data-toggle="collapse">  
-                <i class="fa fa-plus"></i>Registros<span class="fa fa-chevron-down"></a>
+                <i class="fa fa-plus"></i>Registros <span class="fa fa-chevron-down"></a>
               <ul id="RegistrosDown" class="collapse list-unstyled ">
                   <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
                   <li><a href="../view/index.php?cargar=2">Vertical</a></li>
@@ -102,9 +102,9 @@
          
       </div>
     </nav>
-    <div class="page">
+    <div class="page ">
       <!-- navbar-->
-      <header class="header affix"  >
+      <header class="header sticky-top  "  >
         <nav class="navbar">
           <div class="container-fluid ">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
@@ -152,8 +152,8 @@
 
         </div>
       </section>
-      <footer class="main-footer">
-        <div class="container-fluid">
+      <footer class="main-footer ">
+        <div class="container-fluid ">
           <div class="row">
             <div class="col-sm-10">
               <p>El mejor modo de predecir el futuro es inventándolo. –Alan Key</p>
