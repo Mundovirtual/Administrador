@@ -2,24 +2,23 @@
   include_once("../modulos/enrutador.php");    
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="images/favicon.ico" type="image/ico" />
-
     <title>Administrador</title>
-    <!-- Favicon-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
     <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
-    <!-- Bootstrap -->
-    <link href="../js/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../js/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">        
-    <!-- Custom Theme Style -->
-    <link href="../js/build/css/custom.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+         
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="../js/malihu/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
 
     <!-- Font Awesome CSS-->
     <link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -28,220 +27,151 @@
     <link href="../css/fontawesome/css/solid.css" rel="stylesheet"> 
     <!-- Popper js--> 
     <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>
-    <!-- Jquery js--> 
-    <script src="../js/jquery/jquery.min.js"></script>
+    
     <!-- Alertyfy js-->
-    <script src="../js/alertifyjs/alertify.js"></script> 
     <link rel="stylesheet" type="text/css" href="../js/alertifyjs/css/alertify.css">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     
 
     <!--Datatable-->
+        
     <link rel="stylesheet" type="text/css" href="../js/DataTables/bootstrap.min.css"/>    
-    <script type="text/javascript" src="../js/DataTables/datatables.min.js"></script> 
+    <script type="text/javascript" src="../js/DataTables/datatables.min.js"></script>
 
+
+      
   </head>
-
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title">
-                <img src="../img/inovahackNavbar.png" height="30" width="180" >
-              </a>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix live-preview-bar" >
-               <div class="sidebar-header d-flex align-items-center">
-                <div class="avatar"><i class="fas fa-user-astronaut fa-4x"></i></div>
-                <div class="title">
-                  <h1 class="h4">Isaac Santiago Coronel</h1>
-                </div>
-               </div>
-            </div>
-            <!-- /menu profile quick info -->
-
-            <br />
-
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                  <li><a href="../view/index.php?cargar=10" aria-expanded="false"> 
-                      <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
-                  </li>                  
-                  <li>
-                      <a href="../view/index.php?cargar=11" aria-expanded="false"> 
-                        <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
-                  </li>
-
-                  <li><a><i class="fa fa-laptop"></i>Consultas<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
-                      <li><a href="../view/index.php?cargar=7">Hackers</a></li>
-                      <li><a href="../view/index.php?cargar=8">Jueces</a></li>
-                      <li><a href="../view/index.php?cargar=9">Calificaciones</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-plus"></i> Registros <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
-                      <li><a href="../view/index.php?cargar=2">Vertical</a></li>
-                      <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
-                      <li><a href="../view/index.php?cargar=4">Rubricas</a></li>
-                    </ul>
-                  </li> 
-                  <li>
-                    <a href="../view/index.php?cargar=5" aria-expanded="false"> 
-                      <i class="fa fa-bell"></i>Solicitudes 5 </a>
-                  </li> 
-
-                </ul>
-              </div>
-
-            </div>
-            <!-- /sidebar menu -->
- 
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center"><div class="fas fa-user-astronaut fa-2x"></div>
+            <h3 class="h3">Isaac Santiago Coronel</h2><span>Administrador</span>
           </div>
+          <!-- Small Brand information, appears on minimized sidebar-->
+          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>I</strong><strong class="text-primary">H</strong></a></div>
         </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <h5 class="sidenav-heading">Main</h5>
 
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+          
+            <li><a href="../view/index.php?cargar=10" aria-expanded="false"> 
+                <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
+            </li>                  
+            <li>
+                <a href="../view/index.php?cargar=11" aria-expanded="false"> 
+                  <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
+            </li>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
+            <li><a href="#ConsultasDown" aria-expanded="false" data-toggle="collapse">  
+                <i class="fa fa-laptop"></i>Consultas<span class="fa fa-chevron-down"></a>
+              <ul id="ConsultasDown" class="collapse list-unstyled ">
+                  <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
+                  <li><a href="../view/index.php?cargar=7">Hackers</a></li>
+                  <li><a href="../view/index.php?cargar=8">Jueces</a></li>
+                  <li><a href="../view/index.php?cargar=9">Calificaciones</a></li>
               </ul>
-            </nav>
-          </div>
+            </li>
+
+            <li><a href="#RegistrosDown" aria-expanded="false" data-toggle="collapse">  
+                <i class="fa fa-plus"></i>Registros<span class="fa fa-chevron-down"></a>
+              <ul id="RegistrosDown" class="collapse list-unstyled ">
+                  <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
+                  <li><a href="../view/index.php?cargar=2">Vertical</a></li>
+                  <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
+                  <li><a href="../view/index.php?cargar=4">Rubricas</a></li>
+              </ul>
+            </li>
+
+
+
+            <li>
+              <a href="../view/index.php?cargar=5" aria-expanded="false"> 
+                <i class="fa fa-bell"></i>Solicitudes 5 </a>
+            </li>
+            
+
+          </ul>
         </div>
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main" >
-        
-         <?php  
-                    $enrutador = new enrutador();
-                    
-                    if ($enrutador->validarGET($_GET['cargar'])) { 
-                          $enrutador->cargarVista($_GET['cargar']);
-                       } 
-
-
-                  ?>   
-        
-        </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+         
       </div>
-    </div>
+    </nav>
+    <div class="page">
+      <!-- navbar-->
+      <header class="header affix"  >
+        <nav class="navbar">
+          <div class="container-fluid ">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header">
+                <a id="toggle-btn" href="#" class="menu-btn">
+                  <i class="fas fa-bars"></i>
+                </a>
+                 
+                  <img src="../img/inovahackNavbar.png" height="20" width="100" align="center">
+                
+              </div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Notifications dropdown-->
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>                     
+                  </ul>
+                </li>
+                 
+                <!-- Log out-->
+                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="fas fa-sign-out-alt">Logout</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Counts Section -->
+      <section class="dashboard-counts section-padding">
+        <div class="container-fluid">
+         <div class="right_col" role="main" >
+          <div>
+            <?php
+              $enrutador = new enrutador();
+              
+              if ($enrutador->validarGET($_GET['cargar'])) { 
+                    $enrutador->cargarVista($_GET['cargar']);
+                 } 
+            ?>
+           
+          </div>
 
-    <!-- jQuery -->
-    <script src="../js/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../js/vendors/bootstrap/dist/js/bootstrap.min.js"></script>      
-    <!-- Custom Theme Scripts -->
-    <script src="../js/build/js/custom.min.js"></script>
-  
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-10">
+              <p>El mejor modo de predecir el futuro es inventándolo. –Alan Key</p>
+            </div>
+            <div class="col-sm-2 text-right">
+              <p>Equipo LABSOL</p>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- JavaScript files-->
+    <script src="../js/jquery/jquery.min.js"></script> 
+    <script src="../js/Bootstrap/bootstrap.min.js"></script>
+    <script src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/alertifyjs/alertify.js"></script> 
+    <!-- Main File-->
+    <script src="../js/front.js"></script>
   </body>
 </html>
