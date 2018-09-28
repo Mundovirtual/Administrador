@@ -1,9 +1,4 @@
-<script type="text/javascript">
- 	$(document).ready(function() {
-	    $('#TablaVertical').DataTable();
-	    $('.displayVertical').dataTable();
-	} );
- </script>
+ 
 <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
