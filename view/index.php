@@ -33,7 +33,12 @@
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     
- 
+
+    <!--Datatable-->
+        
+    <link rel="stylesheet" type="text/css" href="../js/DataTables/bootstrap.min.css"/>    
+    <script type="text/javascript" src="../js/DataTables/datatables.min.js"></script>
+
 
       
   </head>
@@ -159,14 +164,11 @@
       </footer>
     </div>
     <!-- JavaScript files-->
-    
+    <script src="../js/jquery/jquery.min.js"></script> 
     <script src="../js/Bootstrap/bootstrap.min.js"></script>
-    <script src="../js/jquery/jquery.min.js"></script>
     <script src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/alertifyjs/alertify.js"></script> 
     <!-- Main File-->
     <script src="../js/front.js"></script>
-    
-
   </body>
 </html>
