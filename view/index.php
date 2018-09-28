@@ -57,7 +57,7 @@
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix">
+            <div class="profile clearfix live-preview-bar" >
                <div class="sidebar-header d-flex align-items-center">
                 <div class="avatar"><i class="fas fa-user-astronaut fa-4x"></i></div>
                 <div class="title">
@@ -210,7 +210,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+        <div class="right_col" role="main" >
         
          <?php  
                     $enrutador = new enrutador();

@@ -9,7 +9,7 @@
 	<div align="right">
 				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalVertical">Nuevo
 				</button>
-			</div>	   
+	</div>	   
 </div>
  
  
@@ -18,7 +18,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10" id="TablaVertical" class="displayVertical">
-			<table class="displayVertical table table-striped">
+			<table class="displayVertical">
 			    <thead>
 			        <tr>
 			            <th>Nombre</th>
