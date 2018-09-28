@@ -64,26 +64,23 @@
                   <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
             </li>
 
-            <li><a href="#ConsultasDown" aria-expanded="false" data-toggle="collapse">  
-                <i class="fa fa-laptop"></i>Consultas <span class="fa fa-chevron-down"></a>
-              <ul id="ConsultasDown" class="collapse list-unstyled ">
+           <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
+              <ul id="Monitoreo" class="collapse list-unstyled ">                
                   <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
                   <li><a href="../view/index.php?cargar=7">Hackers</a></li>
                   <li><a href="../view/index.php?cargar=8">Jueces</a></li>
                   <li><a href="../view/index.php?cargar=9">Calificaciones</a></li>
               </ul>
-            </li>
+            </li> 
 
-            <li><a href="#RegistrosDown" aria-expanded="false" data-toggle="collapse">  
-                <i class="fa fa-plus"></i>Registros <span class="fa fa-chevron-down"></a>
-              <ul id="RegistrosDown" class="collapse list-unstyled ">
-                  <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
-                  <li><a href="../view/index.php?cargar=2">Vertical</a></li>
-                  <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
-                  <li><a href="../view/index.php?cargar=4">Rubricas</a></li>
+            <li><a href="#Registros" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-plus"></i>Registros </a>
+              <ul id="Registros" class="collapse list-unstyled ">
+                <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
+                <li><a href="../view/index.php?cargar=2">Vertical</a></li>
+                <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
+                <li><a href="../view/index.php?cargar=4">Rubricas</a></li> 
               </ul>
             </li>
-
 
 
             <li>
