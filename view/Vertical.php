@@ -1,9 +1,15 @@
-<script type="text/javascript">
- 	$(document).ready(function() {
-	    $('#TablaVertical').DataTable();
-	    $('.displayVertical').dataTable();
-	} );
- </script>
+<style type="text/css">
+	span.error{
+		color: red;
+	}
+</style>
+ 
+<script src="../js/jquery.validate.min.js"></script>
+
+
+<script src="../modulos/vertical/ValidatorVertical.js"></script>
+<script src="../js/Validaciones.js"></script>
+ 
 <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
@@ -72,6 +78,7 @@
 			        </tr>
 			    </tbody>
 			</table>
+			 
 			<!--<table class="table table-hover">
 			  <thead>
 			    <tr>
@@ -118,37 +125,44 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form>
+	       	<form id="RegistroVertical" >
 			  <div class="form-group">
-			    <label>Nombre</label>
-			    <input type="text" class="form-control" id="NombreVertical" placeholder="Hackaton">
-			  </div>
-			  <div class="form-group">
-			    <label >Descripcion</label>
-			    <textarea class="form-control" id="DescripcionVertical" rows="2" placeholder="Descripcion"></textarea>
+			    <label>Nombre*</label>
+			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical" name="NombreVertical" class="form-control letras" placeholder="Vertical" required>
 			  </div>
 			  <div class="form-group">
-			    <label>Asesoria</label>
-			    <textarea class="form-control" id="AsesoriaVertical" rows="2" placeholder="Asesoria" ></textarea>
+			    <label >Descripcion*</label>
+			    <textarea class="form-control letras" id="DescripcionVertical" rows="2" placeholder="Descripcion" minlength="10" maxlength="80" required ></textarea>
 			  </div>
-		    <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text">Edición</label>
+			  <div class="form-group">
+			    <label>Asesoria*</label>
+			    <textarea class="form-control" id="AsesoriaVertical letras" rows="2" placeholder="Asesoria" minlength="10" maxlength="80" required></textarea>
 			  </div>
-			  <select class="custom-select" id="EdicionVertical">
-			    <option selected>Selecciona...</option>
-			    <option value="1">Hackaton 1</option>
-			    <option value="2">Hackaton 2</option>
-			    <option value="3">Hackaton 3</option>
-			  </select>
-			</div>
-				 		
+			    <div class="input-group mb-3"> 
+				  <div class="input-group-prepend">
+				    <label class="input-group-text">Edición</label>
+				  </div>
+				  <select required class="custom-select" id="EdicionVertical">
+				    <option selected>Selecciona...</option>
+				    <option value="1">Hackaton 1</option>
+				    <option value="2">Hackaton 2</option>
+				    <option value="3">Hackaton 3</option>
+				  </select>
+				</div>
+				<div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+			        <button type="button" id="GuardarVertical" name="GuardarVertical" class="btn btn-success" onclick="guardarVertical();">Registrar</button>
+
+
+			        <script type="text/javascript">
+			        	$("#RegistroVertical").validate();
+			 
+			        </script>
+			    </div>		
 			</form>
+			 
 	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" onclick="guardarVertical()">Registrar</button>
-	      </div>
+	      
 	    </div>
 	  </div>
 	</div>
@@ -225,27 +239,4 @@
 	  </div>
 	</div>
  
- <script type="text/javascript">
- 	function guardarVertical(){
- 		var Nombre=$("#NombreVertical").val;
- 		var Descripcion=$("#DescripcionVertical").val;
- 		var Asesoria=$("#AsesoriaVertical").val;
- 		var Hack=$("#EdicionVertical").val;
- 		$.ajax({
- 			url: '/path/to/file',
- 			type: 'default GET (Other values: POST)',
- 			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
- 			data: {param1: 'value1'},
- 		})
- 		.done(function() {
- 			console.log("success");
- 		})
- 		.fail(function() {
- 			console.log("error");
- 		})
- 		.always(function() {
- 			console.log("complete");
- 		});
- 		
- 	}
- </script>
+ 
