@@ -1,14 +1,13 @@
- <script type="text/javascript">
-    
+ <script type="text/javascript">    
    $(document).ready(function() {
 	    $('#DatosVertical').DataTable();
 	} );
 </script>
 
 <script src="../js/jquery.validate.min.js"></script>
-<script src="../modulos/vertical/ValidatorVertical.js"></script>
-<script src="../js/Validaciones.js"></script>
 
+<script src="../js/Validaciones.js"></script>
+<script src="../modulos/vertical/ValidatorVertical.js"></script>
 <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
@@ -103,10 +102,10 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form id="RegistroVertical" onsubmit="alert("submit");return false;">
+	       	<form id="RegistroVertical" onsubmit="return false;">
 			  <div class="form-group">
 			    <label>Nombre*</label>
-			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical" name="NombreVertical" class="form-control letras" placeholder="Vertical" required>
+			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical" class="form-control letras" placeholder="Vertical" required>
 			  </div>
 			  <div class="form-group">
 			    <label >Descripcion*</label>
@@ -129,8 +128,8 @@
 				</div>
 				
 				<div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-			        <button type="submit"  id="GuardarVertical" class="btn btn-success">Registrar</button>	
+			        <button type="button"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+			        <button type="button"  id="GuardarVertical" onclick="guardarVerticale();" class="btn btn-success">Registrar</button>	
 			        <script type="text/javascript">
 			        	$("#RegistroVertical").validate();
 			        </script>	        

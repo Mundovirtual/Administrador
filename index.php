@@ -1,5 +1,12 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
+
+<?php 
+
+  include_once("modulos/login/validar.php"); 
+ 
+?>
 
 <head>
   <meta charset="utf-8" />
@@ -10,7 +17,7 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="css/indexLogin.css" />
-  <link rel="stylesheet" href="css/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
   <!-- CSS Files -->
   <link href="css/material-kit.css?v=2.0.4" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -24,7 +31,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" method="" action="">
+            <form class="form" onsubmit="">
               <div class="card-header card-header-primary text-center">
                 <h4 class="card-title">Iniciar sesión</h4>
                 <div class="profile-photo-small">
@@ -56,6 +63,7 @@
               	<button class="btn btn-primary	btn-round " type="submit">Entrar</button> 
               </div>
             </form>
+            
           </div>
         </div>
       </div>

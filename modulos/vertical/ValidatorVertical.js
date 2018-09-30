@@ -1,9 +1,9 @@
  
  $(document).ready(function(){
 
-		function guardarVertical(){
- 
-	 		var Nombre=$("#NombreVertical").val(); 
+		function guardarVerticale(){
+ alert();
+	 		/*var Nombre=$("#NombreVertical").val(); 
 	 		var Descripcion=$("#DescripcionVertical").val();
 	 		var Asesoria=$("#AsesoriaVertical").val();
 	 		var Hack=$("#EdicionVertical").val();
@@ -28,7 +28,7 @@
 	 		})
 	 		.always(function() {
 	 			console.log("complete");
-	 		});
+	 		});*/
 	 		
 	 	}
 	}
