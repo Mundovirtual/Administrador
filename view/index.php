@@ -26,14 +26,15 @@
     <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
     <link href="../css/fontawesome/css/solid.css" rel="stylesheet"> 
     <!-- Popper js--> 
-    <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>
-    
+    <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>    
     <!-- Alertyfy js-->
     <link rel="stylesheet" type="text/css" href="../js/alertifyjs/css/alertify.css">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="../css/fontastic.css">
     <script src="../js/jquery/jquery.min.js"></script>
- 
+    <!-- Data tables-->
+    <link rel="stylesheet" type="text/css" href="../js/DataTables/datatables.min.css">
+    <script type="text/javascript" src="../js/DataTables/datatables.js"></script>
   </head>
   <body>
     <!-- Side Navbar -->
