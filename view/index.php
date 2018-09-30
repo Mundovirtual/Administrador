@@ -1,4 +1,7 @@
- 
+ <?php
+ include_once("../modulos/login/security.php");
+  include_once("../modulos/enrutador.php");    
+?>
 <!DOCTYPE html>
 <html>
   <head>

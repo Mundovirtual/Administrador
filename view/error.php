@@ -1,4 +1,6 @@
- 
+ <?php
+ include_once("../modulos/login/security.php");    
+?>  
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, minimum-scale=0.1">

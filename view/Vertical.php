@@ -1,4 +1,6 @@
- 
+ <?php
+ include_once("../modulos/login/security.php");    
+?>  
  <script type="text/javascript">    
    $(document).ready(function() {
 	    $('#DatosVertical').DataTable();

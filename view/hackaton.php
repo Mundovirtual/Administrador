@@ -1,4 +1,6 @@
- 
+ <?php
+ include_once("../modulos/login/security.php");    
+?>  
   	<form id="guardarDatosHackaton" method="post">
   		<div class="modal fade" tabindex="-1" id="ModalHackaton1" role = "dialog" aria-LabelLebby = "registrar" aria-hidden = "true">
   			<div class="modal-dialog" role = "document">
