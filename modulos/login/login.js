@@ -1,37 +1,39 @@
-  function Login()
-      {
-       var email=$("#emailid").val();
-       var pass=$("#password").val();
-       if(email!="" && pass!="")
-         {
-          $("#loading_spinner").css({"display":"block"});
-          $.ajax
-          ({
-          type:'post',
-          url:'do_login.php',
-          data:{
-           do_login:"do_login",
-           email:email,
-           password:pass
-          },
-        success:function(response) {
-          if(response=="success")
-            {
-              window.location.href="index.php";
-            }
-          else
-            {
-              $("#loading_spinner").css({"display":"none"});
-              alert("Wrong Details");
-            }
-        }
+$('#ErrorLogin').hide();
+
+
+
+jQuery(document).on('submit','#Login',function(event){
+      event.preventDefault();
+ 
+      jQuery.ajax({
+          url:'modulos/login/validar.php',
+          type:'POST',
+          dataType:'json',
+
+          data:$(this).serialize(),
+          beforeSend:function(){
+             
+          }
+        })
+        .done(function(respuesta){
+          console.log(respuesta.error);
+          if (!respuesta.error) {
+           location.href = "../../../Hackaton/view/index.php";                        
+          } 
+          if (respuesta.error) { 
+            $('#ErrorLogin').slideDown('slow');
+                setTimeout(function(){
+                $('#ErrorLogin').slideUp('slow');
+              },2000);
+
+              
+              }       
+          
+        })
+        .fail(function(resp){
+                
+              })
+        .always(function(){
+           
       });
-     }
-
-     else
-     {
-      alert("Please Fill All The Details");
-     }
-
-     return false;
-    }
+});

@@ -1,12 +1,7 @@
  
 <!DOCTYPE html>
 <html lang="en">
-
-<?php 
-
-  include_once("modulos/login/validar.php"); 
  
-?>
 
 <head>
   <meta charset="utf-8" />
@@ -22,6 +17,7 @@
   <link href="css/material-kit.css?v=2.0.4" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="css/login.css" rel="stylesheet" />
+
 </head>
 
 <body class="login-page sidebar-collapse">
@@ -31,7 +27,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" onsubmit="">
+            <form class="form" id="Login" method="POST">
               <div class="card-header card-header-primary text-center">
                 <h4 class="card-title">Iniciar sesión</h4>
                 <div class="profile-photo-small">
@@ -47,7 +43,7 @@
                       <i class="material-icons">mail</i>
                     </span>
                   </div>
-                  <input type="email" class="form-control" placeholder="Email...">
+                  <input type="text" id="Usuario" name="Usuario" class="form-control" placeholder="Email">
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -55,20 +51,24 @@
                       <i class="material-icons">lock_outline</i>
                     </span>
                   </div>
-                  <input type="password" class="form-control " placeholder="Password...">
+                  <input type="password" id="Password" name="Password" class="form-control " placeholder="Password">
                 </div>
               </div>
                
               <div class=" text-center">
               	<button class="btn btn-primary	btn-round " type="submit">Entrar</button> 
               </div>
+
+              <div id="ErrorLogin" align="center"> 
+                <span class="text-danger"><h4><dt>Datos de ingreso no válidos, inténtelo de nuevo por favor</dt></h4></span> 
+            </div>
             </form>
             
           </div>
         </div>
       </div>
     </div>
-    
+ 
   </div>
   <!--   Core JS Files   -->
   <script src="js/core/jquery.min.js" type="text/javascript"></script>
@@ -81,6 +81,7 @@
   <script src="js/plugins/nouislider.min.js" type="text/javascript"></script>
   <!--	Plugin for Sharrre btn -->
   <script src="js/plugins/jquery.sharrre.js" type="text/javascript"></script> 
+  <script src="modulos/login/login.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
  $(document).ready(function(){
 
 		function guardarVerticale(){
- alert();
+ 
 	 		/*var Nombre=$("#NombreVertical").val(); 
 	 		var Descripcion=$("#DescripcionVertical").val();
 	 		var Asesoria=$("#AsesoriaVertical").val();
