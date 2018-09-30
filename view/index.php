@@ -1,6 +1,9 @@
  <?php
  include_once("../modulos/login/security.php");
-  include_once("../modulos/enrutador.php");    
+  include_once("../modulos/enrutador.php");   
+    if (!isset($_GET['cargar'])) {
+      $_GET['cargar']="";
+  } 
 ?>
 <!DOCTYPE html>
 <html>
