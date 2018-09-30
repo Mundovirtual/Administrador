@@ -1,3 +1,7 @@
+<?php 
+	include_once("../modulos/login/security.php"); 
+ ?>  
+
 <div class="container">
 	<h1 align="center">Panel de Control</h1></br>  
 </div>

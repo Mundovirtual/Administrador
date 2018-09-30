@@ -1,6 +1,4 @@
-<?php
-  include_once("../modulos/enrutador.php");    
-?>
+ 
 <!DOCTYPE html>
 <html>
   <head>
@@ -120,7 +118,7 @@
                 </li>
                  
                 <!-- Log out-->
-                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="fas fa-sign-out-alt">Logout</span></a></li>
+                <li class="nav-item"><a href="../modulos/login/SesionClose.php" class="nav-link logout"> <span class="fas fa-sign-out-alt">Logout</span></a></li>
               </ul>
             </div>
           </div>

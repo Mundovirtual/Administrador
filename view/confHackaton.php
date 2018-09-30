@@ -1,4 +1,4 @@
- 
+   
 <div class="container">
 	<h1 align="center">Configuracion de Ediciones</h1>     
 </div>
