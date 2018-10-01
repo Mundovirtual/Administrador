@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
 
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
          
     <!-- Custom Scrollbar-->
     <link rel="stylesheet" href="../js/malihu/jquery.mCustomScrollbar.css">
