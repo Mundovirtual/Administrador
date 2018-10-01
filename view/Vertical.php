@@ -1,5 +1,6 @@
 <?php
- include_once("../modulos/login/security.php");   
+ include_once("../modulos/login/security.php"); 
+ include_once("../modulos/vertical/MetodosVertical.php");  
 ?>  
 <script type="text/javascript">    
    $(document).ready(function() {
@@ -16,8 +17,6 @@
 				</button>
 	</div>	   
 </div>
- 
- 
 <body>
 	 <div class="row">
 		<div class="col-md-1">
@@ -36,6 +35,11 @@
 			      <th></th>
 			    </tr>
 			  </thead>
+			  <?php 
+				 $con=new Vertical();
+				 $d=$con->mostrarDatos();
+				 var_dump($d);
+				 ?>
 			  <tbody>
 		
 			 

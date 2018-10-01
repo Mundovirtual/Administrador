@@ -1,9 +1,10 @@
 <?php 
-	include_once("../../class/conexion.php");
+	include_once("../class/conexion.php");
 
 	 class Vertical{
 
 	 	function mostrarDatos(){
+	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT * FROM `vertical`";
