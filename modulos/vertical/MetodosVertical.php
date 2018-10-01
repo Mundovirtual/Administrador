@@ -3,9 +3,10 @@
 
 	 class Vertical{
 
-	 	function mostrarDatos($sql){
+	 	function mostrarDatos(){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
+	 		$sql="SELECT * FROM `vertical`";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_assoc($resultado);
 	 		$Conexion->mysql_close();
@@ -41,5 +42,7 @@
 	 	}
 
 	 }
+ 
+	 
  
  ?>

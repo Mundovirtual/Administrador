@@ -1,5 +1,5 @@
 <?php
- include_once("../modulos/login/security.php");    
+ include_once("../modulos/login/security.php");   
 ?>  
 <script type="text/javascript">    
    $(document).ready(function() {
@@ -37,6 +37,8 @@
 			    </tr>
 			  </thead>
 			  <tbody>
+		
+			 
 			    <tr>
 			      <th scope="row">2</th>
 			      <td>Vertical 1</td>
@@ -106,37 +108,37 @@
 	       	<form class="form" id="RV" method="POST">
 			  <div class="form-group">
 			    <label>Nombre*</label>
-			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical" class="form-control letras" placeholder="Vertical" required>
+			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical"  name="NombreVertical" class="form-control letras" placeholder="Vertical" required="">
 			  </div>
 			  <div class="form-group">
 			    <label >Descripcion*</label>
-			    <textarea class="form-control letras" id="DescripcionVertical" rows="2" placeholder="Descripcion" minlength="10" maxlength="80" required ></textarea>
+			    <textarea class="form-control letras" id="DescripcionVertical"  name="DescripcionVertical" rows="2" placeholder="Descripcion" minlength="10" maxlength="80" required="" ></textarea>
 			  </div>
 			  <div class="form-group">
 			    <label>Asesoria*</label>
-			    <textarea class="form-control" id="AsesoriaVertical letras" required rows="2" placeholder="Asesoria" minlength="10" maxlength="80" ></textarea>
+			    <textarea class="form-control" id="AsesoriaVertical letras"  name="AsesoriaVertical" required="" rows="2" placeholder="Asesoria" minlength="10" maxlength="80" ></textarea>
 			  </div>
-			    <div class="input-group mb-3"> 
-				  <div class="input-group-prepend">
-				    <label class="input-group-text">Edición</label>
-				  </div>
-				  <select  class="custom-select" id="EdicionVertical">
-				    <option selected required>Selecciona...</option>
-				    <option value="1">Hackaton 1</option>
-				    <option value="2">Hackaton 2</option>
-				    <option value="3">Hackaton 3</option>
-				  </select>
-				</div>
-				
-				<div class="modal-footer">
-			        <button type="button"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-			        <button type="submit" id="RegistroVertical" class="btn btn-success">Registrar</button>	
-			        
-			        <script type="text/javascript">
-			        	$("#RegistroVertical").validate();
-			        </script>	        
-			        
-			    </div>	
+		      <div class="input-group mb-3"> 
+			    <div class="input-group-prepend">
+			      <label class="input-group-text">Edición</label>
+			    </div>
+			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required="">
+			      <option selected>Selecciona...</option>
+			      <option value="1">Hackaton 1</option>
+			      <option value="2">Hackaton 2</option>
+			      <option value="3">Hackaton 3</option>
+			    </select>
+			  </div>
+			</div>
+			  <div class="modal-footer">
+		          <button type="button"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+		          <button type="submit" id="RegistroVertical" class="btn btn-success">Registrar</button>	
+		          
+		          <script type="text/javascript">
+		          	$("#RegistroVertical").validate();
+		          </script>	        
+		          
+		      </div>	
 			 
 			</form>
 	      </div>
