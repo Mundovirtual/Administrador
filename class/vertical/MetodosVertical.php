@@ -1,6 +1,6 @@
 <?php 
-	include_once("../class/conexion.php");
-
+	 include_once("../class/conexion.php");
+	 
 	 class Vertical{
 
 	 	function mostrarDatos(){
@@ -44,6 +44,11 @@
 
 	 }
  
-	 
+	   
+
+ if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset($_POST['AsesoriaVertical'])&&isset($_POST['EdicionVertical'])){
+		echo "hola desde muy lejos".$_POST['EdicionVertical'];   
+ }	
+ 
  
  ?>

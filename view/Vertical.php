@@ -4,7 +4,7 @@
 ?>  
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
- 
+ 	
 <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
@@ -32,7 +32,7 @@
 			  </thead>			  
 			  <tbody>
 		
-			 	<?php 
+			 <?php 
 
 					$con=new Vertical();
 					$datos=$con->mostrarDatos();

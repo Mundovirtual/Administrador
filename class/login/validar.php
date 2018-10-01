@@ -11,7 +11,7 @@
 
 function login($usr,$pss){
 	$psw=md5($pss);
-	include_once("../../class/conexion.php");
+	include_once("../conexion.php");
 		$con=new Conectar();
 		$Conexion=$con->conexion();
 		$sql="SELECT `id`, `Nombre`, `Correo`, `Usuario`, `psw`, `Status` FROM `admin` WHERE `Correo`='$usr' or `Usuario`='$usr' and `psw`='$psw' and `Status`='1'"; 
