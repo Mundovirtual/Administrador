@@ -2,14 +2,9 @@
  include_once("../modulos/login/security.php"); 
  include_once("../modulos/vertical/MetodosVertical.php");  
 ?>  
-<script type="text/javascript">    
-   $(document).ready(function() {
-	    $('#DatosVertical').DataTable();
-	} );
-</script>
-
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
+ 
 <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
@@ -34,60 +29,34 @@
 			      <th></th>
 			      <th></th>
 			    </tr>
-			  </thead>
-			  <?php 
-				 $con=new Vertical();
-				 $d=$con->mostrarDatos();
-				 var_dump($d);
-				 ?>
+			  </thead>			  
 			  <tbody>
 		
-			 
-			    <tr>
-			      <th scope="row">2</th>
-			      <td>Vertical 1</td>
-			      <td>Herramienta de análisis y monitoreo....</td>
-			      <td>Subsecretaria de ....</td>
-			      <td>Primera Edición</td> 
-			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical">	 
-			      	 </button>
-					</td>
-						<td>
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical"></button>
-			      </td>
-			      
-			    </tr>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>Vertical 1</td>
-			      <td>Herramienta de análisis y monitoreo....</td>
-			      <td>Subsecretaria de ....</td>
-			      <td>Primera Edición</td> 
-			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical">	 
-			      	 </button>
-					</td>
-						<td>
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical"></button>
-			      </td>
-			      
-			    </tr>	
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Vertical 1</td>
-			      <td>Herramienta de análisis y monitoreo....</td>
-			      <td>Subsecretaria de ....</td>
-			      <td>Primera Edición</td> 
-			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical">	 
-			      	 </button>
-					</td>
-						<td>
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical"></button>
-			      </td>
-			      
-			    </tr>				     
+			 	<?php 
+
+					$con=new Vertical();
+					$datos=$con->mostrarDatos();
+				  	foreach ($datos as $key) {?>
+					<tr>
+				      <th scope="row"><?php echo $key[0];?></th>
+				      <td><?php echo $key[1];?></td>
+				      <td><?php echo $key[2];?></td>
+				      <td><?php echo $key[3];?></td>
+				      <td><?php echo $key[4];?></td> 
+				      <td>
+				      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
+				      	 </button>
+					  </td>
+					  <td>
+				      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" value="<?php echo $key[0];"" ?>"></button>
+				      </td>
+				     <tr>
+			     		
+
+					 <?php	 		 
+				 	}				 				 
+			  	?>
+			    	     
 			  </tbody>
 			</table> 
 			

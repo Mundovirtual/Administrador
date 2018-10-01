@@ -9,7 +9,7 @@
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT * FROM `vertical`";
 	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return  mysqli_fetch_assoc($resultado);
+	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
 
