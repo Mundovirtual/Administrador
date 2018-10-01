@@ -1,3 +1,45 @@
+alert();
+jQuery(document).on('submit','#RV',function(event){
+      event.preventDefault();
+ 	 alert();
+      jQuery.ajax({
+          url:'CrudVertical.php',
+          type:'POST',
+          dataType:'json',
+
+          data:$(this).serialize(),
+          beforeSend:function(){
+             console.log("hola");
+          }
+        })
+        .done(function(respuesta){
+          console.log(respuesta.error);
+                     
+        })
+        .fail(function(resp){
+                console.log("fail");
+              })
+        .always(function(){
+           console.log("always");
+      });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  $(document).ready(function(){
 

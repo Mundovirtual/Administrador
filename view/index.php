@@ -1,9 +1,11 @@
  <?php
+
  include_once("../modulos/login/security.php");
   include_once("../modulos/enrutador.php");   
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
   } 
+ 
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,7 +50,7 @@
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><div class="fas fa-user-astronaut fa-2x"></div>
-            <h3 class="h3">Isaac Santiago Coronel</h2><span>Administrador</span>
+            <h3 class="h3"><?php echo $_SESSION['NombreAdmin']; ?></h2><span>Administrador</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>I</strong><strong class="text-primary">H</strong></a></div>
@@ -141,6 +143,9 @@
               if ($enrutador->validarGET($_GET['cargar'])) { 
                     $enrutador->cargarVista($_GET['cargar']);
                  } 
+                 else{
+                 echo "BienVenido";
+                 }
             ?>
            
           </div>

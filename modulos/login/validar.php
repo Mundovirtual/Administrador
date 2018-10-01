@@ -9,7 +9,8 @@
 }
  
 
-function login($usr,$psw){
+function login($usr,$pss){
+	$psw=md5($pss);
 	include_once("../../class/conexion.php");
 		$con=new Conectar();
 		$Conexion=$con->conexion();

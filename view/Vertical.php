@@ -1,15 +1,13 @@
- <?php
+<?php
  include_once("../modulos/login/security.php");    
 ?>  
- <script type="text/javascript">    
+<script type="text/javascript">    
    $(document).ready(function() {
 	    $('#DatosVertical').DataTable();
 	} );
 </script>
 
-<script src="../js/jquery.validate.min.js"></script>
-
-<script src="../js/Validaciones.js"></script>
+<script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
 <div class="container">
 	<h1 align="center">Verticales</h1>  
@@ -105,7 +103,7 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form id="RegistroVertical" onsubmit="return false;">
+	       	<form class="form" id="RV" method="POST">
 			  <div class="form-group">
 			    <label>Nombre*</label>
 			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical" class="form-control letras" placeholder="Vertical" required>
@@ -132,7 +130,8 @@
 				
 				<div class="modal-footer">
 			        <button type="button"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-			        <button type="button"  id="GuardarVertical" onclick="guardarVerticale();" class="btn btn-success">Registrar</button>	
+			        <button type="submit" id="RegistroVertical" class="btn btn-success">Registrar</button>	
+			        
 			        <script type="text/javascript">
 			        	$("#RegistroVertical").validate();
 			        </script>	        
