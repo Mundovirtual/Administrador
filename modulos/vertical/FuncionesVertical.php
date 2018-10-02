@@ -32,7 +32,10 @@ if (isset($_POST["idAc"])&&isset($_POST["eNv"])&&isset($_POST["eDv"])&&isset($_P
 	 $Registrar=$Vertical->ActualizarVertical($_POST["idAc"],$_POST["eNv"],$_POST["eDv"],$_POST["eAv"],$_POST["eHv"]);
 
 }
-
+if (isset($_POST['IdEliminar'])) {
+	$Vertical=new Vertical();
+	 $Registrar=$Vertical->EliminarVertical($_POST['IdEliminar']);
+}
 
  
 

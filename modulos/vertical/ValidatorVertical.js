@@ -9,7 +9,7 @@ jQuery(document).on('submit', "#RV", function(event){
 		dataType: 'json',
 		data: datos,
 		beforeSend:function(){
-			 
+			 $('#ModalVertical').modal('hide');
 		}
 	})
 	.done(function(respuesta) {
@@ -47,7 +47,7 @@ function UpdateVertical() {
 		dataType: 'json',
 		data: {'idAc':actualizar,'eNv':eNv,'eDv':eDv,'eAv':eAv,'eHv':eHv},
 		beforeSend:function(){ 
-			 
+			 $('#editarVertical').modal('hide');
 		}
 	})
 	.done(function(respuesta) {
@@ -61,20 +61,25 @@ function UpdateVertical() {
 		console.log("complete");
 	});
 }
+let eliminar="";
 
+function eliminarVertical(id){
+	eliminar=id;
+}
+ 
  $(document).ready(function(){
-	$("#EliminarVer").click(function () {  
-		let idEliminar=idE;
+	$("#EliminarVer").click(function () {   
 	 	jQuery.ajax({
 		url: '../Modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
 		dataType: 'json',
-		data: {'IdEliminar':idEliminar},
+		data: {'IdEliminar':eliminar},
 		beforeSend:function(){
-			 alert("hola "+idEliminar);
+			  $('#EliminarVertical').modal('hide');
 		}
 		})
 		.done(function(respuesta) {
+			$('#EliminarV').modal('hide');
 			console.log(respuesta.Estado);
 		})
 		.fail(function(  responseText) {
@@ -85,8 +90,7 @@ function UpdateVertical() {
 			console.log("complete");
 		});
 	});		
-});
-
+}); 
 
 
 

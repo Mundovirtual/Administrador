@@ -20,8 +20,7 @@
 			 
 			 <table id="DatosVertical" class="display table">
 			  <thead>
-			    <tr>
-			      <th scope="col">#</th>
+			    <tr> 
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
@@ -36,9 +35,10 @@
 
 					$con=new Vertical();
 					$datos=$con->mostrarDatos();
-				  	foreach ($datos as $key) {?>
+				  	foreach ($datos as $key) {				  		
+				  		?>
 					<tr>
-				      <th scope="row"><?php echo $key[0];?></th>
+ 
 				      <td><?php echo $key[1];?></td>
 				      <td><?php echo $key[2];?></td>
 				      <td><?php echo $key[3];?></td>
@@ -48,12 +48,13 @@
 				      	 </button>
 					  </td>
 					  <td>
-				      	<button type="button" id="EliminarV"  class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" id="EliminarVerticalTabla" value="<?php echo $key[0];?>"></button>
-				      </td>
+				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
+				      </td>				     
 				     <tr>
 			     		
 
-					 <?php	 		 
+					 <?php
+					   		 
 				 	}				 				 
 			  	?>
 			    	     
