@@ -44,11 +44,11 @@
 				      <td><?php echo $key[3];?></td>
 				      <td><?php echo $key[4];?></td> 
 				      <td>
-				      	<button type="button" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
+				      	<button type="button" id="editarVerticall" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
 				      	 </button>
 					  </td>
 					  <td>
-				      	<button type="button" onclick="<?php echo $key[0];?>" id="EliminarV" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" value="<?php echo $key[0];"" ?>"></button>
+				      	<button type="button" id="EliminarV"  class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" id="EliminarVerticalTabla" value="<?php echo $key[0];?>"></button>
 				      </td>
 				     <tr>
 			     		
@@ -132,7 +132,7 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form>
+	       	<form class="form" id="EV" method="POST">
 			  <div class="form-group">
 			    <label for="inputNombre">Nombre</label> 
 			    <input type="text" class="form-control" id="eNv" name="eNv" placeholder="Hackaton">
@@ -162,7 +162,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="ActualizarVertical">Actualizar</button>
+	        <button type="button" class="btn btn-success" id="ActualizarVertical" onclick="UpdateVertical()">Actualizar</button>
 	      </div>
 	    </div>
 	  </div>
@@ -187,7 +187,7 @@
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+	        <button type="button" class="btn btn-danger" id="EliminarVer">Continuar</button>
 	      </div>
 	    </div>
 	  </div>

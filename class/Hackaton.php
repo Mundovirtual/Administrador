@@ -3,8 +3,7 @@
 	 
 	 class Vertical{
 
-	 	function mostrarDatos(){
-	 		
+	 	function mostrarDatos(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT * FROM `hackatonedicion`";

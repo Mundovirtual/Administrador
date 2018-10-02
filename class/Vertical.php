@@ -36,7 +36,7 @@
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
-	 		$sql="DELETE FROM `vertical` WHERE `id`='$id'";
+	 		$sql="DELETE FROM `vertical` WHERE `id`='$id'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
