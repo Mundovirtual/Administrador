@@ -1,5 +1,5 @@
 <?php 
-	 include_once("../class/conexion.php");
+	 include_once("conexion.php");
 	 
 	 class Vertical{
 
@@ -45,10 +45,6 @@
 	 }
  
 	   
-
- if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset($_POST['AsesoriaVertical'])&&isset($_POST['EdicionVertical'])){
-		echo "hola desde muy lejos".$_POST['EdicionVertical'];   
- }	
  
  
  ?>

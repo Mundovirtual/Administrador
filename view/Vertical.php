@@ -1,6 +1,6 @@
 <?php
  include_once("../modulos/login/security.php"); 
- include_once("../modulos/vertical/MetodosVertical.php");  
+ include_once("../class/Vertical.php");  
 ?>  
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
@@ -44,11 +44,11 @@
 				      <td><?php echo $key[3];?></td>
 				      <td><?php echo $key[4];?></td> 
 				      <td>
-				      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
+				      	<button type="button" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
 				      	 </button>
 					  </td>
 					  <td>
-				      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" value="<?php echo $key[0];"" ?>"></button>
+				      	<button type="button" onclick="<?php echo $key[0];?>" id="EliminarV" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" value="<?php echo $key[0];"" ?>"></button>
 				      </td>
 				     <tr>
 			     		
@@ -89,7 +89,7 @@
 			  </div>
 			  <div class="form-group">
 			    <label>Asesoria*</label>
-			    <textarea class="form-control" id="AsesoriaVertical letras"  name="AsesoriaVertical" required="" rows="2" placeholder="Asesoria" minlength="10" maxlength="80" ></textarea>
+			    <textarea class="form-control letras" id="AsesoriaVertical "  name="AsesoriaVertical" required="" rows="2" placeholder="Asesoria" minlength="10" maxlength="80" ></textarea>
 			  </div>
 		      <div class="input-group mb-3"> 
 			    <div class="input-group-prepend">
@@ -134,22 +134,23 @@
 	      <div class="modal-body">
 	       	<form>
 			  <div class="form-group">
-			    <label for="inputNombre">Nombre</label>
-			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
+			    <label for="inputNombre">Nombre</label> 
+			    <input type="text" class="form-control" id="eNv" name="eNv" placeholder="Hackaton">
 			  </div>
+
 			  <div class="form-group">
 			    <label for="exampleFormControlTextarea1">Descripcion</label>
-			    <textarea class="form-control" id="Descripcion" rows="2" placeholder="Descripcion"></textarea>
+			    <textarea class="form-control" id="eDv" name="eDv" rows="2" placeholder="Descripcion"></textarea>
 			  </div>
 			  <div class="form-group">
 			    <label for="exampleFormControlTextarea1">Asesoria</label>
-			    <textarea class="form-control" id="Asesoria" rows="2" placeholder="Asesoria"></textarea>
+			    <textarea class="form-control" id="eAv" name="eAv" rows="2" placeholder="Asesoria"></textarea>
 			  </div>
 		    <div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
 			    <label class="input-group-text" for="inputGroupSelect01">Hackaton</label>
 			  </div>
-			  <select class="custom-select" id="inputGroupSelect01">
+			  <select required class="custom-select" id="eHv" name="eHv">
 			    <option selected>Selecciona...</option>
 			    <option value="1">Hackaton 1</option>
 			    <option value="2">Hackaton 2</option>
@@ -161,7 +162,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="ActualizarHack">Actualizar</button>
+	        <button type="button" class="btn btn-success" id="ActualizarVertical">Actualizar</button>
 	      </div>
 	    </div>
 	  </div>
