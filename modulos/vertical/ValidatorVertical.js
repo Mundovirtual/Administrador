@@ -90,7 +90,27 @@ function eliminarVertical(id){
 			console.log("complete");
 		});
 	});		
+<<<<<<< HEAD
 });    
+=======
+}); 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> parent of b1832e2... Datatable
  
 
  

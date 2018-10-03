@@ -1,7 +1,6 @@
 <?php
  include_once("../modulos/login/security.php"); 
- include_once("../class/Vertical.php"); 
- include_once("../class/Hackaton.php") 
+ include_once("../class/Vertical.php");  
 ?>  
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
@@ -31,7 +30,38 @@
 			    </tr>
 			  </thead>			  
 			  <tbody>
+<<<<<<< HEAD
 		    
+=======
+		
+			 <?php 
+
+					$con=new Vertical();
+					$datos=$con->mostrarDatos();
+				  	foreach ($datos as $key) {				  		
+				  		?>
+					<tr>
+ 
+				      <td><?php echo $key[1];?></td>
+				      <td><?php echo $key[2];?></td>
+				      <td><?php echo $key[3];?></td>
+				      <td><?php echo $key[4];?></td> 
+				      <td>
+				      	<button type="button" id="editarVerticall" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
+				      	 </button>
+					  </td>
+					  <td>
+				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
+				      </td>				     
+				     <tr>
+			     		
+
+					 <?php
+					   		 
+				 	}				 				 
+			  	?>
+			    	     
+>>>>>>> parent of b1832e2... Datatable
 			  </tbody>
 			</table> 
 			
@@ -72,15 +102,9 @@
 			    </div>
 			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required="">
 			      <option selected>Selecciona...</option>
-			      <?php 
-			      $con=new hackaton();
-				  $datosH=$con->mostrarDatosHackaton(); 
-				  foreach ($datosH as $key) {
-				  	?>
-				  	<option value="<?php echo $key["0"];?>"><?php echo $key["1"];?></option>
-				  	<?php
-				  }
-			       ?> 
+			      <option value="1">Hackaton 1</option>
+			      <option value="2">Hackaton 2</option>
+			      <option value="3">Hackaton 3</option>
 			    </select>
 			  </div>
 			</div>
@@ -132,16 +156,11 @@
 			    <label class="input-group-text" for="inputGroupSelect01">Hackaton</label>
 			  </div>
 			  <select required class="custom-select" id="eHv" name="eHv">
-			    <?php 
-			    $datosH=$con->mostrarDatosHackaton(); 
-				  foreach ($datosH as $key) {
-				  	?>
-				  	<option value="<?php echo $key["0"];?>"><?php echo $key["1"];?></option>
-				  	<?php
-				  }
-			       ?> 
-
-			   </select>
+			    <option selected>Selecciona...</option>
+			    <option value="1">Hackaton 1</option>
+			    <option value="2">Hackaton 2</option>
+			    <option value="3">Hackaton 3</option>
+			  </select>
 			</div>
 				 		
 			</form>
