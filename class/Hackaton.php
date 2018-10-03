@@ -1,9 +1,9 @@
 <?php 
 	 include_once("conexion.php");
 	 
-	 class Vertical{
+	 class hackaton{
 
-	 	function mostrarDatos(){	 		
+	 	function mostrarDatosHackaton(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT * FROM `hackatonedicion`";
