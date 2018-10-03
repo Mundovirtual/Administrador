@@ -5,8 +5,7 @@
 ?>  
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
- 	
-<div class="container">
+ <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
 				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalVertical">Nuevo
@@ -19,9 +18,10 @@
 		</div>
 		<div class="col-md-10" id="TablaVertical" class="displayVertical">
 			 
-			 <table id="DatosVertical" class="display table">
+			 <table id="MostrarVertical" class="table">
 			  <thead>
-			    <tr> 
+			    <tr>
+			      <th scope="col">#</th> 
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
@@ -31,34 +31,7 @@
 			    </tr>
 			  </thead>			  
 			  <tbody>
-		
-			 <?php 
-
-					$con=new Vertical();
-					$datos=$con->mostrarDatos(); 
-				  	foreach ($datos as $key) {				  		
-				  		?>
-					<tr>
- 
-				      <td><?php echo $key[1];?></td>
-				      <td><?php echo $key[2];?></td>
-				      <td><?php echo $key[3];?></td>
-				      <td><?php echo $key[6];?></td> 
-				      <td>
-				      	<button type="button" id="editarVerticall" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
-				      	 </button>
-					  </td>
-					  <td>
-				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
-				      </td>				     
-				     <tr>
-			     		
-
-					 <?php
-					   		 
-				 	}				 				 
-			  	?>
-			    	     
+		    
 			  </tbody>
 			</table> 
 			

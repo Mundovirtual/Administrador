@@ -2,7 +2,7 @@
 include_once("../../class/Vertical.php");
 
 
- if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset($_POST['AsesoriaVertical'])&&isset($_POST['EdicionVertical']) ){
+if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset($_POST['AsesoriaVertical'])&&isset($_POST['EdicionVertical']) ){
 	if ($_POST['EdicionVertical']=="Selecciona...") {
 		 
 	}
@@ -14,7 +14,6 @@ include_once("../../class/Vertical.php");
 }
  
 if (isset($_POST['IdEliminar'])){
-
 	$Vertical=new Vertical();
 	$eliminar=$Vertical->EliminarVertical($_POST['IdEliminar']);
 	if ($eliminar) {
@@ -36,12 +35,6 @@ if (isset($_POST['IdEliminar'])) {
 	$Vertical=new Vertical();
 	 $Registrar=$Vertical->EliminarVertical($_POST['IdEliminar']);
 }
-
- 
-
-
-
- 
  
 ?>
  
