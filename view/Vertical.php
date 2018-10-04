@@ -27,8 +27,8 @@
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
 			      <th scope="col">Hackaton</th>
-			      <th></th>
-			      <th></th>
+			      <th>Eliminar</th>
+			      <th>aaa</th>
 			    </tr>
 			  </thead>			  
 			  <tbody> 
