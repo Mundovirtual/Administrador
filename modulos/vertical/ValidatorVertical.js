@@ -1,3 +1,4 @@
+ 
 /*Registrar Verticales*/
 jQuery(document).on('submit', "#RV", function(event){
 	event.preventDefault(); 
@@ -35,12 +36,13 @@ function ActualizarVertical(idd,Nv,Dv,Av,Ev){
 }
 
 function UpdateVertical() {
-	 event.preventDefault(); 
+	 
 
 		var eNv=$("#eNv").val();
 		var eDv=$("#eDv").val();
 		var eAv=$("#eAv").val();
 		var eHv=$("#eHv").val(); 
+	 event.preventDefault();
 	jQuery.ajax({
 		url: '../Modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
@@ -66,7 +68,7 @@ let eliminar="";
 function eliminarVertical(id){
 	eliminar=id;
 }
- 
+  
  $(document).ready(function(){
 	$("#EliminarVer").click(function () {   
 	 	jQuery.ajax({
@@ -90,27 +92,5 @@ function eliminarVertical(id){
 			console.log("complete");
 		});
 	});		
-<<<<<<< HEAD
 });    
-=======
-}); 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> parent of b1832e2... Datatable
- 
-
  

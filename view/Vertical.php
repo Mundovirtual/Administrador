@@ -2,6 +2,8 @@
  include_once("../modulos/login/security.php"); 
  include_once("../class/Vertical.php");  
 ?>  
+
+<script type="text/javascript" src="../modulos/vertical/cargartabla.js"></script>
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
  <div class="container">
@@ -29,39 +31,7 @@
 			      <th></th>
 			    </tr>
 			  </thead>			  
-			  <tbody>
-<<<<<<< HEAD
-		    
-=======
-		
-			 <?php 
-
-					$con=new Vertical();
-					$datos=$con->mostrarDatos();
-				  	foreach ($datos as $key) {				  		
-				  		?>
-					<tr>
- 
-				      <td><?php echo $key[1];?></td>
-				      <td><?php echo $key[2];?></td>
-				      <td><?php echo $key[3];?></td>
-				      <td><?php echo $key[4];?></td> 
-				      <td>
-				      	<button type="button" id="editarVerticall" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
-				      	 </button>
-					  </td>
-					  <td>
-				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
-				      </td>				     
-				     <tr>
-			     		
-
-					 <?php
-					   		 
-				 	}				 				 
-			  	?>
-			    	     
->>>>>>> parent of b1832e2... Datatable
+			  <tbody> 
 			  </tbody>
 			</table> 
 			
