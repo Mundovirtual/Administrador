@@ -6,6 +6,8 @@
 <script type="text/javascript" src="../modulos/vertical/cargartabla.js"></script>
 <script src="../js/jquery.validate.min.js"></script> 
 <script src="../modulos/vertical/ValidatorVertical.js"></script>
+
+
  <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
@@ -13,11 +15,11 @@
 				</button>
 	</div>	   
 </div>
-<body>
+ 	
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
-		<div class="col-md-10" id="TablaVertical" class="displayVertical">
+		<div class="col-md-10">
 			 
 			 <table id="MostrarVertical" class="table">
 			  <thead>
@@ -27,8 +29,8 @@
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
 			      <th scope="col">Hackaton</th>
-			      <th>Eliminar</th>
-			      <th>aaa</th>
+			      <th></th>
+			      <th></th>
 			    </tr>
 			  </thead>			  
 			  <tbody> 
@@ -39,8 +41,7 @@
 		<div class="col-md-1">
 		</div>
 	</div>
-
-</body>
+ 
 
 	<!-- REGISTRO -->
 	<div class="modal fade" id="ModalVertical" tabindex="-1" role="dialog" aria-labelledby="Editar" aria-hidden="true">
