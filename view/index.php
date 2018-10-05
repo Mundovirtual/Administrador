@@ -101,7 +101,7 @@
     </nav>
     <div class="page ">
       <!-- navbar-->
-      <header class="header sticky-top  "  >
+      <header class="header sticky-top">
         <nav class="navbar">
           <div class="container-fluid ">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
