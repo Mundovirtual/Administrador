@@ -4,7 +4,7 @@
  			
 			switch ($vista) {
 			    case "1": 
-			        include_once("../view/hackaton.php");      
+			        include_once("../view/comunidad.php");      
 			        break;
 			    case "2": 
 			        include_once("../view/Vertical.php");			         

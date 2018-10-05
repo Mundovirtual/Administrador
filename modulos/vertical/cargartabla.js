@@ -1,6 +1,4 @@
-$(document).ready(function() {
-    $('#MostrarVertical').DataTable();
-}); 
+ 
 /*$(document).ready(function() {			   
 
 	$('#MostrarVertical').DataTable( {	 
