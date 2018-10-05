@@ -70,8 +70,7 @@ function eliminarVertical(id){
 }
   
  $(document).ready(function(){
-	$("#EliminarVer").click(function () {
-		alert(eliminar) ;  
+	$("#EliminarVer").click(function () { 
 	 	jQuery.ajax({
 		url: '../Modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
