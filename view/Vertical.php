@@ -155,9 +155,14 @@
 			  </div>
 			  <select required class="custom-select" id="eHv" name="eHv">
 			    <option selected>Selecciona...</option>
-			    <option value="1">Hackaton 1</option>
-			    <option value="2">Hackaton 2</option>
-			    <option value="3">Hackaton 3</option>
+			    <?php 
+				 
+				  foreach ($datosH as $key) {
+				  	?>
+				  	<option value="<?php echo $key["0"];?>"><?php echo $key["1"];?></option>
+				  	<?php
+				  }
+			       ?> 
 			  </select>
 			</div>
 				 		
