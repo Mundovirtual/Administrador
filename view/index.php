@@ -167,11 +167,6 @@
       </footer>
     </div>
     <!-- JavaScript files-->
-    
-
-
-
-
     <script src="../js/Bootstrap/bootstrap.min.js"></script>
     <script src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/alertifyjs/alertify.js"></script> 

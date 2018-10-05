@@ -1,28 +1,14 @@
 $(document).ready(function() {
-    $('#MostrarVertical').DataTable( {  
-        "ajax": "../Modulos/vertical/tablavertical.php",
-
-        "columns":  [
-			{ "dataVertical": "id" },
-			{ "dataVertical": "Nombre" },
-			{ "dataVertical": "Descripcion" },
-			{ "dataVertical": "Asesorias" },
-			{ "dataVertical": "Hack" },
-			{ "dataVertical": "Editar" } ,
-			{ "dataVertical": "Eliminar" } 
-			],
-    } );
-} );
+    $('#MostrarVertical').DataTable();
+}); 
 /*$(document).ready(function() {			   
 
 	$('#MostrarVertical').DataTable( {	 
 		"bDeferRender": true,
-
 		"sPaginationType": "full_numbers",
 		"ajax": {
 			"url": "../Modulos/vertical/tablavertical.php",
-        	"type": "POST",
-        	"dataType": "json",        	
+        	"type": "POST",        	
 		},
 
 		"columns": [

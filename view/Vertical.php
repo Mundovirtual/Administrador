@@ -3,9 +3,6 @@
  include_once("../class/Vertical.php");  
 ?>  
 
-<script type="text/javascript" src="../modulos/vertical/cargartabla.js"></script>
-<script src="../js/jquery.validate.min.js"></script> 
-<script src="../modulos/vertical/ValidatorVertical.js"></script>
 
 
  <div class="container">
@@ -21,19 +18,44 @@
 		</div>
 		<div class="col-md-10">
 			 
-			 <table id="MostrarVertical" class="table">
+			 <table id="MostrarVertical" class="table display">
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th> 
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
-			      <th scope="col">Hackaton</th>
+			      <th scope="col">Hackaton</th>  
 			      <th></th>
 			      <th></th>
-			    </tr>
+			    </tr>			    
 			  </thead>			  
-			  <tbody> 
+			  <tbody>
+			  	<?php 
+
+					$con=new Vertical();
+					$datos=$con->mostrarDatos();
+				  	foreach ($datos as $key) {?>
+					<tr>
+				      <th scope="row"><?php echo $key[0];?></th>
+				      <td><?php echo $key[1];?></td>
+				      <td><?php echo $key[2];?></td>
+				      <td><?php echo $key[3];?></td>
+				      <td><?php echo $key[4];?></td> 
+				      <td>
+				      	<button type="button" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
+				      	</button>
+					  </td>
+					  <td>
+				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
+
+				      </td>
+				     <tr>
+			     		
+
+					 <?php	 		 
+				 	}				 				 
+			  	?> 
 			  </tbody>
 			</table> 
 			
@@ -81,11 +103,7 @@
 			</div>
 			  <div class="modal-footer">
 		          <button type="button"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-		          <button type="submit" id="RegistroVertical" class="btn btn-success">Registrar</button>	
-		          
-		          <script type="text/javascript">
-		          	$("#RegistroVertical").validate();
-		          </script>	        
+		          <button type="submit" id="RegistroVertical" class="btn btn-success">Registrar</button>	 
 		          
 		      </div>	
 			 
@@ -170,3 +188,10 @@
 	</div>
  
  
+<script src="../js/jquery.validate.min.js"></script> 
+<script src="../modulos/vertical/ValidatorVertical.js"></script>
+<script>
+	$(document).ready(function() {
+    $('#MostrarVertical').DataTable();
+}); 
+</script>
