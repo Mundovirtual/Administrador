@@ -60,27 +60,5 @@
   				</div>
   			</div>
   		</div>
-  	</form>
-    <script type="text/javascript">
-    	$(document).ready(function(){
-    		$('#guardarDatosHackaton').submit(function(event){
-    			var valor = $(this).serialize();
-    			 $.ajax({
-		             url: '../modulos/Hackaton/registro_hackaton.php',
-		             type:'post',
-		             data:valor,
-		             beforeSend:function(){
-		 	         $(".mensaje").html("<div class='alert alert-danger alert-dismissible fade show text-center' role='alert'><i class='fas fa-times'></i><strong> Cargando datos !</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-		         },
-		         success:function(respuesta){
-		 	         $(".mensaje").html(respuesta);
-		 	         visualizarHackaton();
-		         }
-	             })
-    			event.preventDefault();
-
-    		 })
-    	})
-    	 
-    	
-    </script> 
+  	</form> 
+  

@@ -1,9 +1,11 @@
  <?php
+
  include_once("../modulos/login/security.php");
   include_once("../modulos/enrutador.php");   
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
   } 
+ 
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,10 +16,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-    <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
+    <link rel="shortcut icon" href="../img/favicon.png">
 
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
          
     <!-- Custom Scrollbar-->
     <link rel="stylesheet" href="../js/malihu/jquery.mCustomScrollbar.css">
@@ -48,7 +50,7 @@
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><div class="fas fa-user-astronaut fa-2x"></div>
-            <h3 class="h3">Isaac Santiago Coronel</h2><span>Administrador</span>
+            <h3 class="h3"><?php echo $_SESSION['IdAdmin']; ?></h2><span>Administrador</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>I</strong><strong class="text-primary">H</strong></a></div>
@@ -141,6 +143,9 @@
               if ($enrutador->validarGET($_GET['cargar'])) { 
                     $enrutador->cargarVista($_GET['cargar']);
                  } 
+                 else{
+                 echo "BienVenido";
+                 }
             ?>
            
           </div>
@@ -162,16 +167,11 @@
       </footer>
     </div>
     <!-- JavaScript files-->
-    
-
-
-
-
     <script src="../js/Bootstrap/bootstrap.min.js"></script>
     <script src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/alertifyjs/alertify.js"></script> 
     <!-- Main File-->
-    <script type="text/javascript" src="../js/front.js"></script>
+    <script src="../js/front.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
 
   </body>
