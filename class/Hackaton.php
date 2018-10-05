@@ -1,9 +1,9 @@
 <?php 
 	 include_once("conexion.php");
 	 
-	 class Vertical{
+	 class Hackaton{
 
-	 	function mostrarDatos(){	 		
+	 	function mostrarDatosHackaton(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT * FROM `hackatonedicion`";
@@ -12,7 +12,7 @@
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function InsertarVertical($Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
+	 	function InsertarHackaton($Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `hackatonedicion`(`Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen`) VALUES  ('$Edicion','$InicioHackaton','$FechLimiteRegProy','$TerminoHack','$Imagen'))";
@@ -21,7 +21,7 @@
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function ActualizarVertical($id,$Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
+	 	function ActualizarHackaton($id,$Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
@@ -31,7 +31,7 @@
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function EliminarVertical($id){
+	 	function EliminarHackaton($id){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 

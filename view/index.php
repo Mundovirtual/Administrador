@@ -170,6 +170,7 @@
     <script src="../js/Bootstrap/bootstrap.min.js"></script>
     <script src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/alertifyjs/alertify.js"></script> 
+
     <!-- Main File-->
     <script src="../js/front.js"></script>
     <script src="../js/jquery.validate.min.js"></script>

@@ -27,7 +27,7 @@ jQuery(document).on('submit', "#RV", function(event){
 
 /*actualizar Verticales*/
  let actualizar="";
-function ActualizarVertical(idd,Nv,Dv,Av,Ev){ 
+function ActualizarVertical(idd,Nv,Dv,Av,Ev){  
 	actualizar =idd;
 	$("#eNv").val(Nv);
 	$("#eDv").val(Dv);

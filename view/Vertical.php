@@ -1,6 +1,7 @@
 <?php
  include_once("../modulos/login/security.php"); 
- include_once("../class/Vertical.php");  
+ include_once("../class/Vertical.php"); 
+ include_once("../class/Hackaton.php"); 
 ?>  
 
 
@@ -25,7 +26,7 @@
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
-			      <th scope="col">Hackaton</th>  
+			      <th scope="col">Hackaton</th>   
 			      <th></th>
 			      <th></th>
 			    </tr>			    
@@ -35,21 +36,22 @@
 
 					$con=new Vertical();
 					$datos=$con->mostrarDatos();
-				  	foreach ($datos as $key) {?>
+				  	foreach ($datos as $key) {				  		
+				  		?>
 					<tr>
-				      <th scope="row"><?php echo $key[0];?></th>
+ 
 				      <td><?php echo $key[1];?></td>
 				      <td><?php echo $key[2];?></td>
 				      <td><?php echo $key[3];?></td>
 				      <td><?php echo $key[4];?></td> 
 				      <td>
-				      	<button type="button" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
-				      	</button>
+				      	<button type="button" id="editarVerticall" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>""></button> 
+
 					  </td>
 					  <td>
-				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
+				      	<button type="button" id="EliminarV"  class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" id="EliminarVerticalTabla" value="<?php echo $key[0];?>"></button>
 
-				      </td>
+				      </td>				     
 				     <tr>
 			     		
 
@@ -95,9 +97,16 @@
 			    </div>
 			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required="">
 			      <option selected>Selecciona...</option>
-			      <option value="1">Hackaton 1</option>
-			      <option value="2">Hackaton 2</option>
-			      <option value="3">Hackaton 3</option>
+				  <?php 
+				  $con=new Hackaton();
+			       $datosH=$con->mostrarDatosHackaton(); 
+				  foreach ($datosH as $key) {
+				  	?>
+				  	<option value="<?php echo $key["0"];?>"><?php echo $key["1"];?></option>
+				  	<?php
+				  }
+			       ?> 
+				   
 			    </select>
 			  </div>
 			</div>
@@ -186,12 +195,5 @@
 	    </div>
 	  </div>
 	</div>
- 
- 
-<script src="../js/jquery.validate.min.js"></script> 
-<script src="../modulos/vertical/ValidatorVertical.js"></script>
-<script>
-	$(document).ready(function() {
-    $('#MostrarVertical').DataTable();
-}); 
-</script>
+  <script src="../modulos/vertical/ValidatorVertical.js"></script>
+  <script src="../modulos/vertical/cargartabla.js"></script>
