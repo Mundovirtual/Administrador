@@ -1,21 +1,20 @@
 <?php 
-include_once("../../class/Vertical.php");
+include_once("../../class/Hackaton.php");
 
-
-if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset($_POST['AsesoriaVertical'])&&isset($_POST['EdicionVertical']) ){
-	if ($_POST['EdicionVertical']=="Selecciona...") {
-		 
-	}
-	else{ 		 
-		$Vertical=new Vertical();
-		$Registrar=$Vertical->InsertarVertical($_POST['NombreVertical'],$_POST['DescripcionVertical'],$_POST['AsesoriaVertical'],$_POST['EdicionVertical']);
+/*Registrar Imagen*/
+/*Variable para dejar la imagen como nula como primera etapa de desarrollo*/
+$imagen="null";
+if (isset($_POST['NombreHack'])&&isset($_POST['InicioHack'])&&isset($_POST['EntregaProyectos'])&&isset($_POST['FinHack'])){
+	 		 
+		$Hackaton=new Hackaton();
+		$Registrar=$Hackaton->InsertarHackaton($_POST['NombreHack'],$_POST['InicioHack'],$_POST['EntregaProyectos'],$_POST['FinHack'], $imagen);
 		echo $Registrar;
-	} 
+ 
 }
  
 if (isset($_POST['IdEliminar'])){
-	$Vertical=new Vertical();
-	$eliminar=$Vertical->EliminarVertical($_POST['IdEliminar']);
+	$Hackaton=new Hackaton();
+	$eliminar=$Hackaton->EliminarHackaton($_POST['IdEliminar']);
 	if ($eliminar) {
 		echo "siii";
 	}
@@ -24,17 +23,14 @@ if (isset($_POST['IdEliminar'])){
 	}
 
 }
+   
  
- 
-if (isset($_POST["idAc"])&&isset($_POST["eNv"])&&isset($_POST["eDv"])&&isset($_POST["eAv"])&&isset($_POST["eHv"])) {
-	 $Vertical=new Vertical();
-	 $Registrar=$Vertical->ActualizarVertical($_POST["idAc"],$_POST["eNv"],$_POST["eDv"],$_POST["eAv"],$_POST["eHv"]);
+if (isset($_POST["idAc"])&&isset($_POST["EhN"])&&isset($_POST["EhI"])&&isset($_POST["EhE"])&&isset($_POST["EhF"])&& isset($_POST["EhImg"])) {
+	 $Hackaton=new Hackaton();
+	 $Registrar=$Hackaton->ActualizarHackaton($_POST["idAc"],$_POST["eNv"],$_POST["eDv"],$_POST["eAv"],$_POST["eHv"],$_POST["EhImg"]);
 
 }
-if (isset($_POST['IdEliminar'])) {
-	$Vertical=new Vertical();
-	 $Registrar=$Vertical->EliminarVertical($_POST['IdEliminar']);
-}
+ 
  
 ?>
  

@@ -1,6 +1,7 @@
  <?php
- include_once("../modulos/login/security.php");    
-?>  
+ include_once("../modulos/login/security.php");
+ include_once("../class/Hackaton.php")    
+ ?>  
  
 <div class="container">
 	<h1 align="center"> </i>Hackaton</h1>     
@@ -32,23 +33,38 @@
 			      <th scope="col">Edicion</th>
 			      <th scope="col">Inicio</th>
 			      <th scope="col">Limite de registro</th>
-			      <th scope="col">Acciones</th>
+			      <th scope="col">Fin</th>
+			      <th scope="col">Imagen</th>
+			      <th scope="col"></th>
+			      <th scope="col"></th>
 			    </tr>
 			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Mark</td>
-			      <td>Otto</td>
-			      <td>@mdo</td> 
-			      <td>
-			      	<button type="button" class="btn btn-primary fas fa-edit" data-toggle="modal" data-target="#EditarHackaton">	 
-			      	 </button>
+			  <tbody>			    
+			   <?php
+				/*SELECT `id`, `Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen` FROM `hackatonedicion` WHERE 1 */
+					$Hackaton=new Hackaton();
+					$Ver=$Hackaton->mostrarDatosHackaton();  
+					foreach ($Ver as $key) {?>	
+					<tr>					
+				      <th scope="row"><?php echo $key[0] ?></th>
+				      <td><?php echo $key[1]; ?></td>
+				      <td><?php echo $key[2]; ?></td>
+				      <td><?php echo $key[3]; ?></td> 
+				      <td><?php echo $key[4]; ?></td>
+				      <td><?php if ($key[5]=="null") echo ""; ?></td> 
+				      <td>
+				      	<button type="button" class="btn btn-primary fas fa-edit" onclick="ActualizarHackaton(<?php  echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."','".$key[5]."'"; ?>)" data-toggle="modal" data-target="#EditarHackaton">	 
+				      	 </button>
+					  </td>
+					  <td>
+				      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarHackaton"></button>
+				      </td>
+				     </tr>
+					<?php
+					}
 
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarHackaton"></button>
-			      </td>
-			      
-			    </tr>			     
+				 ?>
+			    			     
 			  </tbody>
 			</table>
 			
@@ -70,36 +86,42 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form>
+	       	<form class="form" id="ModalRegistroHackaton" method="POST" >
 			  <div class="form-group">
-			    <label for="inputNombre">Nombre</label>
-			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
+			    <label>Nombre</label>
+			    <input type="text" class="form-control" id="NombreHack" name="NombreHack"  placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
 			  	 <div class="form-row">
 				    <div class="col">
 				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="InicioHack" class="form-control " value=""/>
+			   		  <input type="date" id="InicioHack" name="InicioHack"  class="form-control " value=""/>
 				    </div>
 				    <div class="col">
 				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EntregaProyectos" class="form-control " value=""/>
+			    	   <input type="date" id="EntregaProyectos" name="EntregaProyectos" class="form-control " value=""/>
 				    </div>
-				  </div>
-			    
-			  </div>			 
+				  </div>			    
+			  </div>		 
 			  <div class="form-group" align="center">
-			    <label class="label-control">Fin de Hackaton</label>
-			    	<div class="col-md-6">
-			    		<input type="date" id="FinHack" class="form-control" value=""/>
-			    	</div>
-			  </div>			  
-			</form>
+			  <label class="label-control">Fin de Hackaton</label>
+		    	<div class="col-md-6">
+		    		<input type="date" id="FinHack" name="FinHack" class="form-control" />
+		    	</div>
+			    <div class="col-md-6">
+				   <label class="label-control" align="center">Imagen</label>	    			
+				</div>	
+			  </div>
+			  <div class="form-group" >
+			  	<input type="file" class="form-control-file" id="ImagenPrincipal" name="ImagenPrincipal"  accept=".jpg, .jpeg, .png">
+			  </div>	  
+			
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="GuardarHack">Guardar</button>
+	        <button type="submit" class="btn btn-success" id="GuardarHack">Registrar</button>
 	      </div>
+	  	 </form>
 	    </div>
 	  </div>
 	</div>
@@ -116,39 +138,46 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form>
+	       	<form id="ModalEditarHackaton" class="form" method="POST">
 			  <div class="form-group">
 			    <label for="inputNombre">Nombre</label>
-			    <input type="text" class="form-control" id="inputNombre" placeholder="Hackaton">
+			    <input type="text" class="form-control" id="EditarNombreHack" name="EditarNombreHack" placeholder="Hackaton">
 			  </div>
 			  <div class="form-group">
 			  	 <div class="form-row">
 				    <div class="col">
 				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="InicioHack" class="form-control " value=""/>
+			   		  <input type="date" id="EditarInicioHack" name="EditarInicioHack" class="form-control " value=""/>
 				    </div>
 				    <div class="col">
 				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EntregaProyectos" class="form-control " value=""/>
+			    	   <input type="date" id="EditarEntregaProyectos" name="EditarEntregaProyectos" class="form-control " value=""/>
 				    </div>
 				  </div>
 			    
-			  </div>			 
-			  <div class="form-group" align="center">
-			    <label class="label-control">Fin de Hackaton</label>
-			    	<div class="col-md-6">
-			    		<input type="date" id="FinHack" class="form-control" value=""/>
-			    	</div>
-			  </div>			  
-			</form>
-	      </div>
+			  </div>	
+			  <label class="label-control">Fin de Hackaton</label>
+		    	<div class="col-md-6">
+		    		<input type="date" id="EditarFinHack" name="EditarFinHack" class="form-control" />
+		    	</div>
+			    <div class="col-md-6">
+				   <label class="label-control" align="center">Imagen</label>	    			
+				</div>	
+			 
+			  <div class="form-group" >
+			  	<input type="file" class="form-control-file" id="EditarImagenPrincipal" name="EditarImagenPrincipal"  accept=".jpg, .jpeg, .png">
+			  </div>				 			  
+ 
+
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="ActualizarHack">Actualizar</button>
-	      </div>
+	        <button type="submit" class="btn btn-success" id="ActualizarHack" onclick="UpdateHackaton()">Actualizar</button>
+	      </div>	
+	    </form>
 	    </div>
 	  </div>
 	</div>
+</div>
 
 	<!-- Eliminar -->	
  
@@ -174,7 +203,7 @@
 	    </div>
 	  </div>
 	</div>
-	
+  <script src="../modulos/hackaton/Hackaton.js"></script>	
 
 
 

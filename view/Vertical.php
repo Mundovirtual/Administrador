@@ -200,4 +200,4 @@
 	  </div>
 	</div>
   <script src="../modulos/vertical/ValidatorVertical.js"></script>
-  <script src="../modulos/vertical/cargartabla.js"></script>
+ 

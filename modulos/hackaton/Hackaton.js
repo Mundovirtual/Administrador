@@ -1,16 +1,17 @@
  
-/*Registrar Verticales*/
-jQuery(document).on('submit', "#RV", function(event){
+/*Registrar Hackaton*/
+jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){ 
 	event.preventDefault(); 
-     var datos=$(this).serialize();
-
-	jQuery.ajax({
-		url: '../Modulos/vertical/FuncionesVertical.php',
+     var datos=$("#ModalRegistroHackaton").serialize();
+     alert(datos);
+     console.log(datos);
+	 jQuery.ajax({
+		url: '../Modulos/hackaton/Hackaton.php',
 		type: 'POST',
 		dataType: 'json',
 		data: datos,
 		beforeSend:function(){
-			 $('#ModalVertical').modal('hide');
+			  
 		}
 	})
 	.done(function(respuesta) {
@@ -25,31 +26,33 @@ jQuery(document).on('submit', "#RV", function(event){
 	});
 });      
 
-/*actualizar Verticales*/
+ /*actualizar Hackaton*/
  let actualizar="";
-function ActualizarVertical(idd,Nv,Dv,Av,Ev){  
+function ActualizarHackaton(idd,Edicion,IH,FlP,TH,Imagen){  
 	actualizar =idd;
-	$("#eNv").val(Nv);
-	$("#eDv").val(Dv);
-	$("#eAv").val(Av);
-	$("#eHv").val(Ev); 
+	$("#EditarNombreHack").val(Edicion);
+	$("#EditarInicioHack").val(IH);
+	$("#EditarEntregaProyectos").val(FlP);
+	$("#EditarFinHack").val(TH);
+	$("#EditarImagenPrincipal").val(Imagen);
 }
 
-function UpdateVertical() {
-	 event.preventDefault();
+function UpdateHackaton() {
+	 
 
-		var eNv=$("#eNv").val();
-		var eDv=$("#eDv").val();
-		var eAv=$("#eAv").val();
-		var eHv=$("#eHv").val(); 
+		var EhN=$("#EditarNombreHack").val();
+		var EhI=$("#EditarInicioHack").val();
+		var EhE=$("#EditarEntregaProyectos").val();
+		var EhF=$("#EditarFinHack").val(); 
+		var EhImg=$("#EditarImagenPrincipal").val();
 	 
 	jQuery.ajax({
-		url: '../Modulos/vertical/FuncionesVertical.php',
+		url:'../Modulos/hackaton/Hackaton.php',
 		type: 'POST',
 		dataType: 'json',
-		data: {'idAc':actualizar,'eNv':eNv,'eDv':eDv,'eAv':eAv,'eHv':eHv},
+		data: {'idAc':actualizar,'EhN':EhN,'EhI':EhI,'EhE':EhE,'EhF':EhF,'EhImg':EhImg},
 		beforeSend:function(){ 
-			 $('#editarVertical').modal('hide');
+			  
 		}
 	})
 	.done(function(respuesta) {
@@ -62,6 +65,7 @@ function UpdateVertical() {
 	.always(function() {
 		console.log("complete");
 	});
+	event.preventDefault();
 }
 let eliminar="";
 
