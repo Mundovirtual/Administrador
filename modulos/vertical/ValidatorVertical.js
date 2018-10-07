@@ -32,8 +32,8 @@ jQuery(document).on('submit', "#RV", function(event){
 
 
 /*actualizar Verticales*/
- let actualizar="";
-function ActualizarVertical(idd,Nv,Dv,Av,Ev){ 
+let actualizar="";
+function ActualizarVertical(idd,Nv,Dv,Av,Ev){  
 	actualizar =idd;
 	$("#eNv").val(Nv);
 	$("#eDv").val(Dv);
@@ -41,7 +41,9 @@ function ActualizarVertical(idd,Nv,Dv,Av,Ev){
 	$("#eHv").val(Ev); 
 }
 
-function UpdateVertical() { 
+function UpdateVertical() {
+	 
+
 		var eNv=$("#eNv").val();
 		var eDv=$("#eDv").val();
 		var eAv=$("#eAv").val();
@@ -52,21 +54,21 @@ function UpdateVertical() {
 		type: 'POST',
 		dataType: 'json',
 		data: {'idAc':actualizar,'eNv':eNv,'eDv':eDv,'eAv':eAv,'eHv':eHv},
-		beforeSend:function(){ 			
+		beforeSend:function(){ 
+			 $('#editarVertical').modal('hide');
 		}
 	})
-	.done(function(respuesta) { 
-		alert(respuesta);
-			$('#editarVertical').modal('hide');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Se ha registrado correctamente');
-			CargarTabla();
-	 
+	.done(function(respuesta) {
+		console.log(respuesta.Estado);
 	})
-	.fail(function(  responseText,wdw) {
-        console.log(wdw); 
+	.fail(function(  responseText) {
+        console.log(responseText.responseText); 
          
+	})
+	.always(function() {
+		console.log("complete");
 	});
+	 
 }
 let eliminar="";
 
@@ -82,7 +84,7 @@ function eliminarVertical(id){
 		type: 'POST',
 		dataType: 'json',
 		data: {'IdEliminar':eliminar},
-		beforeSend:function(){
+		beforeSend:function(){ 
 		   	$('#EliminarVertical').modal('hide');				
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.success('Registro Eliminado');
