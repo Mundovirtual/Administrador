@@ -3,9 +3,7 @@
  include_once("../class/Vertical.php"); 
  include_once("../class/Hackaton.php"); 
 ?>  
-<script type="text/javascript" src="../modulos/vertical/cargartabla.js"></script>
-
-
+ 
  <div class="container">
 	<h1 align="center">Verticales</h1>  
 	<div align="right">
@@ -70,7 +68,7 @@
 			    <div class="input-group-prepend">
 			      <label class="input-group-text">Edición</label>
 			    </div>
-			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required="">
+			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required>
 			      <option selected>Selecciona...</option>
 				  <?php 
 				  $con=new Hackaton();
@@ -163,10 +161,7 @@
 	        </button>
 	      </div>
 	    <div class="modal-body">	      		
-		<h1>Estás a punto de eliminar</h2>
-
-		Quiere proceder?
-	      	
+		<h1>Estás a punto de eliminar</h2> 
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

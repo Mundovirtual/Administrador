@@ -20,7 +20,7 @@ if (isset($_POST['IdEliminar'])){
 		echo "siii";
 	}
 	else{
-		echo $eliminar;
+		echo "false";
 	}
 
 }

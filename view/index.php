@@ -151,20 +151,8 @@
           </div>
 
         </div>
-      </section>
-      <footer class="main-footer ">
-        <div class="container-fluid ">
-          <div class="row">
-            <div class="col-sm-10">
-              <p>El mejor modo de predecir el futuro es inventándolo. –Alan Key</p>
-            </div>
-            <div class="col-sm-2 text-right">
-              <p>Equipo LABSOL</p>
-              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+      </section> 
     </div>
     <!-- JavaScript files-->
     <script src="../js/Bootstrap/bootstrap.min.js"></script>
