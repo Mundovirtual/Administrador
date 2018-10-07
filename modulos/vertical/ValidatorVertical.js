@@ -70,7 +70,7 @@ function UpdateVertical() {
 		} else {		
 			$('#editarVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Registrado actualizado');
+	 		alertify.success('Registro actualizado');
 			CargarTabla();
 		 }
 	})
