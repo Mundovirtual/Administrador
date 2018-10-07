@@ -1,4 +1,4 @@
- 
+
 /*Registrar Verticales*/
 jQuery(document).on('submit', "#RV", function(event){
 	event.preventDefault(); 
@@ -9,17 +9,22 @@ jQuery(document).on('submit', "#RV", function(event){
 		type: 'POST',
 		dataType: 'json',
 		data: datos,
-		beforeSend:function(){
-			
+		beforeSend:function(){			
 		}
 	})
 	 
 	.done(function(respuesta) {
-		$('#ModalVertical').modal('hide');
+		if (respuesta=="0") {
+			$('#ModalVertical').modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Selecciona una edición');
+
+		} else {		
+			$('#ModalVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.success('Registrado');
 			CargarTabla();
-		 
+		 }
 	})
 	.fail(function(responseText) {
         console.log(responseText.responseText); 
@@ -42,8 +47,6 @@ function ActualizarVertical(idd,Nv,Dv,Av,Ev){
 }
 
 function UpdateVertical() {
-	 
-
 		var eNv=$("#eNv").val();
 		var eDv=$("#eDv").val();
 		var eAv=$("#eAv").val();
@@ -55,14 +58,24 @@ function UpdateVertical() {
 		dataType: 'json',
 		data: {'idAc':actualizar,'eNv':eNv,'eDv':eDv,'eAv':eAv,'eHv':eHv},
 		beforeSend:function(){ 
-			 $('#editarVertical').modal('hide');
+			  
 		}
 	})
 	.done(function(respuesta) {
-		console.log(respuesta.Estado);
+		if (respuesta=="0") {
+			$('#editarVertical').modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Selecciona una edición');
+
+		} else {		
+			$('#editarVertical').modal('hide');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.success('Registrado actualizado');
+			CargarTabla();
+		 }
 	})
-	.fail(function(  responseText) {
-        console.log(responseText.responseText); 
+	.fail(function(  responseText,aa) {
+        console.log(aa); 
          
 	})
 	.always(function() {
@@ -74,7 +87,6 @@ let eliminar="";
 
 function eliminarVertical(id){ 
 	eliminar=id;
-
 }
   
  $(document).ready(function(){
@@ -85,14 +97,14 @@ function eliminarVertical(id){
 		dataType: 'json',
 		data: {'IdEliminar':eliminar},
 		beforeSend:function(){ 
-		   	$('#EliminarVertical').modal('hide');				
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Registro Eliminado');
-	 		CargarTabla();	
+		   	
 		}
 		})
-		.done(function(respuesta) { 
-			alert(respuesta);
+		.done(function(respuesta) {  
+			$('#EliminarVertical').modal('hide');				
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Registro Eliminado');
+	 		CargarTabla();	
 			
 		})
 		.fail(function(  responseText) {

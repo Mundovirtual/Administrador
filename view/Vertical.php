@@ -110,21 +110,21 @@
 	      <div class="modal-body">
 	       	<form class="form" id="EV" method="POST">
 			  <div class="form-group">
-			    <label for="inputNombre">Nombre</label> 
-			    <input type="text" class="form-control" id="eNv" name="eNv" placeholder="Hackaton">
+			    <label for="inputNombre">Nombre*</label> 
+			    <input type="text" minlength="8" maxlength="45" required="" class="form-control" id="eNv" name="eNv" placeholder="Hackaton">
 			  </div>
 
 			  <div class="form-group">
-			    <label for="exampleFormControlTextarea1">Descripcion</label>
-			    <textarea class="form-control" id="eDv" name="eDv" rows="2" placeholder="Descripcion"></textarea>
+			    <label for="exampleFormControlTextarea1">Descripcion*</label>
+			    <textarea class="form-control" id="eDv" name="eDv" rows="2" placeholder="Descripcion" required="" minlength="10" maxlength="80"></textarea>
 			  </div>
 			  <div class="form-group">
-			    <label for="exampleFormControlTextarea1">Asesoria</label>
-			    <textarea class="form-control" id="eAv" name="eAv" rows="2" placeholder="Asesoria"></textarea>
+			    <label for="exampleFormControlTextarea1">Asesoria*</label>
+			    <textarea class="form-control" id="eAv" name="eAv" rows="2" minlength="10" maxlength="80" placeholder="Asesoria"></textarea>
 			  </div>
 		    <div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Hackaton</label>
+			    <label class="input-group-text" for="inputGroupSelect01">Edición</label>
 			  </div>
 			  <select required class="custom-select" id="eHv" name="eHv">
 			    <option selected>Selecciona...</option>
