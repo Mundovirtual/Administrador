@@ -207,5 +207,17 @@
 
 
 
+<<<<<<< HEAD
 
  
+=======
+  					 <div class="modal-footer">
+	                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+	                     <button type="submit" class="btn btn-success" id="re">Registrar</button>
+	                 </div>	
+  				</div>
+  			</div>
+  		</div>
+  	</form> 
+  
+>>>>>>> master
