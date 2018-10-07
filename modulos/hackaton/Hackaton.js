@@ -38,8 +38,7 @@ function ActualizarHackaton(idd,Edicion,IH,FlP,TH,Imagen){
 }
 
 function UpdateHackaton() {
-	 
-
+	  
 		var EhN=$("#EditarNombreHack").val();
 		var EhI=$("#EditarInicioHack").val();
 		var EhE=$("#EditarEntregaProyectos").val();

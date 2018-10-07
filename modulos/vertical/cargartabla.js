@@ -1,6 +1,7 @@
+ 
 var tabla_nombre;
 $(document).ready(function() {
-    tabla_nombre = $("#tabla_nombre").dataTable({
+    tabla_nombre = $("#MostrarVertical").dataTable({
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
@@ -8,15 +9,18 @@ $(document).ready(function() {
             "type": "POST"
         },
         "columns": [ 
-            { "dataVertical": "id" },
-            { "dataVertical": "Nombre" },
-            { "dataVertical": "Descripcion" },
-            { "dataVertical": "Asesorias" },
-            { "dataVertical": "Hack" }
+            { "data": "idT" },
+            { "data": "NombreT" },
+            { "data": "DescripcionT" },
+            { "data": "AsesoriasT" },
+            { "data": "HackT" }, 
+            { "data": "EditarT" },
+            { "data": "EliminarT" } 
         ],
         "oLanguage": {
             "sProcessing": "Procesando...",
             "sLengthMenu": 'Mostrar <select>' +
+           		'<option value="5">5</option>' +
                 '<option value="10">10</option>' +
                 '<option value="20">20</option>' +
                 '<option value="30">30</option>' +

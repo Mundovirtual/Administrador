@@ -3,7 +3,7 @@
  include_once("../class/Vertical.php"); 
  include_once("../class/Hackaton.php"); 
 ?>  
-
+<script type="text/javascript" src="../modulos/vertical/cargartabla.js"></script>
 
 
  <div class="container">
@@ -18,7 +18,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			 
+			 				 
 			 <table id="MostrarVertical" class="table display">
 			  <thead>
 			    <tr> 
@@ -26,38 +26,14 @@
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Descripcion</th>
 			      <th scope="col">Asesorias</th>
-			      <th scope="col">Hackaton</th>   
+			      <th scope="col">Hackaton</th>    
 			      <th></th>
 			      <th></th>
+			 
 			    </tr>			    
 			  </thead>			  
-			  <tbody>
-			  		<?php 
-
-					$con=new Vertical();
-					$datos=$con->mostrarDatos();
-				  	foreach ($datos as $key) {?>
-					<tr>
-				      <th scope="row"><?php echo $key[0];?></th>
-				      <td><?php echo $key[1];?></td>
-				      <td><?php echo $key[2];?></td>
-				      <td><?php echo $key[3];?></td>
-				      <td><?php echo $key[6];?></td> 
-				      <td>
-				      	<button type="button" onclick="ActualizarVertical(<?php echo "'".$key[0]."','".$key[1]."','".$key[2]."','".$key[3]."','".$key[4]."'";?>)" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#editarVertical" value="<?php echo $key[0]; ?>">	 
-				      	</button>
-					  </td>
-					  <td>
-				      	<button type="button" id="EliminarV" onclick="eliminarVertical(<?php echo "'".$key[0]."'";?>)" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarVertical" ></button>
-
-				      </td>
-				     <tr>
-			     		
-
-					 <?php	 		 
-				 	}				 				 
-			  	?> 
-			  </tbody>
+			  <tbody> 
+		      </tbody> 
 			</table> 
 			</div>	
 		</div>
