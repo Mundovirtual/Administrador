@@ -191,33 +191,14 @@
 	        </button>
 	      </div>
 	    <div class="modal-body">	      		
-		<h1>Estás a punto de eliminar</h2>
-
-		Quiere proceder?
-	      	
+			<h1>Estás a punto de eliminar</h2> 
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-danger" id="ActualizarHack">Eliminar</button>
-	      </div>
+	        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+	    </div>
 	    </div>
 	  </div>
 	</div>
-  <script src="../modulos/hackaton/Hackaton.js"></script>	
-
-
-
-<<<<<<< HEAD
-
- 
-=======
-  					 <div class="modal-footer">
-	                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	                     <button type="submit" class="btn btn-success" id="re">Registrar</button>
-	                 </div>	
-  				</div>
-  			</div>
-  		</div>
-  	</form> 
   
->>>>>>> master
+ 
