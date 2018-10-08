@@ -25,8 +25,7 @@
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
-	 		$sql="UPDATE `hackatonedicion` SET `Edicion`='$Edicion',`InicioHackaton`='$InicioHackaton',`FechLimiteRegProy`='$FechLimiteRegProy',`TerminoHack`='$TerminoHack',`Imagen`='$Imagen' WHERE `id`='$id'";
-	 		echo $sql;
+	 		$sql="UPDATE `hackatonedicion` SET `Edicion`='$Edicion',`InicioHackaton`='$InicioHackaton',`FechLimiteRegProy`='$FechLimiteRegProy',`TerminoHack`='$TerminoHack',`Imagen`='$Imagen' WHERE `id`='$id'";  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();

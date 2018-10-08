@@ -1,13 +1,16 @@
 <?php 
-$fecha_entrada = strtotime("19-11-2008");
-$fecha_salidada = strtotime("17-11-2008");
-if ($fecha_entrada>$fecha_salidada) {
+ 
+
+$er="12345";
+echo strlen($er);
+
+echo "<br>";
+
+if (strlen($er)<=5) {
 	echo "sii";
 }
-else {
-	echo "noo";
+else{
+	echo "no";
 }
-
-
-
+ 
  ?>

@@ -64,21 +64,19 @@ function ActualizandoHackaton() {
 		var EhN=$("#EditarNombreHack").val();
 		var EhI=$("#EditarInicioHack").val();
 		var EhE=$("#EditarEntregaProyectos").val();
-		var EhF=$("#EditarFinHack").val(); 
-			alert(actualizar+" "+EhN+" "+EhI+" "+EhE+" "+EhF); 
+		var EhF=$("#EditarFinHack").val();  
 		/*var EhImg=$("#EditarImagenPrincipal").val();*/
 	$.ajax({		
 		url:'../Modulos/hackaton/Hackaton.php',
 		type: 'POST', 
+		dataType:'json',
 		data: {'idAc':actualizar,'EhN':EhN,'EhI':EhI,'EhE':EhE,'EhF':EhF/*,'EhImg':EhImg*/},
-		beforeSend:function(){ 
-		debugger;		
-			alert("  "+actualizar+" "+EhN+" "+EhI+" "+EhE+" "+EhF);
+		beforeSend:function(){  	
+		 
 
 		}
 	})
-	.done(function(respuesta) {
-		alert(respuesta);
+	.done(function(respuesta) { 
 		if (respuesta=='1') {
 			$('#ModalEditarHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
@@ -99,20 +97,25 @@ function ActualizandoHackaton() {
 
 			$('#ModalEditarHackaton').modal('hide');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Hackaton registrado');
+	 		alertify.success('Hackaton actualizado');
 	 		CargarTabla();	
 		}
-		else{
+		 else if(respuesta=='4'){
 
-			$('#ModalEditarHackaton').modal('hide');
+			$('#ModalEditarHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Edición: Minimo 5 Caracteres ');
+	 		 
+		}
+		else if(respuesta!='0' || respuesta!='1' || respuesta!='2' || respuesta!='3'||respuesta!='4'){
+ 
 	 		alertify.error('Error desconocido');
+	 		CargarTabla();
+
 		}
  
 	})
-	.fail(function( jqXHR, textStatus ) {
-		  alert( "Request failed: " + textStatus );
-  	}) 
+	  
 	
 }
 
@@ -141,7 +144,7 @@ function eliminarHackaton(id){
 			if (respuesta=='0') {
 				$('#EliminarHackaton').modal('hide');
 				alertify.set('notifier','position', 'top-right');
-	 			alertify.success('Hackaton Eliminado');
+	 			alertify.error('Hackaton Eliminado');
 				CargarTabla();	
 			} else {
 			$('#EliminarHackaton').modal('hide');
@@ -203,7 +206,7 @@ $( document ).ready(function() {
             "sInfoEmpty": "Mostrando del 0 al 0 de un total de 0 registros",
             "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
             "sInfoPostFix": "",
-            "sSearch": "Filtrar:",
+            "sSearch": "Buscar:",
             "sUrl": "",
             "sInfoThousands": ",",
             "sLoadingRecords": "Por favor espere - cargando...",

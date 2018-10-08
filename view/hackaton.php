@@ -116,24 +116,24 @@
 	       	<form id="ModalEditarHackaton" method="POST" >
 			  <div class="form-group">
 			    <label for="inputNombre">Edición</label>
-			    <input type="text" minlength="5" maxlength="45" class="form-control" id="EditarNombreHack" name="EditarNombreHack" placeholder="Edición">
+			    <input type="text" minlength="5" maxlength="45" class="form-control" id="EditarNombreHack" name="EditarNombreHack" placeholder="Edición" required="">
 			  </div>
 			  <div class="form-group">
 			  	 <div class="form-row">
 				    <div class="col">
 				      <label class="label-control">Inicio Hackaton</label>
-			   		  <input type="date" id="EditarInicioHack" name="EditarInicioHack" class="form-control " value=""/>
+			   		  <input type="date" id="EditarInicioHack" name="EditarInicioHack" class="form-control " required="" value=""/>
 				    </div>
 				    <div class="col">
 				       <label class="label-control">Fecha Limite de Registros</label>
-			    	   <input type="date" id="EditarEntregaProyectos" name="EditarEntregaProyectos" class="form-control " value=""/>
+			    	   <input type="date" id="EditarEntregaProyectos" name="EditarEntregaProyectos" class="form-control " value="" required="" />
 				    </div>
 				  </div>
 			    
 			  </div>	
 			  <label class="label-control">Fin de Hackaton</label>
 		    	<div class="col-md-6">
-		    		<input type="date" id="EditarFinHack" name="EditarFinHack" class="form-control" />
+		    		<input type="date" id="EditarFinHack" name="EditarFinHack" class="form-control" required="" />
 		    	</div>
 			    <div class="col-md-6">
 				  <!-- <label class="label-control" align="center">Imagen</label>-->
@@ -146,12 +146,14 @@
 
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="ActualizarHackk" onclick="ActualizandoHackaton();">Actualizar</button>
+	        <button type="button" class="btn btn-success" id="ActualizarHackk" onclick="ActualizandoHackaton()">Actualizar</button>
 	      </div>	
 	    </form>
 	    </div>
 	  </div>
 	</div>
+</div>
+
 </div>
 
 	<!-- Eliminar -->	
