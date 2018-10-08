@@ -80,33 +80,34 @@ function ActualizandoHackaton() {
 		if (respuesta=='1') {
 			$('#ModalEditarHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Fecha de Registro de proyectos mayor al inicio del Hackaton');
+	 		alertify.error('Fecha limite de Registros no valido');
 		} 
 		else if(respuesta=='2'){
 			$('#ModalEditarHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Fecha del fin del Hackaton menor a la fecha de registro de proyectos ');
+	 		alertify.error('Fecha limite de Registros no valido');
 		}
 		else if (respuesta=='3') {
 
 			$('#ModalEditarHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Fecha de Inicio del Hackaton mayor a la fecha de termino');
+	 		alertify.error('Fecha de Inicio del Hackaton no valido');
 
-		} else if(respuesta=='0'){
-
-			$('#ModalEditarHackaton').modal('hide');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Hackaton actualizado');
-	 		CargarTabla();	
-		}
-		 else if(respuesta=='4'){
+		}  else if(respuesta=='4'){
 
 			$('#ModalEditarHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.error('Edición: Minimo 5 Caracteres ');
 	 		 
 		}
+		else if(respuesta=='0'){
+
+			$('#ModalEditarHackaton').modal('hide');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.success('Hackaton actualizado');
+	 		CargarTabla();	
+		}
+		
 		else if(respuesta!='0' || respuesta!='1' || respuesta!='2' || respuesta!='3'||respuesta!='4'){
  
 	 		alertify.error('Error desconocido');

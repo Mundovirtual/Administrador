@@ -67,7 +67,7 @@
 			    <input type="text" class="form-control"  minlength="5" maxlength="45" id="NombreHack" name="NombreHack"  placeholder="Edición" required="">
 			  </div>
 			  <div class="form-group">
-			  	 <div class="form-row">
+			  	<div class="form-row">
 				    <div class="col">
 				      <label class="label-control">Inicio Hackaton</label>
 			   		  <input type="date" id="InicioHack" name="InicioHack"  class="form-control " value="" required="" />
@@ -76,7 +76,7 @@
 				       <label class="label-control">Fecha Limite de Registros</label>
 			    	   <input type="date" id="EntregaProyectos" name="EntregaProyectos" class="form-control " value="" required="" />
 				    </div>
-				  </div>			    
+				</div>			    
 			  </div>		 
 			  <div class="form-group" align="center">
 			  <label class="label-control">Fin de Hackaton</label>
@@ -154,10 +154,11 @@
 	</div>
 </div>
 
-</div>
+
+ 
 
 	<!-- Eliminar -->	
- 
+
 	<div class="modal fade" id="EliminarHackaton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
