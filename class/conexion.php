@@ -11,6 +11,8 @@ class Conectar{
 									 $this->usuario,
 									 $this->password,
 									 $this->bd);
+			$conexion->query("SET NAMES 'utf8';");
+
 			return $conexion;
 		}
 

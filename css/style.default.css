@@ -265,7 +265,7 @@ nav.navbar .nav-menu {
 
 nav.navbar .dropdown-toggle::after {
   border: none !important;
-  content: '\f107';
+  content: '˅';
   vertical-align: baseline;
   font-family: 'FontAwesome';
   margin-left: .3rem;
@@ -432,7 +432,7 @@ nav.navbar a.menu-btn:hover {
 }
 
 .side-navbar li a[data-toggle="collapse"]::before {
-  content: '\f104';
+  content: '˅';
   display: inline-block;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -443,7 +443,7 @@ nav.navbar a.menu-btn:hover {
 }
 
 .side-navbar li a[aria-expanded="true"]::before {
-  content: '\f107';
+  content: '˄';
   color: #fff;
 }
 

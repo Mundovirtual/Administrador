@@ -1,13 +1,16 @@
 <?php 
-	include_once("../../class/conexion.php");
-
+	 include_once("conexion.php");
+	 
 	 class Vertical{
 
-	 	function mostrarDatos($sql){
+	 	function mostrarDatos(){
+	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
+	 		$sql="SELECT `vertical` .`id`, `vertical` .`Nombre`, `vertical`.`Descripcion`, `vertical` .`InfAsesoria`, `vertical` .`HackatonEdicion_id` as 'veH',`hackatonedicion`.`id` as 'iH', `hackatonedicion`.`Edicion` as 'eH' FROM `vertical` inner join `hackatonedicion`on `hackatonedicion`.`id`=`vertical` .`HackatonEdicion_id`";
+
 	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return  mysqli_fetch_assoc($resultado);
+	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
 
@@ -34,12 +37,15 @@
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
-	 		$sql="DELETE FROM `vertical` WHERE `id`='$id'";
+	 		$sql="DELETE FROM `vertical` WHERE `id`='$id'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
 
 	 }
+ 
+	   
+ 
  
  ?>
