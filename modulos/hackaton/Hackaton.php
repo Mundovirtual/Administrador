@@ -43,35 +43,34 @@ if (isset($_POST["idAc"])&&isset($_POST["EhN"])&&isset($_POST["EhI"])&&isset($_P
  	$EditarinicioHack=strtotime($_POST['EhI']);
 	$EditarEntregaHack=strtotime($_POST['EhE']);
 	$EditarFinHack=strtotime($_POST['EhF']);
-
+	$msj="";
 	
 
 	if ($EditarinicioHack > $EditarEntregaHack) {
-		echo "1";
+		$msj="1";
 	}		 
 	else if ($EditarEntregaHack > $EditarFinHack) {
-		echo "2";
+		$msj="2";
 	}
 	else if ($EditarinicioHack > $EditarFinHack) {
-		echo "3";
+		$msj="3";
 	}
-	else if ( $EditarinicioHack < $EditarEntregaHack &&  $EditarEntregaHack<$EditarFinHack) {
-
-		if (strlen($_POST["EhN"]) <=4) {
-			echo "4"; 
-		}
-	 else if(strlen($_POST["EhN"]) > 4 && strlen($_POST["EhN"]) <45){
+	else if (strlen($_POST["EhN"]) <=4) {
+			$msj="4"; 
+	}
+	 
+	 else  if(strlen($_POST["EhN"]) > 4 && strlen($_POST["EhN"]) <45 && $EditarinicioHack < $EditarEntregaHack &&  $EditarEntregaHack<$EditarFinHack){
 	 	$Hackaton=new Hackaton();
 		 $Registrar=$Hackaton->ActualizarHackaton($_POST["idAc"],$_POST["EhN"],$_POST["EhI"],$_POST["EhE"],$_POST["EhF"],$imagen);
  
-		 echo "0";
+		 $msj="0";
 	 }
 
-
+	 echo $msj;
 
 	 
 
 }
-} 
+  
  
 ?>

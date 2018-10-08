@@ -57,23 +57,35 @@ function UpdateVertical() {
 		type: 'POST',
 		dataType: 'json',
 		data: {'idAc':actualizar,'eNv':eNv,'eDv':eDv,'eAv':eAv,'eHv':eHv},
-		beforeSend:function(){ 
-			  
+		beforeSend:function(respuesta){ 
+			   
 		}
 	})
 	.done(function(respuesta) {
-		if (respuesta=="0") {
+	 
+
+		 if (respuesta=="0") {
 			$('#editarVertical').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Selecciona una edición');
+	 		alertify.error('Seleccione una edición');
 
-		} else {		
+		}  else if(respuesta=="1") {		
 			$('#editarVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.success('Vertical actualizada');
 			CargarTabla();
 		 }
+		 else if (respuesta=="3"){
+		 	$('#editarVertical').modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Verifique los campos');
+		 }
+
+	 		 
 	}) 
+ 
+
+	
 	 
 }
 let eliminar="";

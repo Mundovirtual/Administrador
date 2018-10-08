@@ -7,7 +7,7 @@ include_once("../../class/Hackaton.php");
 	$i=1;
  foreach ($ver as $key) {
  
- 	 $Editar='<button type=\"button\" class=\"btn btn-primary fas fa-edit\" onclick=\"ActualizarHackaton('."'".$key['0']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['4']."','".$key['5']."'".')\" data-toggle=\"modal\" data-target=\"#EditarHackaton\"></button>';
+ 	 $Editar='<button type=\"button\" class=\"btn btn-primary fas fa-edit\" onclick=\"ActualizarHackaton('."'".$key['0']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['4']."','null'".')\" data-toggle=\"modal\" data-target=\"#EditarHackaton\"></button>';
 
  	$Eliminar='<button type=\"button\" class=\"btn btn-danger fas fa-trash-alt\" data-toggle=\"modal\"  data-target=\"#EliminarHackaton\" onclick=\"eliminarHackaton('."'".$key['0']."'".')\"></button>';
 

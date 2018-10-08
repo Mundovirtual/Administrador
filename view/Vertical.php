@@ -69,7 +69,7 @@
 			      <label class="input-group-text">Edición</label>
 			    </div>
 			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required>
-			      <option selected>Selecciona...</option>
+			      <option selected >Selecciona...</option>
 				  <?php 
 				  $con=new Hackaton();
 			       $datosH=$con->mostrarDatosHackaton(); 
