@@ -1,7 +1,4 @@
 $('#ErrorLogin').hide();
-
-
-
 jQuery(document).on('submit','#Login',function(event){
       event.preventDefault();
  
