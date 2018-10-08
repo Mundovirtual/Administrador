@@ -78,30 +78,31 @@ function ActualizandoHackaton() {
 })
 .done(function(Res) {
 	if(Res=='0'){
-			$('#ModalEditarHackaton').modal("hide");
+			
 		alertify.set('notifier','position', 'top-right');
  		alertify.success('Hackaton actualizado');
  		CargarTablaHack();	
+ 		$('#EditarHackaton').modal("hide");
 	} 
 	else if (Res=='1') {
-		$('#ModalEditarHackaton').modal('show');
+		
 		alertify.set('notifier','position', 'top-right');
  		alertify.error('Fecha limite de Registros no valido');
 	} 
 	else if(Res=='2'){
-		$('#ModalEditarHackaton').modal('show');
+		
 		alertify.set('notifier','position', 'top-right');
  		alertify.error('Fecha limite de Registros no valido');
 	}
 	else if (Res=='3') {
 
-		$('#ModalEditarHackaton').modal('show');
+		
 		alertify.set('notifier','position', 'top-right');
  		alertify.error('Fecha de Inicio del Hackaton no valido');
 
 	}  else if(Res=='4'){
 
-		$('#ModalEditarHackaton').modal('show');
+		
 		alertify.set('notifier','position', 'top-right');
  		alertify.error('Edición: Minimo 5 Caracteres ');
  		 
