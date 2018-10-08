@@ -82,7 +82,7 @@
 				   
 			    </select>
 			  </div>
-			</div>
+			 
 			  <div class="modal-footer">
 		          <button type="button"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
 		          <button type="submit" id="RegistroVertical" class="btn btn-success">Registrar</button>	 

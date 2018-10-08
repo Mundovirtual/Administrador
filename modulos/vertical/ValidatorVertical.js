@@ -22,7 +22,7 @@ jQuery(document).on('submit', "#RV", function(event){
 		} else {		
 			$('#ModalVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Registrado');
+	 		alertify.success('Vertical registrada');
 			CargarTabla();
 		 }
 	})
@@ -70,17 +70,10 @@ function UpdateVertical() {
 		} else {		
 			$('#editarVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Registro actualizado');
+	 		alertify.success('Vertical actualizada');
 			CargarTabla();
 		 }
-	})
-	.fail(function(  responseText,aa) {
-        console.log(aa); 
-         
-	})
-	.always(function() {
-		console.log("complete");
-	});
+	}) 
 	 
 }
 let eliminar="";
@@ -101,19 +94,19 @@ function eliminarVertical(id){
 		}
 		})
 		.done(function(respuesta) {  
+			if (respuesta=='1') {
 			$('#EliminarVertical').modal('hide');				
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Registro Eliminado');
-	 		CargarTabla();	
+	 		alertify.error('Vertical Eliminada');
+	 		CargarTabla();
+			} else {
+				$('#EliminarVertical').modal('hide');				
+				alertify.set('notifier','position', 'top-right');
+		 		alertify.error('Registro referenciado');
+			}	
 			
 		})
-		.fail(function(  responseText) {
-	        console.log(responseText.responseText); 
-	         
-		})
-		.always(function() {
-			console.log("complete");
-		});
+		 
 	});		
 });  
 

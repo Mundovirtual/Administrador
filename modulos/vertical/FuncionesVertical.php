@@ -15,12 +15,9 @@ if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset
 if (isset($_POST['IdEliminar'])){
 	$Vertical=new Vertical();
 	$eliminar=$Vertical->EliminarVertical($_POST['IdEliminar']);
-	if ($eliminar) {
+	 
 		echo "1";
-	}
-	else{
-		echo "0";
-	}
+	 
 
 }
  
