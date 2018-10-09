@@ -6,21 +6,7 @@
 	</h1>     
 </div>
  
- <header>
-	<div class="d-flex"> 
-		<div class="col-md-1"></div>
-		<div class="col-md-6">
-			
-		</div>
-		<div class="col-md-5">
-			 <form class="form-inline">
-				<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
-
-		</div>
-	</div>
- </header>
+ 
 <body>
 	 <div class="row">
 		<div class="col-md-1">
