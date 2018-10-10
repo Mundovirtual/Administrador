@@ -62,14 +62,8 @@ function actualizandoJuez(){
 	 		alertify.error('Correo no valido');
 		}
 
-	})
-	.fail(function(xhr, status, error){  
-
-	   
-	})
-	.always(function() {
-		console.log("complete");
 	});
+ 
 
 	
 }
@@ -92,13 +86,8 @@ function EliminandoJuez(){
 			$("#EliminarJueces").modal('hide');
 			}
 			
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
 		});
+ 
 			
 } 
 
