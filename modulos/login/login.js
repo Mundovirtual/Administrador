@@ -1,8 +1,5 @@
 $('#ErrorLogin').hide();
-<<<<<<< HEAD
-=======
-
->>>>>>> 7e17a5ecc0c0ff6bd75ea96345377edb913c2a1c
+ 
 jQuery(document).on('submit','#Login',function(event){
       event.preventDefault();
  

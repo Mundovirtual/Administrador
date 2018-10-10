@@ -1,6 +1,8 @@
  <?php
- include_once("../modulos/login/security.php");    
+ include_once("../modulos/login/security.php");  
+ require_once("../modulos/Juez/juezjs.php"); 
 ?> 
+ 
 <div class="container">
 	<h1 align="center">Jueces
 	</h1>     
@@ -12,7 +14,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			<table id="tablaJuezAceptados" class="table table-hover">
+			<table id="TablaJuezAceptado" class="table table-hover">
 			  <thead>
 				<tr>
 				  <th scope="col">#</th>
@@ -53,45 +55,45 @@
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="password">password</label>
-			  <input type="text" class="form-control" id="paswHacker" value="#$@$@#$@isac" disabled="">
+			  <input type="text" class="form-control" id="PasswordJuez" name="PasswordJuez"  disabled="">
 			</div> 
 		</div>
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="Institucion">Institución</label>
-			  <input type="text" class="form-control" id="Institucion" value="Instituto Tecnológico de san Miguel El grande" disabled="">
+			  <input type="text" class="form-control" id="InstitucionJuez" name="InstitucionJuez" disabled="">
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="Carrera">Carrera</label>
-			  <input type="text" class="form-control" id="Carrera" value="Ingeniería en Sistemas Computacionales " disabled="">
+			  <input type="text" class="form-control" id="CarreraJuez" name="CarreraJuez"  disabled="">
 			</div>
 		</div>
 		<div class="form-group">
 			    <label for="Habilidades">Habilidades</label>
-			    <textarea class="form-control" id="Habilidades" rows="2" disabled="" value=""></textarea>
+			    <textarea class="form-control" id="HabilidadesJuez" name="HabilidadesJuez" rows="2" disabled=""></textarea>
 		</div>
 		<div class="form-group">
 			    <label for="Hobbies">Hobbies</label>
-			    <textarea class="form-control" id="Hobbies" rows="2" disabled="" value=""></textarea>
+			    <textarea class="form-control" id="HobbiesJuez" name="HobbiesJuez" rows="2" disabled=""></textarea>
 		</div>
 		<div class="form-row">
 			<div class="col-md-5">
 			  <label for="FechaNacimiento">Fecha de nacimiento</label>
-			  <input type="text" class="form-control" id="FechaNacimiento" value="02/12/1995" disabled="">
+			  <input type="text" class="form-control" id="FechaNacimientoJuez" name="FechaNacimientoJuez" disabled="">
 			</div>
 			<div class="col-md-3">
 			  <label for="Sexo">Sexo</label>
-			  <input type="text" class="form-control" id="sexo" value="Masculino" disabled="">
+			  <input type="text" class="form-control" id="sexoJuez" name="sexoJuez" disabled="">
 			</div>
 			<div class="col-md-3">
 			  <label for="Playera">Playera</label>
-			  <input type="text" class="form-control" id="playera" value="Mediana" disabled="">
+			  <input type="text" class="form-control" id="playeraJuez" name="playeraJuez" disabled="">
 			</div>					     
 		</div>
 
-		 
+	<!--		 
 		<span></span>
 		<div class="form-row">
 			<div class="col-md-4"> 					 
@@ -108,6 +110,7 @@
 				</a>
 			</div>
 		</div>
+	-->
    </div>
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button> 
@@ -131,19 +134,19 @@
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="password">password</label>
-			  <input type="text" class="form-control" id="paswHackerEdit" value="#$@$@#$@isac" placeholder="Password">
+			  <input type="text" class="form-control" id="PaswJuez"  name="PaswJuez"  placeholder="Password">
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="Celular">Celular</label>
-			  <input type="tel" class="form-control" id="CelularEdit" value="953 145 54 54" placeholder="Celular">
+			  <input type="tel" class="form-control" id="CelularJuez"  name="CelularJuez"  placeholder="Celular">
 			</div>
 		</div>	
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="password">Correo</label>
-			  <input type="email" class="form-control" id="paswHackerEdit" value="qIsaac@gmail.com" placeholder="Correo">
+			  <input type="email" class="form-control" id="CorreoJuez"  name="CorreoJuez" placeholder="Correo">
 			</div>
 		</div>		      
 	  </div>
@@ -152,7 +155,7 @@
   
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
-		<button type="button" class="btn btn-success"  name="submit" id="submit">Actualizar</button>
+		<button type="button" class="btn btn-success"   onclick="actualizandoJuez()">Actualizar</button>
 	  </div>
 	</div>
   </div>
@@ -178,12 +181,12 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+        <button type="button" class="btn btn-danger" onclick="EliminandoJuez()">Continuar</button>
       </div>
     </div>
   </div>
 </div> 
 
-<script src="../modulos/Juez/juez.js"></script>
+
 
  
