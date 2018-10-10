@@ -48,7 +48,7 @@ include_once("conexion.php");
 	 		$Actpsw=md5($psw);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="UPDATE `comunidad` SET `E-mail`='$correo',`psw`='$Actpsw',`Celular`='' WHERE `id`='$id' and `Rol_idRol`='3' and `status`='1'";
+	 		$sql="UPDATE `comunidad` SET `E-mail`='$correo',`psw`='$Actpsw',`Celular`='$celular' WHERE `id`='$id' and `Rol_idRol`='3' and `status`='1'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();

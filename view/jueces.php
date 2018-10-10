@@ -133,9 +133,12 @@
 	  <div class="modal-body"> 
 		<div class="form-row">
 			<div class="col-md-12">
+			<!--
 			  <label for="password">password</label>
-			  <input type="text" class="form-control" id="PaswJuez"  name="PaswJuez"  placeholder="Password">
+			-->
+			  <input type="hidden" class="form-control" id="PaswJuez"  name="PaswJuez" disabled="" placeholder="Password">
 			</div>
+
 		</div>
 		<div class="form-row">
 			<div class="col-md-12">

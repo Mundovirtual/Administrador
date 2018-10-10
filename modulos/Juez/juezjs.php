@@ -2,7 +2,7 @@
 
 
 function DetallesJuez(psw,institucion,carrera,habilidades,Hobbies,FNacimiento,sexo,Playera){
-  
+ 
 	$("#PasswordJuez").val(psw);
 	$("#InstitucionJuez").val(institucion);
 	$("#CarreraJuez").val(carrera);
@@ -31,26 +31,45 @@ function EliminarJuez(id){
 
 
 function actualizandoJuez(){
+ 
+	 PaswJuez=$("#PaswJuez").val();
+	 CelularJuez=$("#CelularJuez").val();
+	 CorreoJuez=$("#CorreoJuez").val(); 
+	$.ajax({
+		url: '../Modulos/Juez/juez.php',
+		type: 'POST',
+		dataType: 'json',
+		data: {'IdActualizar': idEditar,'psw':PaswJuez,'celular':CelularJuez,'correo':CorreoJuez}
+	})
+	.done(function(hola) { 
+		if (hola=='0') {
+			CargarTablaJuez();
+			$("#EditarJueces").modal('hide');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.success('Datos actualizados');
+		} else if(hola=='1'){
+			$("#EditarJueces").modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Contraseña vacía');		
+		}else if(hola=='2'){
+			$("#EditarJueces").modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('número celular no valido');		
+			
+		}else if(hola=='3'){
+			$("#EditarJueces").modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error('Correo no valido');
+		}
 
-let PaswJuez=$("PaswJuez").val();
-let CelularJuez=$("CelularJuez").val();
-let CorreoJuez=$("CorreoJuez").val();
+	})
+	.fail(function(xhr, status, error){  
 
-$.ajax({
-	url: '../Modulos/Juez/juez.php',
-	type: 'POST',
-	dataType: 'json',
-	data: {IdActualizar: 'idEditar',psw:'psw',celular:'CelularJuez',correo:'CorreoJuez'}
-})
-.done(function() {
-	console.log("success");
-})
-.fail(function() {
-	console.log("error");
-})
-.always(function() {
-	console.log("complete");
-});
+	   
+	})
+	.always(function() {
+		console.log("complete");
+	});
 
 	
 }
