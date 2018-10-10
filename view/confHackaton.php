@@ -76,10 +76,22 @@
 	       	<form>
 			<div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="Vertical">Vertical</label>
+			    <label class="input-group-text">Hackaton</label>
 			  </div>
 			  <select class="custom-select" id="Vertical">
-			    <option selected>Selecciona...</option>
+			    <option selected value="s">Selecciona...</option>
+			    <option value="1">Hackaton 1</option>
+			    <option value="2">Hackaton 2</option>
+			    <option value="3">Hackaton 3</option>
+			  </select>
+			</div>
+			
+			<div class="input-group mb-3"> 
+			  <div class="input-group-prepend">
+			    <label class="input-group-text">Vertical</label>
+			  </div>
+			  <select class="custom-select" id="Vertical">
+			    <option selected value="s">Selecciona...</option>
 			    <option value="1">Vertical 1</option>
 			    <option value="2">Vertical 2</option>
 			    <option value="3">Vertical 3</option>
@@ -90,14 +102,14 @@
 			    <label class="input-group-text" for="Fases">Fase</label>
 			  </div>
 			  <select class="custom-select" id="Fases">
-			    <option selected>Selecciona...</option>
+			    <option selected value="s">Selecciona...</option>
 			    <option value="1">Primera</option>
 			    <option value="2">Segunda</option>
 			    <option value="3">Tercera</option>
 			  </select>
 			</div>
 			<div>
-		      <label class="sr-only" for="nEquipos">Username</label>
+		  
 		      <div class="input-group">
 		        <div class="input-group-prepend">
 		          <div class="input-group-text">Equipos Limite</div>

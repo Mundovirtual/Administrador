@@ -18,8 +18,8 @@
 				  <th scope="col">Celular</th>
 				  <th scope="col">E-mail</th> 
 				  <th scope="col">Detalles</th>
-				  <th scope="col"></th>
-				  <th scope="col"></th>
+				  <th scope="col">Aceptar</th>
+				  <th scope="col">Rechazar</th>
 				</tr>
 			  </thead>
 			  <tbody>

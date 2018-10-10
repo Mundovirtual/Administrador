@@ -1,4 +1,3 @@
- 
 <?php 
 
 include_once("../../class/Juez.php");
@@ -34,3 +33,4 @@ if (isset($_POST['idRechazar'])) {
 
 
  ?> 
+

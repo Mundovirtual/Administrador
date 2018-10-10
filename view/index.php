@@ -4,6 +4,7 @@
   include_once("../modulos/enrutador.php");   
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
+      
   } 
  
 ?>

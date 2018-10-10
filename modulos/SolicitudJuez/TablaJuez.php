@@ -1,4 +1,3 @@
- 
 <?php 
 include_once("../../class/Juez.php");
 	$Juez=new Juez();

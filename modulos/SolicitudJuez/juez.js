@@ -1,4 +1,4 @@
- function DetallesJuez(nombre,FechaNacimiento,Correo,Institucion,Carrera){
+function DetallesJuez(nombre,FechaNacimiento,Correo,Institucion,Carrera){
 $("#NombreJuez").val(nombre);
 $("#FechaNacimientoJuez").val(FechaNacimiento);
 $("#CorreoJuez").val(Correo);
@@ -51,7 +51,7 @@ function Rechazar(){
         data: {idRechazar: idRechazar},
     })
     .done(function(resp) {
-        if (resp=='0') {
+        if (resp=='0')  {
             $('#EliminarJuez').modal('show');
             alertify.set('notifier','position', 'top-right');
             alertify.error('Solicitud eliminada');
