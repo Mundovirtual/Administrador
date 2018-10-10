@@ -145,7 +145,7 @@
                     $enrutador->cargarVista($_GET['cargar']);
                  } 
                  else{
-                 echo "BienVenido";
+              
                  }
             ?>
            
