@@ -163,6 +163,6 @@
     <!-- Main File-->
     <script src="../js/front.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
-    <script src=""></script>
+ 
   </body>
 </html>

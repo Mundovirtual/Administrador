@@ -20,7 +20,7 @@ function RechazarJuez(id){
 
 function Aceptado(){
     $.ajax({
-        url: '../Modulos/Juez/juez.php',
+        url: '../Modulos/SolicitudJuez/juez.php',
         type: 'POST',
         dataType: 'json',
         data: {IdAceptarJuez: idAceptar},
@@ -45,7 +45,7 @@ function Aceptado(){
 
 function Rechazar(){
     $.ajax({
-        url: '../Modulos/Juez/juez.php',
+        url: '../Modulos/SolicitudJuez/juez.php',
         type: 'POST',
         dataType: 'json',
         data: {idRechazar: idRechazar},
@@ -80,7 +80,7 @@ $( document ).ready(function() {
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "../Modulos/Juez/TablaJuez.php",
+            "url": "../Modulos/SolicitudJuez/TablaJuez.php",
             "type": "POST"
         },
 

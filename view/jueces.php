@@ -12,7 +12,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			<table class="table table-hover">
+			<table id="tablaJuezAceptados" class="table table-hover">
 			  <thead>
 				<tr>
 				  <th scope="col">#</th>
@@ -20,28 +20,13 @@
 				  <th scope="col">Celular</th> 
 				  <th scope="col">E-mail</th> 
 				  <th scope="col">Detalles</th> 
-				  <th scope="col">Acciones</th> 
+				  <th scope="col">Editar</th> 
+				  <th scope="col">Eliminar</th>
+				   
 				</tr>
 			  </thead>
 			  <tbody>
-				<tr>
-				  <th scope="row">1</th>
-				  <td>Jovanny Leobardo Salas</td>
-				  <td>953 456 45 45</td>
-				  <td>HolaMundo@gmail.com</td> 	
-				  <td>
-					<a data-toggle="modal" data-target="#detallesJueces">
-						<i class="fa fa-eye fa-2x" align="center" aria-hidden="true">
-						</i>
-					</a>			      	
-				  </td> 
-				  <td>
-				 	 <button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarJueces">	 
-			      	 </button> 
-					<button type="button" class="btn btn-danger fa fa-trash" data-toggle="modal"  data-target="#EliminarJueces"> </button>
-				  </td>
-				  
-				</tr>			     
+				 	     
 			  </tbody>
 			</table>
 			
@@ -167,7 +152,7 @@
   
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
-		<button type="button" class="btn btn-success"  name="submit" id="submit">Registrar</button>
+		<button type="button" class="btn btn-success"  name="submit" id="submit">Actualizar</button>
 	  </div>
 	</div>
   </div>
@@ -199,9 +184,6 @@
   </div>
 </div> 
 
+<script src="../modulos/Juez/juez.js"></script>
 
-
- <script type="text/javascript">
- 	document.getElementById("Hobbies").value = "Billiards, billar.Bowling, juego de bolos, boliche.Brainteasers, acertijos.Camping, acampar.";
- 	document.getElementById("Habilidades").value = "Flexibilidad/adaptabilidad. ...Habilidades comunicativas. ...Capacidad para resolver problemas. ...Creatividad. ...";
- </script>
+ 

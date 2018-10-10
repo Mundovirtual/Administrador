@@ -1,20 +1,20 @@
- 
-<?php 
+ <?php 
 include_once("../../class/Juez.php");
 	$Juez=new Juez();
-	$ver=$Juez->MostrarJuezPorActivar();
+	$ver=$Juez->JuecesAceptados();
  	$tabla="";
 	$i=1;
-
  
   foreach ($ver as $key ) {
  
  	$nombre=$key['1']." ".$key['2'];
 
-	$detalles='<button type=\"button\" class=\"btn btn-default fa fa-eye fa-1x\" data-toggle=\"modal\" data-target=\"#Detalles\" onclick=\"DetallesJuez('."'".$nombre."','".$key['8']."','".$key['3']."','".$key['7']."','".$key['6']."'".')\"></button>';
-	$Aceptar='<button type=\"button\" class=\"btn btn-success fa fa-check\" data-toggle=\"modal\" data-target=\"#AceptarJuez\" onclick=\"AceptarJuez('."'".$key['0']."'".')\"></button>';
 
-	$Rechazar='<button type=\"button\" class=\"btn btn-danger fa fa-trash\" data-toggle=\"modal\"  data-target=\"#EliminarJuez\" onclick=\"RechazarJuez('."'".$key['0']."'".')\"></button>';
+	$detalles='<button type=\"button\" class=\"btn btn-default fa fa-eye fa-1x\" data-toggle=\"modal\" data-target=\"#detallesJueces\" onclick=\"DetallesJuez('."'".$nombre."','".md5($key['4'])."','".$key['8']."','".$key['7']."','".$key['12']."','".$key['13']."','".$key['11']."','".$key['15']."','".$key['6']."'".')\"></button>';
+
+	$Editar='<button type=\"button\" class=\"btn btn-success fa fa-check\" data-toggle=\"modal\" data-target=\"#EditarJueces\" onclick=\"Editar('."'".$key['0']."'".')\"></button>';
+
+	$Eliminar='<button type=\"button\" class=\"btn btn-danger fa fa-trash\" data-toggle=\"modal\"  data-target=\"#EliminarJueces\" onclick=\"EliminarJuez('."'".$key['0']."'".')\"></button>';
 	 	
 
  	$tabla.='{
@@ -23,8 +23,8 @@ include_once("../../class/Juez.php");
 				  "Telefono":"'.$key['5'].'",
 				  "correo":"'.$key['3'].'", 
 				  "Detalles":"'.$detalles.'" ,
-				  "Aceptar":"'.$Aceptar.'",
-				  "Rechazar":"'.$Rechazar.'"
+				  "Editar":"'.$Editar.'",
+				  "Eliminar":"'.$Eliminar.'"
 			},';
  
  	$i++;	
@@ -35,3 +35,4 @@ include_once("../../class/Juez.php");
  
 
 ?>  
+ 

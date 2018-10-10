@@ -131,4 +131,4 @@
 	  </div>
 	</div>
  
-<script src="../modulos/Juez/juez.js"></script>
+<script src="../modulos/SolicitudJuez/juez.js"></script>

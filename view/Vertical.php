@@ -1,7 +1,7 @@
 <?php
  include_once("../modulos/login/security.php"); 
  include_once("../class/Vertical.php"); 
- include_once("../class/Hackaton.php"); 
+ include_once("../class/Hackaton.php");  
 ?>  
  
  <div class="container">
