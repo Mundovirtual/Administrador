@@ -91,7 +91,7 @@
 
             <li>
               <a href="../view/index.php?cargar=5" aria-expanded="false"> 
-                <i class="fa fa-bell"></i>Solicitudes 5 </a>
+                <i class="fa fa-bell"></i>Solicitudes</a>
             </li>
             
 
@@ -115,7 +115,7 @@
                 
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <!-- Notifications dropdown-->
+                <!-- Notifications dropdown
                 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item"> 
@@ -125,7 +125,7 @@
                         </div></a></li>                     
                   </ul>
                 </li>
-                 
+                 -->
                 <!-- Log out-->
                 <li class="nav-item"><a href="../modulos/login/SesionClose.php" class="nav-link logout"> <span class="fas fa-sign-out-alt">Logout</span></a></li>
               </ul>
