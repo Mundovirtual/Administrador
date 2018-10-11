@@ -14,5 +14,9 @@ var_dump($msg);
 
 
  ?> 
-  <input type="radio" name="ActivarHack" onclick="ActivarHackaton('1')">
+  <input type="radio" name="ActivarHack" checked="checked" onclick="ActivarHackaton('1')">
+    <input type="radio" name="ActivarHack" checked="checked" onclick="ActivarHackaton('1')">
+      <input type="radio" name="ActivarHack" checked="checked" onclick="ActivarHackaton('1')">
+        <input type="radio" name="ActivarHack" checked="checked" onclick="ActivarHackaton('1')">
+        
  

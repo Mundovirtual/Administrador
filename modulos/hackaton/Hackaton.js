@@ -113,7 +113,7 @@ function ActualizandoHackaton() {
 	
 }
 function ActivarHackaton(id,edicion){
-
+	
 	$.ajax({
 		url: '../Modulos/hackaton/Hackaton.php',
 		type: 'POST',
