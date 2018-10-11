@@ -13,4 +13,6 @@ if ($var>5) {
 var_dump($msg);
 
 
- ?>
+ ?> 
+  <input type="radio" name="ActivarHack" onclick="ActivarHackaton('1')">
+ 
