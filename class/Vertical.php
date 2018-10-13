@@ -7,7 +7,7 @@
 	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `vertical` .`id`, `vertical` .`Nombre`, `vertical`.`Descripcion`, `vertical` .`InfAsesoria`, `vertical` .`HackatonEdicion_id` as 'veH',`hackatonedicion`.`id` as 'iH', `hackatonedicion`.`Edicion` as 'eH' FROM `vertical` inner join `hackatonedicion`on `hackatonedicion`.`id`=`vertical` .`HackatonEdicion_id`";
+	 		$sql="SELECT `vertical` .`id`, `vertical` .`Nombre`, `vertical`.`Descripcion`, `vertical` .`InfAsesoria`, `vertical` .`HackatonEdicion_id` as 'veH',`hackatonedicion`.`id` as 'iH', `hackatonedicion`.`Edicion` as 'eH' FROM `vertical` inner join `hackatonedicion`on `hackatonedicion`.`id`=`vertical` .`HackatonEdicion_id` where `hackatonedicion`.`status`='1'";
 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
