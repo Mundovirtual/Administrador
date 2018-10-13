@@ -163,8 +163,6 @@
 	</div>
   </div>
 </div>
- 
-
 <!-- Eliminar -->	
 
 <div class="modal fade" id="EliminarJueces" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -151,7 +151,5 @@
  		</div>
  	</div>
 </div>	
-
-
 <script src="../modulos/hackaton/Hackaton.js"></script>
 </div>
