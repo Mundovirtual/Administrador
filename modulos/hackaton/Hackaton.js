@@ -109,17 +109,31 @@ function ActualizandoHackaton() {
 	}
 
  
-})
-.fail(function(jqXHR, textStatus, errorThrown) {
-            console.log('error');
-            console.log(errorThrown);
-            console.log(jqXHR);
-  })
-	
-
+});
 	
 }
+function ActivarHackaton(id,edicion){
+	
+	$.ajax({
+		url: '../Modulos/hackaton/Hackaton.php',
+		type: 'POST',
+		dataType: 'json',
+		data: {'EstatusHackaton': id},
+	})
+	.done(function(Respuesta) {
 
+		if (Respuesta=='0') {
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.success(edicion+" activado");
+		} else {
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error(edicion+" activado");
+		}
+		
+
+	}) ;
+
+}
 
 
 
@@ -187,6 +201,7 @@ $( document ).ready(function() {
             { "data": "Inicio" },
             { "data": "FinRegProyectos" },
             { "data": "FinHack" }, 
+            { "data": "Estado" },
             { "data": "Editar" },
             { "data": "Eliminar" } 
         ],

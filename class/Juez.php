@@ -39,10 +39,9 @@ include_once("conexion.php");
 	 	function JuecesAceptados(){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `comunidad`.`id`, `comunidad`.`Nombre`, `comunidad`.`Apellidos`, `comunidad`.`E-mail`, `comunidad`.`psw`, `comunidad`.`Celular`, `talla_playera`.`Talla_Playeracol`, `carrera`.`Carrera` , `institucion`.`Institucion`, `comunidad`.`Facebook`, `comunidad`.`Twitter`, `comunidad`.`FechaNacimiento`, `comunidad`.`Habilidades`, `comunidad`.`Hobbies`, `comunidad`.`Rol_idRol`, `genero`.`Sexo`, `comunidad`.`status` FROM `comunidad` inner join `talla_playera` on `talla_playera`.`idTalla_Playera`=`comunidad`.`Talla_Playera_idTalla_Playera` inner join `carrera` on `carrera`.`id`=`comunidad`.`Carrera_id` inner join `institucion` on `comunidad`.`Institucion_id`=`institucion`.`id` inner join `genero` on `genero`.`idSexo`=`comunidad`.`Genero_idSexo` where `Rol_idRol`='3' and `status`='1'";
-	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return mysqli_fetch_all($resultado);
-	 		$Conexion->mysql_close();
+ 		$sql="SELECT `comunidad`.`id`, `comunidad`.`Nombre`, `comunidad`.`Apellidos`, `comunidad`.`E-mail`, `comunidad`.`psw`, `comunidad`.`Celular`, `talla_playera`.`Talla_Playeracol`, `carrera`.`Carrera` , `institucion`.`Institucion`, `comunidad`.`Facebook`, `comunidad`.`Twitter`, `comunidad`.`FechaNacimiento`, `comunidad`.`Habilidades`, `comunidad`.`Hobbies`, `comunidad`.`Rol_idRol`, `genero`.`Sexo`, `comunidad`.`status` FROM `comunidad` inner join `talla_playera` on `talla_playera`.`idTalla_Playera`=`comunidad`.`Talla_Playera_idTalla_Playera` inner join `carrera` on `carrera`.`id`=`comunidad`.`Carrera_id` inner join `institucion` on `comunidad`.`Institucion_id`=`institucion`.`id` inner join `genero` on `genero`.`idSexo`=`comunidad`.`Genero_idSexo` where `Rol_idRol`='3' and `status`='1'"; 
+ 			$resultado=mysqli_query($Conexion,$sql);
+	 		return  mysqli_fetch_all($resultado);
 	 	}
 	 	function ActualizarDatosJueces($id,$correo,$psw,$celular){
 	 		$Actpsw=md5($psw);

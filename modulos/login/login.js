@@ -16,7 +16,7 @@ jQuery(document).on('submit','#Login',function(event){
         .done(function(respuesta){
           console.log(respuesta.error);
           if (!respuesta.error) {
-           location.href = "../../../Administrador/view/index.php";                        
+           location.href = "view/index.php";                        
           } 
           if (respuesta.error) { 
             $('#ErrorLogin').slideDown('slow');

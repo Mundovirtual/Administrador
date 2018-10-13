@@ -31,7 +31,15 @@ if ($inicioHack > $EntregaHack) {
 if (isset($_POST['IdEliminar'])){
 	$Hackaton=new Hackaton();
 	$eliminar=$Hackaton->EliminarHackaton($_POST['IdEliminar']); 
-		echo "0";
+	echo "0";
+}
+
+
+/*Estatus*/
+if (isset($_POST['EstatusHackaton'])) {
+	$Hackaton=new Hackaton();
+	$eliminar=$Hackaton->CambiarEstado($_POST['EstatusHackaton']); 
+	echo "0";
 }
 
 

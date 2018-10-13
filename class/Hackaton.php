@@ -39,7 +39,18 @@
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
-
+	 	function CambiarEstado($idActualizar){
+	 		$con=new Conectar();
+	 		$Conexion=$con->conexion();
+	 		/*Deshabilitar hackatones*/
+	 		$Deshabilitar="UPDATE `hackatonedicion` SET `status`='0'"; 
+	 		$resultadoDeshabilitar=mysqli_query($Conexion,$Deshabilitar);
+	 		/*habilitar hackaton*/
+	 		$sql="UPDATE `hackatonedicion` SET `status`='1' WHERE `id`='$idActualizar'";
+	 		$resultado=mysqli_query($Conexion,$sql);	  
+	 		return $resultado;
+	 		$Conexion->mysql_close();
+	 	}
 	 }
  
 	   
